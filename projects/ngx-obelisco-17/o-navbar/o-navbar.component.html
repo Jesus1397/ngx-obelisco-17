@@ -1,0 +1,606 @@
+<header
+  class="navbar navbar-light navbar-expand-lg"
+  role="banner"
+  [ngClass]="customClasses"
+>
+  <a
+    href="javascript:void(0)"
+    class="skip-to-main-content-link"
+    (click)="scrollToContent()"
+  >
+    Ir al contenido principal
+  </a>
+  <div class="container header-container">
+    <ng-container *ngIf="!oCustomContent">
+      <!-- Logo ↓ -->
+      <a class="navbar-brand" [routerLink]="logo.route" *ngIf="logo">
+        <img
+          *ngFor="let media of logo.img"
+          [ngClass]="media.customClasses"
+          [src]="media.src"
+          [alt]="media.alt"
+          [attr.width]="media.width"
+          [attr.height]="media.height"
+        />
+      </a>
+      <!-- Login button Mobile ↓ -->
+      <ng-container
+        *ngTemplateOutlet="loginButton; context: loginClassMobile"
+      ></ng-container>
+      <!-- Menu button ↓ -->
+      <ng-container [ngTemplateOutlet]="menuButton"></ng-container>
+      <div
+        #navbarContent
+        class="collapse navbar-collapse"
+        [id]="id + 'navbarContent'"
+      >
+        <div class="navbar-content">
+          <!-- Sections ↓ -->
+          <ng-container [ngTemplateOutlet]="sections"></ng-container>
+          <!-- Searchbar ↓ -->
+          <ng-container [ngTemplateOutlet]="searchBar"></ng-container>
+          <!-- Login button Desktop ↓ -->
+          <ng-container [ngTemplateOutlet]="loginButton"></ng-container>
+          <!-- Account button Desktop ↓ -->
+          <ng-container
+            [ngTemplateOutlet]="accountButtonDesktop"
+          ></ng-container>
+        </div>
+        <!-- Sections extended ↓ -->
+        <ng-container [ngTemplateOutlet]="sectionsExtended"></ng-container>
+        <!-- Account button Mobile ↓ -->
+        <ng-container [ngTemplateOutlet]="accountButtonMobile"></ng-container>
+      </div>
+    </ng-container>
+    <ng-container
+      *ngIf="oCustomContent"
+      [ngTemplateOutlet]="oCustomContent.template"
+    >
+      <ng-content></ng-content>
+    </ng-container>
+  </div>
+  <div class="header-backdrop"></div>
+</header>
+
+<!-- TEMPLATES -->
+<ng-template #iconTemplate let-icon="icon">
+  <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
+  <span
+    *ngIf="icon && !icon.includes('bx')"
+    class="material-icons-round"
+    aria-hidden="true"
+    >{{ icon }}</span
+  >
+</ng-template>
+
+<ng-template #iconTemplateLink let-icon="icon">
+  <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
+  <span
+    *ngIf="icon && !icon.includes('bx')"
+    class="material-icons-round"
+    aria-hidden="true"
+    >{{ icon }}</span
+  >
+  <span *ngIf="!icon" class="material-icons-round" aria-hidden="true"
+    >arrow_forward</span
+  >
+</ng-template>
+
+<ng-template #iconTemplateDropdown let-icon="icon">
+  <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
+  <span
+    *ngIf="icon && !icon.includes('bx')"
+    class="material-icons-round"
+    aria-hidden="true"
+    >{{ icon }}</span
+  >
+  <span *ngIf="!icon" class="material-icons-round btn-dropdown-icon">
+    expand_more
+  </span>
+</ng-template>
+
+<ng-template #iconTemplateAccount let-icon="icon">
+  <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
+  <span
+    *ngIf="icon && !icon.includes('bx')"
+    class="material-icons-round"
+    aria-hidden="true"
+    >{{ icon }}</span
+  >
+  <span *ngIf="!icon" class="material-icons-round" aria-hidden="true"
+    >person</span
+  >
+</ng-template>
+
+<ng-template #iconTemplateLogout let-icon="icon">
+  <i *ngIf="icon && icon.includes('bx')" class="{{ icon }}"></i>
+  <span
+    *ngIf="icon && !icon.includes('bx')"
+    class="material-icons-round"
+    aria-hidden="true"
+    >{{ icon }}</span
+  >
+  <span *ngIf="!icon" class="material-icons-round" aria-hidden="true"
+    >logout</span
+  >
+</ng-template>
+
+<ng-template #accountButtonMobile>
+  <div class="navbar-user-mobile" *ngIf="routesAccount">
+    <nav>
+      <p class="navbar-user-mobile-title">{{ routesAccount.title }}</p>
+      <ul class="nav flex-column nav-pills nav-user">
+        <ng-container *ngFor="let accountChild of routesAccount.children">
+          <li class="nav-item">
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              [routerLink]="accountChild.route"
+              *ngIf="!accountChild.isDangerTitle"
+            >
+              <span>{{ accountChild.title }}</span>
+              <span
+                class="item-notifications"
+                *ngIf="accountChild.isWithNotification"
+              ></span>
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="accountChild.isDangerTitle">
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-danger nav-link-lg"
+              [routerLink]="accountChild.route"
+            >
+              <div class="nav-icon">
+                <span class="material-icons-round" aria-hidden="true"
+                  >logout</span
+                >
+                <span>Cerrar sesión</span>
+              </div>
+            </a>
+          </li>
+        </ng-container>
+      </ul>
+    </nav>
+  </div>
+</ng-template>
+
+<ng-template #sections>
+  <div class="navbar-sections" *ngIf="routes">
+    <nav>
+      <p class="navbar-sections-title">Secciones</p>
+      <ul class="nav nav-pills nav-sections">
+        <ng-container *ngFor="let routeItem of routes">
+          <li class="dropdown" *ngIf="routeItem.children">
+            <button
+              type="button"
+              class="btn btn-dropdown btn-dropdown-lg dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: routeItem!.iconLeft }"
+              ></ng-container>
+              <span class="btn-dropdown-text">{{ routeItem.title }}</span>
+              <ng-container
+                [ngTemplateOutlet]="iconTemplateDropdown"
+                [ngTemplateOutletContext]="{ icon: routeItem!.iconRight }"
+              ></ng-container>
+            </button>
+            <div class="dropdown-menu">
+              <ng-container *ngFor="let routeItemChild of routeItem.children">
+                <!-- Rutas con RouterLink -->
+                <a
+                  class="dropdown-item"
+                  [routerLink]="routeItemChild.route"
+                  *ngIf="routeItemChild.route && !routeItemChild.isOverviewItem"
+                >
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{
+                      icon: routeItemChild.iconLeft
+                    }"
+                  ></ng-container>
+                  <span class="item-text">{{ routeItemChild.title }}</span>
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{
+                      icon: routeItemChild.iconLeft
+                    }"
+                  ></ng-container>
+                </a>
+                <a
+                  class="dropdown-item item-link"
+                  [routerLink]="routeItemChild.route"
+                  *ngIf="routeItemChild.route && routeItemChild.isOverviewItem"
+                >
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{
+                      icon: routeItemChild.iconLeft
+                    }"
+                  ></ng-container>
+                  <span class="item-text">{{ routeItemChild.title }}</span>
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplateLink"
+                    [ngTemplateOutletContext]="{
+                      icon: routeItemChild.iconLeft
+                    }"
+                  ></ng-container>
+                </a>
+                <!-- Rutas con Href -->
+                <a
+                  class="dropdown-item"
+                  [href]="routeItemChild.link"
+                  target="_blank"
+                  *ngIf="routeItemChild.link && !routeItemChild.isOverviewItem"
+                >
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{
+                      icon: routeItemChild.iconLeft
+                    }"
+                  ></ng-container>
+                  <span class="item-text">{{ routeItemChild.title }}</span>
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{
+                      icon: routeItemChild.iconLeft
+                    }"
+                  ></ng-container>
+                </a>
+                <a
+                  class="dropdown-item item-link"
+                  [href]="routeItemChild.link"
+                  target="_blank"
+                  *ngIf="routeItemChild.link && routeItemChild.isOverviewItem"
+                >
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{
+                      icon: routeItemChild.iconLeft
+                    }"
+                  ></ng-container>
+                  <span class="item-text">{{ routeItemChild.title }}</span>
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplateLink"
+                    [ngTemplateOutletContext]="{
+                      icon: routeItemChild.iconLeft
+                    }"
+                  ></ng-container>
+                </a>
+              </ng-container>
+            </div>
+          </li>
+          <li class="nav-item" *ngIf="!routeItem.children">
+            <!-- Ruta con RouterLink -->
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              *ngIf="routeItem.route"
+              [routerLink]="routeItem.route"
+            >
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: routeItem!.iconLeft }"
+              ></ng-container>
+              <span>{{ routeItem.title }}</span>
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: routeItem!.iconLeft }"
+              ></ng-container>
+            </a>
+            <!-- Ruta con Href -->
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              *ngIf="routeItem.link"
+              [href]="routeItem.link"
+            >
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: routeItem!.iconLeft }"
+              ></ng-container>
+              <span>{{ routeItem.title }}</span>
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: routeItem!.iconLeft }"
+              ></ng-container>
+            </a>
+          </li>
+        </ng-container>
+      </ul>
+    </nav>
+  </div>
+</ng-template>
+
+<ng-template #sectionsExtended>
+  <div class="navbar-content-extended" *ngIf="routesExtended">
+    <nav>
+      <p class="navbar-sections-title">Secciones</p>
+      <ul class="nav nav-pills nav-sections">
+        <ng-container
+          *ngFor="let extendedItem of routesExtended; let i = index"
+        >
+          <li class="nav-item" *ngIf="!extendedItem.children">
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              *ngIf="extendedItem.route"
+              [routerLink]="extendedItem.route"
+            >
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: extendedItem.iconLeft }"
+              ></ng-container>
+              <span>{{ extendedItem.title }}</span>
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: extendedItem.iconRight }"
+              ></ng-container>
+            </a>
+            <a
+              (click)="closeDropdownMenu()"
+              class="nav-link nav-link-lg"
+              *ngIf="extendedItem.link"
+              [href]="extendedItem.link"
+            >
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: extendedItem.iconLeft }"
+              ></ng-container>
+              <span>{{ extendedItem.title }}</span>
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: extendedItem.iconRight }"
+              ></ng-container>
+            </a>
+          </li>
+          <li class="dropdown" *ngIf="extendedItem.children">
+            <button
+              type="button"
+              class="btn btn-dropdown btn-dropdown-lg dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <ng-container
+                [ngTemplateOutlet]="iconTemplate"
+                [ngTemplateOutletContext]="{ icon: extendedItem.iconLeft }"
+              ></ng-container>
+              <span class="btn-dropdown-text">{{ extendedItem.title }}</span>
+              <ng-container
+                [ngTemplateOutlet]="iconTemplateDropdown"
+                [ngTemplateOutletContext]="{ icon: extendedItem.iconRight }"
+              ></ng-container>
+            </button>
+            <div class="dropdown-menu">
+              <ng-container *ngFor="let extendedChild of extendedItem.children">
+                <!-- Rutas con RouterLink -->
+                <a
+                  class="dropdown-item"
+                  [routerLink]="extendedChild.route"
+                  *ngIf="extendedChild.route && !extendedChild.isOverviewItem"
+                >
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{ icon: extendedChild.iconLeft }"
+                  ></ng-container>
+                  <span class="item-text">{{ extendedChild.title }}</span>
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{ icon: extendedChild.iconLeft }"
+                  ></ng-container>
+                </a>
+                <a
+                  class="dropdown-item item-link"
+                  [routerLink]="extendedChild.route"
+                  *ngIf="extendedChild.route && extendedChild.isOverviewItem"
+                >
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{ icon: extendedChild.iconLeft }"
+                  ></ng-container>
+                  <span class="item-text">{{ extendedChild.title }}</span>
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplateLink"
+                    [ngTemplateOutletContext]="{ icon: extendedChild.iconLeft }"
+                  ></ng-container>
+                </a>
+                <!-- Rutas con Href -->
+                <a
+                  class="dropdown-item"
+                  [href]="extendedChild.link"
+                  target="_blank"
+                  *ngIf="extendedChild.link && !extendedChild.isOverviewItem"
+                >
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{ icon: extendedChild.iconLeft }"
+                  ></ng-container>
+                  <span class="item-text">{{ extendedChild.title }}</span>
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{ icon: extendedChild.iconLeft }"
+                  ></ng-container>
+                </a>
+                <a
+                  class="dropdown-item item-link"
+                  [href]="extendedChild.link"
+                  target="_blank"
+                  *ngIf="extendedChild.link && extendedChild.isOverviewItem"
+                >
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{ icon: extendedChild.iconLeft }"
+                  ></ng-container>
+                  <span class="item-text">{{ extendedChild.title }}</span>
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplateLink"
+                    [ngTemplateOutletContext]="{ icon: extendedChild.iconLeft }"
+                  ></ng-container>
+                </a>
+              </ng-container>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </nav>
+  </div>
+</ng-template>
+
+<ng-template #loginButton let-classMobile="classMobile">
+  <ng-container *ngIf="routesLogin">
+    <div class="navbar-login{{ classMobile }}" *ngIf="!routesAccount">
+      <a
+        class="btn btn-lg btn-icon btn-outline-link"
+        [routerLink]="routesLogin.route"
+        target="_blank"
+      >
+        <ng-container
+          [ngTemplateOutlet]="iconTemplateAccount"
+          [ngTemplateOutletContext]="{ icon: routesLogin.iconLeft }"
+        ></ng-container>
+        <span class="btn-text">{{ routesLogin.title }}</span>
+        <ng-container
+          [ngTemplateOutlet]="iconTemplate"
+          [ngTemplateOutletContext]="{ icon: routesLogin.iconRight }"
+        ></ng-container>
+      </a>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #searchBar>
+  <div class="navbar-search" *ngIf="searchbarItems">
+    <form class="form-search">
+      <div class="form-group">
+        <label class="sr-only" for="search-input">Buscador</label>
+        <input
+          type="search"
+          class="form-control input-search"
+          id="search-input"
+          name="name"
+          aria-label="Ingrese su búsqueda"
+          [placeholder]="placeholder"
+          [(ngModel)]="term"
+          (input)="search()"
+          (keydown.enter)="onEnter()"
+          (keydown.ArrowUp)="onUp()"
+          (keydown.ArrowDown)="onDown()"
+        />
+        <button
+          class="reset"
+          type="reset"
+          aria-label="Borrar"
+          (click)="resetSearch()"
+        ></button>
+        <button
+          class="submit-search"
+          type="submit"
+          aria-label="Buscar"
+          (click)="onEnter()"
+          (keydown.enter)="onEnter()"
+        ></button>
+      </div>
+    </form>
+    <div
+      class="search-results"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
+    >
+      <ng-container *ngIf="filteredResults.length > 0">
+        <div
+          class="search-item"
+          *ngFor="let result of filteredResults; let i = index"
+          [class.selected-search-item]="i === selectedIndex"
+          [class.first-search-item]="i === selectedIndex && !isHover"
+          (click)="goTo(result)"
+        >
+          {{ result.title }}
+        </div>
+      </ng-container>
+      <div class="no-results" *ngIf="noResults">
+        No se encontraron resultados😢.
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #accountButtonDesktop>
+  <div class="navbar-user" *ngIf="routesAccount">
+    <div class="dropdown">
+      <button
+        type="button"
+        class="btn btn-dropdown btn-dropdown-lg btn-dropdown-border dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <ng-container
+          [ngTemplateOutlet]="iconTemplateAccount"
+          [ngTemplateOutletContext]="{ icon: routesAccount.iconLeft }"
+        ></ng-container>
+        <span class="btn-dropdown-text">{{ routesAccount.title }}</span>
+        <ng-container
+          [ngTemplateOutlet]="iconTemplate"
+          [ngTemplateOutletContext]="{ icon: routesAccount.iconLeft }"
+        ></ng-container>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ng-container *ngFor="let accountChild of routesAccount.children">
+          <a
+            class="dropdown-item"
+            [routerLink]="accountChild.route"
+            *ngIf="!accountChild.isDangerTitle"
+          >
+            <ng-container
+              [ngTemplateOutlet]="iconTemplate"
+              [ngTemplateOutletContext]="{ icon: accountChild.iconLeft }"
+            ></ng-container>
+            <span class="item-text">{{ accountChild.title }}</span>
+            <ng-container
+              [ngTemplateOutlet]="iconTemplate"
+              [ngTemplateOutletContext]="{ icon: accountChild.iconRight }"
+            ></ng-container>
+            <span
+              class="item-notifications"
+              *ngIf="accountChild.isWithNotification"
+            ></span>
+          </a>
+          <a
+            class="dropdown-item item-danger"
+            [routerLink]="accountChild.route"
+            *ngIf="accountChild.isDangerTitle"
+          >
+            <ng-container
+              [ngTemplateOutlet]="iconTemplate"
+              [ngTemplateOutletContext]="{ icon: accountChild.iconLeft }"
+            ></ng-container>
+            <span class="item-text">Cerrar sesión</span>
+            <ng-container
+              [ngTemplateOutlet]="iconTemplateLogout"
+              [ngTemplateOutletContext]="{ icon: accountChild.iconLeft }"
+            ></ng-container>
+          </a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #menuButton>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    [attr.data-target]="'#' + id + 'navbarContent'"
+    [attr.aria-controls]="id + 'navbarContent'"
+    [attr.aria-expanded]="isMenuExpanded ? 'true' : 'false'"
+    aria-label="Menú"
+    (click)="toggleMenu()"
+    *ngIf="routes || routesExtended || routesAccount || searchbarItems"
+  ></button>
+</ng-template>

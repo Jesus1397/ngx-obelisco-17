@@ -1,0 +1,29 @@
+<label
+  class="switch"
+  [class.switch-dark]="isDark"
+  [class.switch-sm]="isSmall"
+  [style.pointerEvents]="isFixed ? 'none' : null"
+  [ngClass]="customClasses"
+  [attr.for]="id"
+>
+  <input
+    type="checkbox"
+    [attr.id]="id"
+    [disabled]="isDisabled"
+    [checked]="switchValue"
+    (change)="onSwitchChange()"
+  />
+  <span class="slider"></span>
+  <span
+    class="switch-label"
+    [class.on]="switchValue"
+    [class.off]="!switchValue"
+    [attr.disabled]="isDisabled ? true : null"
+    [ngClass]="customClassesLabel"
+    [attr.aria-label]="
+      !labelOn && !labelOff ? (switchValue ? 'Prendido' : 'Apagado') : null
+    "
+  >
+    {{ switchValue ? labelOn : labelOff }}
+  </span>
+</label>

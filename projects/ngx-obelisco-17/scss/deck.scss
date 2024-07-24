@@ -1,0 +1,237 @@
+@import './media-query.scss';
+
+@mixin card-deck-4 {
+  o-access,
+  o-highlighted,
+  o-card,
+  .card {
+    flex: 1 0 19%;
+    margin-top: 0;
+
+    &:nth-of-type(n + 5) {
+      margin-top: 30px;
+    }
+  }
+}
+
+@mixin card-deck-3 {
+  o-access,
+  o-highlighted,
+  o-card,
+  .card {
+    flex: 1 0 25%;
+    margin-top: 0;
+
+    &:nth-of-type(n + 4) {
+      margin-top: 30px;
+    }
+  }
+}
+
+@mixin card-deck-2 {
+  o-access,
+  o-highlighted,
+  o-card,
+  .card {
+    flex: 1 0 35%;
+    margin-top: 0;
+
+    &:nth-of-type(n + 3) {
+      margin-top: 30px;
+    }
+  }
+}
+
+@mixin card-deck-1 {
+  o-access,
+  o-highlighted,
+  o-card,
+  .card {
+    flex: 1 0 55% !important;
+    margin-top: 0;
+
+    &:nth-of-type(n + 2) {
+      margin-top: 30px;
+    }
+  }
+}
+
+::ng-deep {
+  .card-deck {
+    @include card-deck-2;
+  }
+
+  .card-deck {
+    o-access,
+    o-highlighted,
+    o-card {
+      .card,
+      .list-group-item {
+        min-width: 100%;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      margin-right: 15px;
+      margin-bottom: 0;
+      margin-left: 15px;
+    }
+
+    o-highlighted {
+      o-access {
+        margin: 0;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      flex-flow: row wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      o-access,
+      o-highlighted,
+      o-card,
+      .card {
+        &:nth-of-type(2) {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .card-deck:not(.max-cards-2),
+    .card-deck.max-cards-3 {
+      @include card-deck-3;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .card-deck:not(.max-cards-2):not(.max-cards-3) {
+      @include card-deck-4;
+    }
+  }
+
+  .card-deck.max-cards-1 {
+    @include card-deck-1;
+  }
+
+  .card-deck.card-column {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+    o-access,
+    o-highlighted,
+    o-card,
+    .card {
+      max-width: calc(calc(100% / 4) - 30px);
+
+      @include media-breakpoint-down(md) {
+        max-width: calc(calc(100% / 3) - 30px);
+      }
+
+      @include media-breakpoint-down(sm) {
+        max-width: calc(calc(100% / 2) - 30px);
+      }
+
+      @include media-breakpoint-down(xs) {
+        display: flex;
+        width: 100%;
+        max-width: 328px;
+        height: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+        &[ng-reflect-is-horizontal='true'] {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .card-deck.max-cards-3.card-column {
+    o-access,
+    o-highlighted,
+    o-card,
+    .card {
+      max-width: calc(calc(100% / 3) - 30px);
+
+      @include media-breakpoint-down(sm) {
+        max-width: calc(calc(100% / 2) - 30px);
+      }
+
+      @include media-breakpoint-down(xs) {
+        max-width: 328px;
+        &[ng-reflect-is-horizontal='true'] {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .card-deck.max-cards-2.card-column {
+    o-access,
+    o-highlighted,
+    o-card,
+    .card {
+      max-width: calc(calc(100% / 2) - 30px);
+
+      @include media-breakpoint-down(xs) {
+        max-width: 328px;
+        &[ng-reflect-is-horizontal='true'] {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .card-deck.max-cards-1.card-column {
+    o-access,
+    o-highlighted,
+    o-card,
+    .card {
+      max-width: calc(calc(100% / 3) - 30px);
+
+      &:nth-of-type(-n + 3) {
+        margin-top: 0px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        max-width: calc(calc(100% / 2) - 30px);
+
+        &:nth-of-type(-n + 3) {
+          margin-top: 30px;
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .access-deck {
+    @extend .card-deck;
+
+    &.access-column {
+      @extend .card-column;
+    }
+
+    &.max-cards-1 {
+      o-access {
+        &:first-of-type {
+          @include media-breakpoint-down(sm) {
+            margin-top: 0 !important;
+          }
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        .list-group-item {
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+}

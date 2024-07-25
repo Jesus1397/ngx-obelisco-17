@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { NavbarRoute } from '@gcba/ngx-obelisco/core/models';
-import { ONavbarModule } from '@gcba/ngx-obelisco/o-navbar';
+import { NavbarRoute } from '@gcba/ngx-obelisco-17/core/models';
+import { ONavbarModule } from '@gcba/ngx-obelisco-17/navbar';
 import {
   COMPONENTS_NAVIGATION,
   OTHERS_NAVIGATION,
   ICONS_NAVIGATION,
 } from './constants/components.constants';
+import { HighlightJsModule } from 'ngx-highlight-js';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ONavbarModule],
+  imports: [RouterOutlet, ONavbarModule, HighlightJsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

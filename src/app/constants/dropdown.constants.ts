@@ -1,9 +1,17 @@
-import { DataSource, DropdownNavigationItem, DropdownSelectionItem } from '@gcba/ngx-obelisco/core/models';
+import {
+  DataSource,
+  DropdownNavigationItem,
+  DropdownSelectionItem,
+} from '@gcba/ngx-obelisco-17/core/models';
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
-const formattedExampleTsCode = (arrayName: string, array: any, interfaceName: string) => `
+const formattedExampleTsCode = (
+  arrayName: string,
+  array: any,
+  interfaceName: string
+) => `
 import { Component  } from '@angular/core';
-import { ${interfaceName} } from '@gcba/ngx-obelisco/core/models';
+import { ${interfaceName} } from '@gcba/ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -17,17 +25,21 @@ export class ExampleComponent {
 
 const formattedExampleTsCodeAlign = (arrayLeft: any, arrayRight: any) => `
 import { Component  } from '@angular/core';
-import { DropdownNavigationItem } from '@gcba/ngx-obelisco/core/models';
+import { DropdownNavigationItem } from '@gcba/ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
   templateUrl: './app-example.component.html',
 })
 export class ExampleComponent {
-  public dropdownItemsLeft: DropdownNavigationItem[] = ${codeFormattingArrayList(arrayLeft)}
+  public dropdownItemsLeft: DropdownNavigationItem[] = ${codeFormattingArrayList(
+    arrayLeft
+  )}
   ];
 
-  public dropdownItemsRight: DropdownNavigationItem[] = ${codeFormattingArrayList(arrayRight)}
+  public dropdownItemsRight: DropdownNavigationItem[] = ${codeFormattingArrayList(
+    arrayRight
+  )}
   ];
 }
 `;
@@ -40,25 +52,25 @@ const DROPDOWN_SELECTION_ROUTE = 'dropdown/dropdown-selection';
 export const DROP_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/dropdown/api'
+    route: '/components/dropdown/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/dropdown/examples'
-  }
+    route: '/components/dropdown/examples',
+  },
 ];
 
 export const DROPDOWN_NAVIGATION = DROP_NAVIGATION.map((el) => {
   return {
     ...el,
-    route: el.route.replace(DROPDOWN_ROUTE, DROPDOWN_NAVIGATION_ROUTE)
+    route: el.route.replace(DROPDOWN_ROUTE, DROPDOWN_NAVIGATION_ROUTE),
   };
 });
 
 export const DROPDOWN_SELECTION = DROP_NAVIGATION.map((el) => {
   return {
     ...el,
-    route: el.route.replace(DROPDOWN_ROUTE, DROPDOWN_SELECTION_ROUTE)
+    route: el.route.replace(DROPDOWN_ROUTE, DROPDOWN_SELECTION_ROUTE),
   };
 });
 
@@ -66,47 +78,62 @@ export const DROPDOWN_SELECTION = DROP_NAVIGATION.map((el) => {
 export const DROPDOWN_NAVIGATION_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() dataTarget: string', customClasses: '' },
-    description: { data: 'Asigna un destino de datos.', customClasses: '' }
+    description: { data: 'Asigna un destino de datos.', customClasses: '' },
   },
   {
     name: { data: '@Input() title: string', customClasses: '' },
-    description: { data: 'Asigna un título.', customClasses: '' }
+    description: { data: 'Asigna un título.', customClasses: '' },
   },
   {
     name: { data: '@Input() iconLeft: string', customClasses: '' },
-    description: { data: 'Asigna un ícono a la izquierda.', customClasses: '' }
+    description: { data: 'Asigna un ícono a la izquierda.', customClasses: '' },
   },
   {
     name: { data: '@Input() iconRight: string', customClasses: '' },
-    description: { data: 'Asigna un ícono a la derecha.', customClasses: '' }
+    description: { data: 'Asigna un ícono a la derecha.', customClasses: '' },
   },
   {
     name: { data: '@Input() isAnimatedIconLeft: boolean', customClasses: '' },
-    description: { data: 'Habilita animación para el ícono izquierdo.', customClasses: '' }
+    description: {
+      data: 'Habilita animación para el ícono izquierdo.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() isAnimatedIconRight: boolean', customClasses: '' },
-    description: { data: 'Habilita animación para el ícono derecho.', customClasses: '' }
+    description: {
+      data: 'Habilita animación para el ícono derecho.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() children: DropdownNavigationItem[]', customClasses: '' },
-    description: { data: 'Asigna elementos de menú desplegable.', customClasses: '' }
+    name: {
+      data: '@Input() children: DropdownNavigationItem[]',
+      customClasses: '',
+    },
+    description: {
+      data: 'Asigna elementos de menú desplegable.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() isPositionRight: boolean', customClasses: '' },
-    description: { data: 'Coloca el menú desplegable a la derecha.', customClasses: '' }
+    description: {
+      data: 'Coloca el menú desplegable a la derecha.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() isBordered: boolean', customClasses: '' },
-    description: { data: 'Habilita el borde.', customClasses: '' }
+    description: { data: 'Habilita el borde.', customClasses: '' },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const DROPDOWN_NAVIGATION_INTERFACE = `
@@ -129,111 +156,171 @@ interface DropdownNavigationItem {
 export const DROPDOWN_NAVIGATION_DATA_SOURCE_INTERFACE: DataSource[] = [
   {
     name: { data: 'id: string', customClasses: '' },
-    description: { data: 'Identificador único para el elemento.', customClasses: '' }
+    description: {
+      data: 'Identificador único para el elemento.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'text: string', customClasses: '' },
-    description: { data: 'Texto descriptivo o título.', customClasses: '' }
+    description: { data: 'Texto descriptivo o título.', customClasses: '' },
   },
   {
     name: { data: 'textRight: boolean', customClasses: '' },
-    description: { data: 'Controla la alineación del texto a la derecha.', customClasses: '' }
+    description: {
+      data: 'Controla la alineación del texto a la derecha.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'iconLeft: string', customClasses: '' },
-    description: { data: 'Ícono que aparece en la parte izquierda.', customClasses: '' }
+    description: {
+      data: 'Ícono que aparece en la parte izquierda.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'iconRight: string', customClasses: '' },
-    description: { data: 'Ícono que aparece en la parte derecha.', customClasses: '' }
+    description: {
+      data: 'Ícono que aparece en la parte derecha.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'isAnimatedIconLeft: string', customClasses: '' },
-    description: { data: 'Habilita animación para el ícono izquierdo.', customClasses: '' }
+    description: {
+      data: 'Habilita animación para el ícono izquierdo.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'isAnimatedIconRight: string', customClasses: '' },
-    description: { data: 'Habilita animación para el ícono derecho.', customClasses: '' }
+    description: {
+      data: 'Habilita animación para el ícono derecho.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'textDanger: boolean', customClasses: '' },
-    description: { data: 'Indica si el texto tiene un significado de alerta o peligro.', customClasses: '' }
+    description: {
+      data: 'Indica si el texto tiene un significado de alerta o peligro.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'route: string', customClasses: '' },
-    description: { data: 'Ruta de navegación asociada al elemento.', customClasses: '' }
+    description: {
+      data: 'Ruta de navegación asociada al elemento.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'link: string', customClasses: '' },
-    description: { data: 'Enlace o URL relacionado con el elemento.', customClasses: '' }
+    description: {
+      data: 'Enlace o URL relacionado con el elemento.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'isDisabled: boolean', customClasses: '' },
-    description: { data: 'Habilita o deshabilita la interacción con el elemento.', customClasses: '' }
+    description: {
+      data: 'Habilita o deshabilita la interacción con el elemento.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'children: DropdownNavigationItem[]', customClasses: '' },
-    description: { data: 'Elementos secundarios que se despliegan en un menú.', customClasses: '' }
+    description: {
+      data: 'Elementos secundarios que se despliegan en un menú.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 // DROPDOWN SELECTION API
 export const DROPDOWN_SELECTION_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() dataTarget: string', customClasses: '' },
-    description: { data: 'Destino de los datos para la selección.', customClasses: '' }
+    description: {
+      data: 'Destino de los datos para la selección.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() title: string', customClasses: '' },
-    description: { data: 'Título descriptivo para la selección.', customClasses: '' }
+    description: {
+      data: 'Título descriptivo para la selección.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() isSelectionMultiple: boolean', customClasses: '' },
-    description: { data: 'Permite múltiples selecciones si es verdadero.', customClasses: '' }
+    description: {
+      data: 'Permite múltiples selecciones si es verdadero.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() iconLeft: string', customClasses: '' },
-    description: { data: 'Ícono que aparece a la izquierda.', customClasses: '' }
+    description: {
+      data: 'Ícono que aparece a la izquierda.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() iconRight: string', customClasses: '' },
-    description: { data: 'Ícono que aparece a la derecha.', customClasses: '' }
+    description: { data: 'Ícono que aparece a la derecha.', customClasses: '' },
   },
   {
     name: { data: '@Input() isAnimatedIconLeft: boolean', customClasses: '' },
-    description: { data: 'Habilita animación para el ícono izquierdo si es verdadero.', customClasses: '' }
+    description: {
+      data: 'Habilita animación para el ícono izquierdo si es verdadero.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() isAnimatedIconRight: boolean', customClasses: '' },
-    description: { data: 'Habilita animación para el ícono derecho si es verdadero.', customClasses: '' }
+    description: {
+      data: 'Habilita animación para el ícono derecho si es verdadero.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() dropSelectItems: DropdownSelectionItem[]', customClasses: '' },
-    description: { data: 'Elementos de selección disponibles.', customClasses: '' }
+    name: {
+      data: '@Input() dropSelectItems: DropdownSelectionItem[]',
+      customClasses: '',
+    },
+    description: {
+      data: 'Elementos de selección disponibles.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() isBordered: boolean', customClasses: '' },
-    description: { data: 'Habilita un borde si es verdadero.', customClasses: '' }
-  }
+    description: {
+      data: 'Habilita un borde si es verdadero.',
+      customClasses: '',
+    },
+  },
 ];
 export const DROPDOWN_SELECTION_DATA_SOURCE_OUTPUT: DataSource[] = [
   {
     name: {
       data: '@Output() selectedItemChange: EventEmitter<DropdownSelectionItem | DropdownSelectionItem[]>',
-      customClasses: ''
+      customClasses: '',
     },
     description: {
       data: 'Se utiliza para emitir el elemento o elementos seleccionados en el componente desplegable. Puede emitir un objeto de tipo DropdownSelectionItem o un arreglo de objetos DropdownSelectionItem, dependiendo de si se seleccionan radios o checkboxes en el componente.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const DROPDOWN_SELECTION_INTERFACE = `
@@ -249,31 +336,37 @@ interface DropdownSelectionItem {
 export const DROPDOWN_SELECTION_DATA_SOURCE_INTERFACE: DataSource[] = [
   {
     name: { data: 'id: string', customClasses: '' },
-    description: { data: 'Identificador único del elemento.', customClasses: '' }
+    description: {
+      data: 'Identificador único del elemento.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'title: string', customClasses: '' },
-    description: { data: 'Texto descriptivo o título.', customClasses: '' }
+    description: { data: 'Texto descriptivo o título.', customClasses: '' },
   },
   {
     name: { data: 'name: string', customClasses: '' },
-    description: { data: 'Nombre asociado al elemento.', customClasses: '' }
+    description: { data: 'Nombre asociado al elemento.', customClasses: '' },
   },
   {
     name: { data: 'value: string', customClasses: '' },
-    description: { data: 'Valor o contenido del elemento.', customClasses: '' }
+    description: { data: 'Valor o contenido del elemento.', customClasses: '' },
   },
   {
     name: { data: 'isDisabled: boolean', customClasses: '' },
-    description: { data: 'Habilita o deshabilita la interacción con el elemento.', customClasses: '' }
+    description: {
+      data: 'Habilita o deshabilita la interacción con el elemento.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 //DROPDOWN NAVIGATION LIST
@@ -282,70 +375,70 @@ export const DROPDOWN_ITEMS_ICONS: DropdownNavigationItem[] = [
     iconLeft: 'info',
     text: 'Opción de navegación',
     iconRight: 'info',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     iconLeft: 'info',
     text: 'Opción de navegación',
     iconRight: 'info',
     link: 'https://www.google.com/',
-    textPosition: 'right'
+    textPosition: 'right',
   },
   {
     iconLeft: 'info',
     text: 'Opción de navegación',
     iconRight: 'info',
     link: 'https://www.google.com/',
-    isDisabled: true
+    isDisabled: true,
   },
   {
     isItemDanger: true,
     iconLeft: 'logout',
     text: 'Cerrar sesión',
-    link: 'https://www.google.com/'
-  }
+    link: 'https://www.google.com/',
+  },
 ];
 
 export const DROPDOWN_ITEMS_LEFT: DropdownNavigationItem[] = [
   {
     text: 'Opción de navegación',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     text: 'Opción de navegación',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     text: 'Opción de navegación',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     isItemDanger: true,
     iconLeft: 'logout',
     text: 'Cerrar sesión',
-    link: 'https://www.google.com/'
-  }
+    link: 'https://www.google.com/',
+  },
 ];
 
 export const DROPDOWN_ITEMS_RIGHT: DropdownNavigationItem[] = [
   {
     text: 'Opción de navegación',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     text: 'Opción de navegación',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     text: 'Opción de navegación',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     isItemDanger: true,
     text: 'Cerrar sesión',
     link: 'https://www.google.com/',
-    iconRight: 'logout'
-  }
+    iconRight: 'logout',
+  },
 ];
 
 export const DROPDOWN_ITEMS_WITH_SUBITEMS: DropdownNavigationItem[] = [
@@ -356,36 +449,36 @@ export const DROPDOWN_ITEMS_WITH_SUBITEMS: DropdownNavigationItem[] = [
     children: [
       {
         text: 'Opción de navegación',
-        route: 'components'
+        route: 'components',
       },
       {
         text: 'Opción de navegación',
-        link: 'https://www.google.com/'
+        link: 'https://www.google.com/',
       },
       {
         text: 'Opción de navegación',
-        link: 'https://www.google.com/'
-      }
-    ]
+        link: 'https://www.google.com/',
+      },
+    ],
   },
   {
     text: 'Opción de navegación',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     text: 'Opción de navegación',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     text: 'Opción de navegación',
-    link: 'https://www.google.com/'
+    link: 'https://www.google.com/',
   },
   {
     isItemDanger: true,
     text: 'Cerrar sesión',
     link: 'https://www.google.com/',
-    iconLeft: 'logout'
-  }
+    iconLeft: 'logout',
+  },
 ];
 
 // DROPDOWN NAVIGATITS
@@ -453,7 +546,7 @@ export const DROPDOWN_NAVIGATION_EXAMPLE_ALIGN_TS = formattedExampleTsCodeAlign(
 
 export const DROPDOWN_NAVIGATION_EXAMPLE_CASCADE_TS = `
 import { Component  } from '@angular/core';
-import { DropdownNavigationItem } from '@gcba/ngx-obelisco/core/models';
+import { DropdownNavigationItem } from '@gcba/ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -508,21 +601,21 @@ export const DROPDOWN_ITEMS_RADIO: DropdownSelectionItem[] = [
     id: 'radioOne',
     text: 'Radio 1',
     name: 'radio',
-    value: 'radioOne'
+    value: 'radioOne',
   },
   {
     id: 'radioTwo',
     text: 'Radio 2',
     name: 'radio',
-    value: 'radioTwo'
+    value: 'radioTwo',
   },
   {
     id: 'radioThree',
     text: 'Radio 3',
     name: 'radio',
     value: 'radioThree',
-    isDisabled: true
-  }
+    isDisabled: true,
+  },
 ];
 
 export const DROPDOWN_ITEMS_CHECKBOX: DropdownSelectionItem[] = [
@@ -530,21 +623,21 @@ export const DROPDOWN_ITEMS_CHECKBOX: DropdownSelectionItem[] = [
     id: 'checkboxOne',
     text: 'Checkbox 1',
     name: 'checkbox',
-    value: 'checkboxOne'
+    value: 'checkboxOne',
   },
   {
     id: 'checkboxTwo',
     text: 'Checkbox 2',
     name: 'checkbox',
-    value: 'checkboxTwo'
+    value: 'checkboxTwo',
   },
   {
     id: 'checkboxThree',
     text: 'Checkbox 3',
     name: 'checkbox',
     value: 'checkboxThree',
-    isDisabled: true
-  }
+    isDisabled: true,
+  },
 ];
 
 // DROPDOWN SELECTION HTML

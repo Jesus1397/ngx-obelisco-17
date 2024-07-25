@@ -1,0 +1,7 @@
+<img
+  *ngIf="image?.src"
+  [src]="image?.src"
+  [ngClass]="getClassesCardImage()"
+  [alt]="image?.alt ? image?.alt : ' '"
+  oDefaultImage
+/>

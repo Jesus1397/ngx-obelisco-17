@@ -1,0 +1,16 @@
+<ng-template #content><ng-content></ng-content></ng-template>
+
+<ng-container *ngIf="!link && !route; else badgeLink">
+  <span class="badge" [ngClass]="getBadgesClassNames()">
+    <ng-container *ngTemplateOutlet="content"></ng-container>{{ text }}
+  </span>
+</ng-container>
+
+<ng-template #badgeLink>
+  <a *ngIf="route" [routerLink]="[route]" class="badge" [ngClass]="getBadgesClassNames()">
+    <ng-container *ngTemplateOutlet="content"></ng-container>{{ text }}
+  </a>
+  <a *ngIf="link" [attr.href]="[link]" class="badge" [ngClass]="getBadgesClassNames()">
+    <ng-container *ngTemplateOutlet="content"></ng-container>{{ text }}
+  </a>
+</ng-template>

@@ -1,0 +1,88 @@
+<ng-template #cardIcon>
+  <i *ngIf="icon && icon.includes('bx')" [ngClass]="[icon, isHorizontal ? 'card-icon-left' : 'card-icon']"></i>
+  <span
+    *ngIf="icon && !icon.includes('bx')"
+    class="material-icons-round"
+    aria-hidden="true"
+    [ngClass]="[isHorizontal ? 'card-icon-left' : 'card-icon']"
+    >{{ icon }}</span
+  >
+</ng-template>
+<ng-template #contentIcon><ng-content select="o-card-icon"></ng-content></ng-template>
+
+<div
+  class="card"
+  [ngClass]="
+    isThemeCard
+      ? 'card-horizontal card-simple card-lg'
+      : {
+          'card-horizontal': isHorizontal && !isThemeCard,
+          'card-simple': !isBordered && !isHorizontal && !isThemeCard,
+          unbordered: !isBordered && isHorizontal
+        }
+  "
+  [class]="customClasses"
+>
+  <ng-container *ngIf="isHorizontal">
+    <ng-container *ngTemplateOutlet="contentIcon"></ng-container>
+    <ng-container *ngTemplateOutlet="cardIcon"></ng-container>
+  </ng-container>
+  <ng-content select="o-card-image"></ng-content>
+  <img
+    *ngIf="image?.src"
+    [src]="image?.src"
+    [ngClass]="[isHorizontal || isThemeCard ? 'card-img-left' : 'card-img-top']"
+    [alt]="image?.alt ? image?.alt : ' '"
+    oDefaultImage
+  />
+  <div class="card-body">
+    <ng-container *ngIf="!oCustomContent">
+      <ng-container *ngIf="!isHorizontal">
+        <ng-container *ngTemplateOutlet="contentIcon"></ng-container>
+        <ng-container *ngTemplateOutlet="cardIcon"></ng-container>
+      </ng-container>
+
+      <ng-content select="o-card-header"></ng-content>
+
+      <ng-content select="o-card-headline"></ng-content>
+      <ng-container *ngIf="headline">
+        <p class="card-headline">{{ headline }}</p>
+      </ng-container>
+
+      <ng-content select="o-card-badges"></ng-content>
+      <ng-container *ngIf="cardBadges">
+        <div class="card-badges">
+          <o-badge
+            *ngFor="let cardBadge of cardBadges"
+            [text]="cardBadge.text"
+            [type]="cardBadge.type"
+            [link]="cardBadge.link"
+            [route]="cardBadge.route"
+          ></o-badge>
+        </div>
+      </ng-container>
+
+      <ng-content select="o-card-title"></ng-content>
+
+      <h3 *ngIf="title" class="card-title">
+        <ng-container *ngIf="isBordered; else cardUnbordered">
+          <a #card [routerLink]="route" [class.card-title-link]="true" [class.ellipsis-3]="isTitleTruncate">
+            {{ title }}
+          </a>
+        </ng-container>
+        <ng-template #cardUnbordered>
+          <a #card [routerLink]="route" [class.ellipsis-3]="isTitleTruncate">{{ title }}</a>
+        </ng-template>
+      </h3>
+
+      <ng-content select="o-card-content"></ng-content>
+      <p *ngIf="description" class="card-text">{{ description }}</p>
+
+      <ng-content select="o-card-footer"></ng-content>
+      <div class="card-info" *ngIf="infoContent">
+        <ng-content></ng-content>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"> </ng-container>
+  </div>
+</div>

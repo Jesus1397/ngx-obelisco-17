@@ -1,0 +1,25 @@
+<nav [ngClass]="customClasses">
+  <ul class="nav flex-row nav-pills">
+    <li class="nav-item" *ngFor="let item of navHorItems; index as i">
+      <a
+        #navLink
+        class="nav-link"
+        [class.border-link]="isBordered"
+        [class.disabled]="item.isDisabled"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: exactRouteActive ? true : false }"
+        [routerLink]="item.route"
+        [ngClass]="size ? 'nav-link-' + size : ''"
+      >
+        <div *ngIf="i === 0 && item.icon; else simpleTitle" class="nav-icon">
+          <i [class]="item.icon"></i>
+          <span>{{ item.title }}</span>
+        </div>
+        <ng-template #simpleTitle>
+          <span>{{ item.title }}</span>
+        </ng-template>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- (click)="scrollToTop()" -->

@@ -1,4 +1,7 @@
-import { DataSource, TooltipDirections } from '@gcba/ngx-obelisco/core/models';
+import {
+  DataSource,
+  TooltipDirections,
+} from '@gcba/ngx-obelisco-17/core/models';
 
 interface Tooltip {
   name: string;
@@ -12,26 +15,41 @@ interface Tooltip {
 export const TOOLTIP_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/tooltip/api'
+    route: '/components/tooltip/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/tooltip/examples'
-  }
+    route: '/components/tooltip/examples',
+  },
 ];
 export const DATA_SOURCE_TOOLTIP: DataSource[] = [
   {
-    name: { data: '@Input() <br /> direction: TooltipDirections', customClasses: '' },
-    description: { data: 'Se utiliza para definir la dirección del Tooltip.', customClasses: '' }
+    name: {
+      data: '@Input() <br /> direction: TooltipDirections',
+      customClasses: '',
+    },
+    description: {
+      data: 'Se utiliza para definir la dirección del Tooltip.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> description: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el contenido.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir el contenido.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: "@Input() <br /> trigger: 'mouseenter' | 'click'", customClasses: '' },
-    description: { data: 'Se utiliza para definir el evento activador del tooltip.', customClasses: '' }
-  }
+    name: {
+      data: "@Input() <br /> trigger: 'mouseenter' | 'click'",
+      customClasses: '',
+    },
+    description: {
+      data: 'Se utiliza para definir el evento activador del tooltip.',
+      customClasses: '',
+    },
+  },
 ];
 
 export const TOOLTIP_DIRECTIONS = `
@@ -87,7 +105,7 @@ import { Component } from '@angular/core';
 export class ExampleComponent {
   public text: string = 'Esta es la descripción de un tooltip.';
 }
-    `
+    `,
   },
   {
     name: 'Derecha',
@@ -125,7 +143,7 @@ import { Component } from '@angular/core';
 export class ExampleComponent {
   public text: string = 'Esta es la descripción de un tooltip.';
 }
-    `
+    `,
   },
   {
     name: 'Izquierda',
@@ -163,7 +181,7 @@ import { Component } from '@angular/core';
 export class ExampleComponent {
   public text: string = 'Esta es la descripción de un tooltip.';
 }
-    `
+    `,
   },
   {
     name: 'Inferior',
@@ -201,7 +219,7 @@ import { Component } from '@angular/core';
 export class ExampleComponent {
   public text: string = 'Esta es la descripción de un tooltip.';
 }
-    `
+    `,
   },
   {
     name: 'Iconos',
@@ -249,6 +267,6 @@ import { Component } from '@angular/core';
 export class ExampleComponent {
   public text: string = 'Esta es la descripción de un tooltip.';
 }
-    `
-  }
+    `,
+  },
 ];

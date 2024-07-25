@@ -1,4 +1,7 @@
-import { DataSource, StatusMessageTypes } from '@gcba/ngx-obelisco/core/models';
+import {
+  DataSource,
+  StatusMessageTypes,
+} from '@gcba/ngx-obelisco-17/core/models';
 
 interface StatusMessage {
   name: string;
@@ -13,44 +16,56 @@ interface StatusMessage {
 export const STATUS_MESSAGE_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/status-message/api'
+    route: '/components/status-message/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/status-message/examples'
-  }
+    route: '/components/status-message/examples',
+  },
 ];
 
 export const DATA_SOURCE_STATUS_MESSAGE: DataSource[] = [
   {
-    name: { data: '@Input() <br /> type: StatusMessageTypes', customClasses: '' },
-    description: { data: 'Se utiliza para definir el tipo de mensaje que se quiere mostrar.', customClasses: '' }
+    name: {
+      data: '@Input() <br /> type: StatusMessageTypes',
+      customClasses: '',
+    },
+    description: {
+      data: 'Se utiliza para definir el tipo de mensaje que se quiere mostrar.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> title: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el título del mensaje.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir el título del mensaje.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br /> content: string | string[]', customClasses: '' },
+    name: {
+      data: '@Input() <br /> content: string | string[]',
+      customClasses: '',
+    },
     description: {
       data: 'Se utiliza para definir el texto del mensaje. Puede ser un string o un array de strings. Si es un array, se mostrará como dos párrafos separados.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> listContent: string[]', customClasses: '' },
     description: {
       data: 'Se utiliza para definir una lista de ítems que se mostrarán debajo del texto. Se puede armar con etiquetas html. No es obligatorio.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const STATUS_MESSAGE_TYPE = `
@@ -67,7 +82,7 @@ export const STATUS_MESSAGE_LIST: StatusMessage[] = [
     listContent: [
       'Éste es un ítem dentro de una lista que puede contener un <a href="#">enlace</a>.',
       'Los ítems pueden contener o no enlaces. Este es un ejemplo para un detalle que no lleva enlace.',
-      'Éste es otro ítem dentro de una lista.'
+      'Éste es otro ítem dentro de una lista.',
     ],
     exampleHTML: `
 <o-status-message
@@ -93,7 +108,7 @@ export class ExampleComponent {
     'Éste es otro ítem dentro de una lista.'
   ]
 }
-    `
+    `,
   },
   {
     name: 'Advertencia',
@@ -104,7 +119,7 @@ export class ExampleComponent {
     listContent: [
       'Contar con Clave Ciudad de <a href="#">AGIP</a>',
       'Cargar en el Sistema de Tramitación a Distancia (TAD) la siguiente documentación obligatoria:',
-      'Anexo II Formulario de Presentación de Programa de Capacitación'
+      'Anexo II Formulario de Presentación de Programa de Capacitación',
     ],
     exampleHTML: `
 <o-status-message
@@ -131,7 +146,7 @@ export class ExampleComponent {
     'Anexo II Formulario de Presentación de Programa de Capacitación'
   ]
 }
-    `
+    `,
   },
   {
     name: 'Información',
@@ -139,7 +154,7 @@ export class ExampleComponent {
     title: 'Esto es un título de un mensaje de información',
     content: [
       'Este es un párrafo que brinda información necesaria con la finalidad de guiar y ayudar a las personas usuarias a finalizar un proceso o iniciar uno nuevo.',
-      'Este es un párrafo que brinda información necesaria con la finalidad de guiar y ayudar a las personas usuarias a finalizar un proceso o iniciar uno nuevo.'
+      'Este es un párrafo que brinda información necesaria con la finalidad de guiar y ayudar a las personas usuarias a finalizar un proceso o iniciar uno nuevo.',
     ],
     exampleHTML: `
 <o-status-message
@@ -163,7 +178,7 @@ export class ExampleComponent {
     'Este es un párrafo que brinda información necesaria con la finalidad de guiar y ayudar a las personas usuarias a finalizar un proceso o iniciar uno nuevo.'
   ]
 }
-    `
+    `,
   },
   {
     name: 'Error',
@@ -174,7 +189,7 @@ export class ExampleComponent {
     listContent: [
       'Contar con Clave Ciudad de <a href="#">AGIP</a>',
       'Cargar en el Sistema de Tramitación a Distancia (TAD) la siguiente documentación obligatoria:',
-      'Anexo II Formulario de Presentación de Programa de Capacitación'
+      'Anexo II Formulario de Presentación de Programa de Capacitación',
     ],
     exampleHTML: `
 <o-status-message
@@ -201,12 +216,13 @@ export class ExampleComponent {
     'Anexo II Formulario de Presentación de Programa de Capacitación'
   ]
 }
-    `
+    `,
   },
   {
     name: 'Institucional',
     type: 'institutional',
-    title: 'Este es un mensaje institucional del Gobierno de la Ciudad de Buenos Aires',
+    title:
+      'Este es un mensaje institucional del Gobierno de la Ciudad de Buenos Aires',
     content:
       "En el cuerpo de este componente pueden ir enlaces o botones: <a href='#'>https://ejemplo.buenosaires.gob.ar</a>",
     exampleHTML: `
@@ -219,6 +235,6 @@ export class ExampleComponent {
     Ir al sitio web
   </o-button>
 </o-status-message>
-    `
-  }
+    `,
+  },
 ];

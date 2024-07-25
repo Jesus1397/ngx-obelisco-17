@@ -1,56 +1,74 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const BUTTON_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/button/api'
+    route: '/components/button/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/button/examples'
-  }
+    route: '/components/button/examples',
+  },
 ];
 
 /* BUTTON-API */
 export const BUTTON_GENERAL_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> type: ButtonTypes', customClasses: '' },
-    description: { data: 'Se utiliza para establecer el tipo de botón. Por defecto es primary.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para establecer el tipo de botón. Por defecto es primary.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> isOutline: boolean', customClasses: '' },
-    description: { data: 'Se utiliza para definir si es un botón con borde. Por defecto es false.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir si es un botón con borde. Por defecto es false.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> size: Sizes', customClasses: '' },
-    description: { data: 'Se utiliza para establecer el tamaño del botón. Por defecto es mediano.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para establecer el tamaño del botón. Por defecto es mediano.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> isExpandable: boolean', customClasses: '' },
-    description: { data: 'Se utiliza para definir si es un botón expandible. Por defecto es false.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir si es un botón expandible. Por defecto es false.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> ariaLabel: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir el atributo aria-label, en el caso de que el botón no posea texto.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> hasIcon: boolean', customClasses: '' },
-    description: { data: 'Se utiliza para definir si el botón tiene un ícono.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir si el botón tiene un ícono.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> hasSpinner: boolean', customClasses: '' },
-    description: { data: 'Se utiliza para definir si el botón tiene un spinner.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir si el botón tiene un spinner.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const BUTTON_LINK_DATA_SOURCE: DataSource[] = [
@@ -58,62 +76,68 @@ export const BUTTON_LINK_DATA_SOURCE: DataSource[] = [
     name: { data: '@Input() <br/> route: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir la ruta de la etiqueta &lt;a&gt;, mediante el routerLink de Angular.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> link: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir el link de la etiqueta &lt;a&gt;, mediante el href de HTML.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> target: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir el atributo target de la etiqueta &lt;a&gt;. Por defecto es "_blank".',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> download: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el atributo download de la etiqueta &lt;a&gt;.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir el atributo download de la etiqueta &lt;a&gt;.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> rel: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir el atributo rel de la etiqueta &lt;a&gt;. Por defecto es "noreferrer".',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const BUTTON_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> isDisabled: boolean', customClasses: '' },
-    description: { data: 'Se utiliza para definir tiene el atributo "disabled".', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir tiene el atributo "disabled".',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> dataTarget: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir el atributo "data-target" de la etiqueta &lt;button&gt;.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> dataToggle: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir el atributo "data-toggle" de la etiqueta &lt;button&gt;.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> dataDismiss: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir el atributo "data-dismiss" de la etiqueta &lt;button&gt;.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const BUTTON_TYPES = `

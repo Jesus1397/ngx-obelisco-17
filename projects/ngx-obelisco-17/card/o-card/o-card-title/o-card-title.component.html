@@ -1,0 +1,9 @@
+<ng-template #content><ng-content></ng-content></ng-template>
+<h3 class="card-title" [ngClass]="customClasses">
+  <a *ngIf="route" [routerLink]="route" [ngClass]="getClassesCardTitle()">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </a>
+  <a *ngIf="!route" [attr.href]="link" [ngClass]="getClassesCardTitle()">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </a>
+</h3>

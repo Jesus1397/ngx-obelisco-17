@@ -1,14 +1,14 @@
-import { ActiveDay } from '@gcba/ngx-obelisco/core/models';
+import { ActiveDay } from '@gcba/ngx-obelisco-17/core/models';
 
 export const CALENDAR_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/calendar/api'
+    route: '/components/calendar/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/calendar/examples'
-  }
+    route: '/components/calendar/examples',
+  },
 ];
 
 // CALENDAR-EXAMPLES
@@ -18,7 +18,7 @@ export const CALENDAR_NO_EVENTS_HTML = `
 export const CALENDAR_DEFAULT: ActiveDay[] = [
   { day: 1, title: 'Nombre del evento 1.' },
   { day: 10, title: 'Nombre del evento 2.' },
-  { day: 25, title: 'Nombre del evento 3.' }
+  { day: 25, title: 'Nombre del evento 3.' },
 ];
 
 export const CALENDAR_DEFAULT_HTML = `
@@ -44,7 +44,7 @@ export class ExampleComponent {
 export const CALENDAR_LINK: ActiveDay[] = [
   { day: 1, title: 'Nombre del evento 1.', url: '#' },
   { day: 10, title: 'Nombre del evento 2.', url: '#' },
-  { day: 25, title: 'Nombre del evento 3.', url: '#' }
+  { day: 25, title: 'Nombre del evento 3.', url: '#' },
 ];
 
 export const CALENDAR_LINK_HTML = `
@@ -71,7 +71,7 @@ export const CALENDAR_TWO_REFERENCES: ActiveDay[] = [
   { day: 1, title: 'Nombre del evento 1.', type: 'secondary' },
   { day: 9, title: 'Nombre del evento 2.' },
   { day: [12, 13], title: 'Nombre del evento 3.', type: 'secondary' },
-  { day: [25, 26, 27], title: 'Nombre del evento 4.' }
+  { day: [25, 26, 27], title: 'Nombre del evento 4.' },
 ];
 
 export const CALENDAR_TWO_REFERENCES_HTML = `
@@ -101,7 +101,7 @@ export const CALENDAR_COLLAPSE: ActiveDay[] = [
   { day: 12, title: 'Nombre del evento 3.' },
   { day: 15, title: 'Nombre del evento 4.' },
   { day: 23, title: 'Nombre del evento 5.' },
-  { day: 27, title: 'Nombre del evento 6.' }
+  { day: 27, title: 'Nombre del evento 6.' },
 ];
 
 export const CALENDAR_COLLAPSE_HTML = `
@@ -140,7 +140,7 @@ export const CALENDAR_CROMATIC_REF: ActiveDay[] = [
   { day: 10, title: 'Nombre del evento 10.', type: 'avocado' },
   { day: 11, title: 'Nombre del evento 11.', type: 'strawberry' },
   { day: 12, title: 'Nombre del evento 12.', type: 'blackberry' },
-  { day: 13, title: 'Nombre del evento 13.', type: 'gray' }
+  { day: 13, title: 'Nombre del evento 13.', type: 'gray' },
 ];
 
 export const CALENDAR_CROMATIC_REF_HTML = `
@@ -180,12 +180,12 @@ export const CALENDAR_DECK: { [key: string]: ActiveDay[] } = {
   APRIL: [{ day: 13, title: 'Nombre del evento.' }],
   MAY: [
     { day: 1, title: 'Nombre del evento.' },
-    { day: 25, title: 'Nombre del evento.' }
+    { day: 25, title: 'Nombre del evento.' },
   ],
   JUNE: [{ day: 16, title: 'Nombre del evento.' }],
   JULY: [
     { day: 9, title: 'Nombre del evento.' },
-    { day: [21, 22, 23], title: 'Nombre del evento.' }
+    { day: [21, 22, 23], title: 'Nombre del evento.' },
   ],
   AUGUST: [{ day: 21, title: 'Nombre del evento.' }],
   SEPTEMBER: [{ day: 20, title: 'Nombre del evento.' }],
@@ -193,8 +193,8 @@ export const CALENDAR_DECK: { [key: string]: ActiveDay[] } = {
   NOVEMBER: [{ day: 18, title: 'Nombre del evento.' }],
   DECEMBER: [
     { day: 2, title: 'Nombre del evento.' },
-    { day: 31, title: 'Nombre del evento.' }
-  ]
+    { day: 31, title: 'Nombre del evento.' },
+  ],
 };
 
 export const CALENDAR_DECK_HTML = `
@@ -251,26 +251,34 @@ export class ExampleComponent {
 export const CALENDAR_DATA_SOURCE = [
   {
     name: { data: '@Input() <br/> date: CalendarDate' },
-    description: { data: 'Se utiliza para establecer el mes y año del calendario.' }
+    description: {
+      data: 'Se utiliza para establecer el mes y año del calendario.',
+    },
   },
   {
     name: { data: '@Input() <br/> activeDays: ActiveDay[]' },
-    description: { data: 'Se utiliza para definir los días que tienen referencias }en el calendario.' }
+    description: {
+      data: 'Se utiliza para definir los días que tienen referencias }en el calendario.',
+    },
   },
   {
     name: { data: '@Input() <br/> isCollapsed: boolean' },
-    description: { data: 'Se utiliza para definir si lleva un colapsable para las} referencias. Por defecto es false.' }
+    description: {
+      data: 'Se utiliza para definir si lleva un colapsable para las} referencias. Por defecto es false.',
+    },
   },
   {
     name: { data: '@Input() <br/> hasList: boolean' },
-    description: { data: 'Se utiliza para definir si lleva la lista de las referencias.} Por defecto es true.' }
+    description: {
+      data: 'Se utiliza para definir si lleva la lista de las referencias.} Por defecto es true.',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string' },
     description: {
-      data: 'Se utiliza para aplicar clases personalizadas al c}omponente para personalizar su apariencia.'
-    }
-  }
+      data: 'Se utiliza para aplicar clases personalizadas al c}omponente para personalizar su apariencia.',
+    },
+  },
 ];
 
 export const ACTIVEDAY_INTERFACE = `
@@ -292,35 +300,39 @@ interface CalendarDate {
 export const ACTIVEDAY_DATA_SOURCE = [
   {
     name: { data: 'day: number | number[]' },
-    description: { data: 'Se utiliza para definir el día o días que lleva la referencia.' }
+    description: {
+      data: 'Se utiliza para definir el día o días que lleva la referencia.',
+    },
   },
   {
     name: { data: 'title: string' },
-    description: { data: 'Se utiliza para definir el texto de la referencia.' }
+    description: { data: 'Se utiliza para definir el texto de la referencia.' },
   },
   {
     name: { data: 'url: string' },
-    description: { data: 'Se utiliza para definir la ruta de la referencia.' }
+    description: { data: 'Se utiliza para definir la ruta de la referencia.' },
   },
   {
     name: { data: 'type: ActiveDayTypes' },
-    description: { data: 'Se utiliza para definir el tipo de la referencia.' }
+    description: { data: 'Se utiliza para definir el tipo de la referencia.' },
   },
   {
     name: { data: 'isDisabled: boolean' },
-    description: { data: 'Se utiliza para definir si la referencia esta deshabilitada.' }
-  }
+    description: {
+      data: 'Se utiliza para definir si la referencia esta deshabilitada.',
+    },
+  },
 ];
 
 export const CALENDAR_DATE_DATA_SOURCE = [
   {
     name: { data: 'month: number' },
-    description: { data: 'Se utiliza para definir el mes.' }
+    description: { data: 'Se utiliza para definir el mes.' },
   },
   {
     name: { data: 'year: number' },
-    description: { data: 'Se utiliza para definir el año.' }
-  }
+    description: { data: 'Se utiliza para definir el año.' },
+  },
 ];
 
 export const ACTIVEDAY_TYPES = `

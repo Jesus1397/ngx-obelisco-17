@@ -1,35 +1,38 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const SPINNER_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/spinner/api'
+    route: '/components/spinner/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/spinner/examples'
-  }
+    route: '/components/spinner/examples',
+  },
 ];
 
 export const SPINNER_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> type: SpinnerTypes', customClasses: '' },
-    description: { data: 'Se utiliza para establecer el color del spinner. Por defecto es info.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para establecer el color del spinner. Por defecto es info.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> size: Sizes', customClasses: '' },
     description: {
       data: 'Se utiliza para establecer el tamaño del spinner. Por defecto es mediano.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> isExpandable: boolean', customClasses: '' },
     description: {
       data: 'Se utiliza para establecer si el spinner es expandible. Por defecto es false.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const SPINNER_COLORS = `

@@ -1,0 +1,33 @@
+<section class="section-components">
+  <div class="sidebar">
+    <o-nav-vertical [navVertItems]="componentsNavigation"></o-nav-vertical>
+    <br />
+    <o-nav-vertical [navVertItems]="iconsNavigation"></o-nav-vertical>
+    <br />
+    <o-nav-vertical [navVertItems]="othersNavigation"></o-nav-vertical>
+  </div>
+  <div class="component-description-content">
+    <h1 class="h2 title-component" #componentTitle>{{ title }}</h1>
+
+    <ng-container *ngIf="!isComponentTemplate; else componentTemplate">
+      <div class="component-detail" #childComponent>
+        <router-outlet></router-outlet>
+      </div>
+    </ng-container>
+
+    <ng-template #componentTemplate>
+      <div class="container mt-5">
+        <div class="card-deck max-cards-3 card-column">
+          <o-card
+            *ngFor="let component of componentsNavigation"
+            [title]="component.title"
+            [route]="component.route"
+            [image]="component.image || {}"
+            [isBordered]="true"
+          >
+          </o-card>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</section>

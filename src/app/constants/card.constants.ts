@@ -1,14 +1,14 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const CARD_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/card/api'
+    route: '/components/card/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/card/examples'
-  }
+    route: '/components/card/examples',
+  },
 ];
 
 //CARDS API
@@ -17,59 +17,89 @@ export const CARD_DATA_SOURCE: DataSource[] = [
     name: { data: '@Input() <br/> isHorizontal: boolean', customClasses: '' },
     description: {
       data: 'Indica si el componente tendrá una dirección horizontal. Por defecto es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> isBordered: boolean', customClasses: '' },
-    description: { data: 'Indica si el componente tendrá borde. Por defecto es false.', customClasses: '' }
+    description: {
+      data: 'Indica si el componente tendrá borde. Por defecto es false.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> isThemeCard: boolean', customClasses: '' },
-    description: { data: 'Indica si el componente es horizontal temática. Por defecto es false.', customClasses: '' }
+    description: {
+      data: 'Indica si el componente es horizontal temática. Por defecto es false.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> title: string', customClasses: '' },
-    description: { data: 'Establece el título de la tarjeta.', customClasses: '' }
+    description: {
+      data: 'Establece el título de la tarjeta.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br/> isTitleTruncate: boolean', customClasses: '' },
+    name: {
+      data: '@Input() <br/> isTitleTruncate: boolean',
+      customClasses: '',
+    },
     description: {
       data: 'Indica si el titulo del componente se trunca cuando es extenso. Por defecto es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> description: string', customClasses: '' },
-    description: { data: 'Define el contenido de texto principal de la tarjeta.', customClasses: '' }
+    description: {
+      data: 'Define el contenido de texto principal de la tarjeta.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> link: string', customClasses: '' },
-    description: { data: 'Establece un enlace URL para la tarjeta.', customClasses: '' }
+    description: {
+      data: 'Establece un enlace URL para la tarjeta.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> route: string', customClasses: '' },
-    description: { data: 'Especifica la ruta de navegación para la tarjeta.', customClasses: '' }
+    description: {
+      data: 'Especifica la ruta de navegación para la tarjeta.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> icon: string', customClasses: '' },
-    description: { data: 'Define el ícono que se mostrará en la tarjeta.', customClasses: '' }
+    description: {
+      data: 'Define el ícono que se mostrará en la tarjeta.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> image: MediaImage', customClasses: '' },
-    description: { data: 'Define la imagen principal de la tarjeta.', customClasses: '' }
+    description: {
+      data: 'Define la imagen principal de la tarjeta.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> headline: string', customClasses: '' },
-    description: { data: 'Establece el titular del evento o componente.', customClasses: '' }
+    description: {
+      data: 'Establece el titular del evento o componente.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> cardBadges: CardBadge[]', customClasses: '' },
     description: {
       data: 'Define las etiquetas del componente. Debe ser un arreglo de objetos CardBadge. Por defecto type es "secondary".',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const CARD_BADGES_INTERFACE = `
@@ -84,20 +114,32 @@ export const CARD_BADGES_INTERFACE = `
 export const CARD_BADGE_DATA_SOURCE: DataSource[] = [
   {
     name: { data: 'text: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el texto de la etiqueta.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir el texto de la etiqueta.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'type: BadgeTypes', customClasses: '' },
-    description: { data: 'Se utiliza para definir el tipo de etiqueta.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir el tipo de etiqueta.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'link: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir enlace o URL.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir enlace o URL.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'route: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir una ruta de navegación interna.', customClasses: '' }
-  }
+    description: {
+      data: 'Se utiliza para definir una ruta de navegación interna.',
+      customClasses: '',
+    },
+  },
 ];
 
 export const MEDIAIMAGE_CARDS_INTERFACE = `
@@ -112,12 +154,16 @@ interface MediaImage extends Media {
 export const MEDIAIMAGE_CARDS_DATA_SOURCE = [
   {
     name: { data: 'src: string' },
-    description: { data: 'Se utiliza para definir la url del elemento multimedia.' }
+    description: {
+      data: 'Se utiliza para definir la url del elemento multimedia.',
+    },
   },
   {
     name: { data: 'alt: string' },
-    description: { data: 'Se utiliza para definir el texto alternativo de la imagen.' }
-  }
+    description: {
+      data: 'Se utiliza para definir el texto alternativo de la imagen.',
+    },
+  },
 ];
 
 export const CARD_SECTIONS_DATA_SOURCE: DataSource[] = [
@@ -125,65 +171,65 @@ export const CARD_SECTIONS_DATA_SOURCE: DataSource[] = [
     name: { data: 'o-card-header', customClasses: 'font-italic' },
     description: {
       data: 'Sección anclada a la parte superior del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-card-title', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza dentro de o-card-header, para establecer el título.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-card-headline', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza dentro de o-card-header, para establecer el titular.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-card-badges', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza dentro de o-card-header, para definir las etiquetas.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-card-content', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza para establecer el contenido del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-card-description', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza dentro de o-card-content, para establecer el texto descriptivo.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-card-image', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza para establecer la imagen del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-card-icon', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza para establecer el ícono del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-card-footer', customClasses: 'font-italic' },
     description: {
       data: 'Sección anclada a la parte inferior del componente.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const CARD_TITLE_DATA_SOURCE: DataSource[] = [
@@ -191,24 +237,33 @@ export const CARD_TITLE_DATA_SOURCE: DataSource[] = [
     name: { data: '@Input() <br/> isTruncate: boolean', customClasses: '' },
     description: {
       data: 'Indica si el titulo del componente se trunca cuando es extenso. Por defecto es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> link: string', customClasses: '' },
-    description: { data: 'Establece un enlace URL para la tarjeta.', customClasses: '' }
+    description: {
+      data: 'Establece un enlace URL para la tarjeta.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> route: string', customClasses: '' },
-    description: { data: 'Especifica la ruta interna de navegación para la tarjeta.', customClasses: '' }
-  }
+    description: {
+      data: 'Especifica la ruta interna de navegación para la tarjeta.',
+      customClasses: '',
+    },
+  },
 ];
 
 export const CARD_IMAGE_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> image: MediaImage', customClasses: '' },
-    description: { data: 'Define la imagen principal de la tarjeta.', customClasses: '' }
-  }
+    description: {
+      data: 'Define la imagen principal de la tarjeta.',
+      customClasses: '',
+    },
+  },
 ];
 
 export const CARD_SECTIONS_VERTICAL = `
@@ -265,17 +320,17 @@ export const CARD_SECTIONS_HORIZONTAL = `
 //CARD EXAMPLES
 export const CARD_HORIZONTAL_IMAGE = {
   src: '/assets/cards/img-left.jpg',
-  alt: 'descripción de imagen'
+  alt: 'descripción de imagen',
 };
 
 export const CARD_THEME_IMAGE = {
   src: '/assets/cards/home.svg',
-  alt: 'descripción de imagen'
+  alt: 'descripción de imagen',
 };
 
 export const CARD_VERTICAL_IMAGE = {
   src: '/assets/cards/img-top.jpg',
-  alt: 'descripción de imagen'
+  alt: 'descripción de imagen',
 };
 
 export const CARD_THEME_HTML = `

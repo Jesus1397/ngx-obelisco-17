@@ -1,0 +1,6 @@
+::ng-deep o-card o-badge {
+  margin-right: 0.75rem;
+  &:last-child {
+    margin-right: 0;
+  }
+}

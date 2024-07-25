@@ -1,68 +1,83 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const MODAL_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/modal/api'
+    route: '/components/modal/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/modal/examples'
-  }
+    route: '/components/modal/examples',
+  },
 ];
 /* MODAL-API */
 export const MODAL_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> dataTarget: string', customClasses: '' },
-    description: { data: 'Se utiliza para identificar el componente.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para identificar el componente.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> title: string', customClasses: '' },
-    description: { data: 'Se utiliza para mostrar el título del componente.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para mostrar el título del componente.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> description: string', customClasses: '' },
-    description: { data: 'Se utiliza para mostrar la descripción del componente.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para mostrar la descripción del componente.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> subtitle: string', customClasses: '' },
-    description: { data: 'Se utiliza para mostrar el subtítulo del componente.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para mostrar el subtítulo del componente.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br/> isHeaderUnbordered: boolean', customClasses: '' },
+    name: {
+      data: '@Input() <br/> isHeaderUnbordered: boolean',
+      customClasses: '',
+    },
     description: {
       data: 'Se utiliza para mostrar la linea divisora entre el encabezado y cuerpo del componente. Por defecto, es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> size: ModalSizes', customClasses: '' },
     description: {
       data: 'Se utiliza para establecer el tamaño del modal. Por defecto, es chico.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> isScrollable: boolean', customClasses: '' },
     description: {
       data: 'Se utiliza para establecer si el modal es desplazable. Por defecto, es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> isOnTop: boolean', customClasses: '' },
     description: {
       data: 'Se utiliza para establecer si el modal se muestra en la parte de arriba de la página. Por defecto, es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const MODAL_SIZES = `
@@ -74,30 +89,30 @@ export const MODAL_SECTIONS_DATA_SOURCE: DataSource[] = [
     name: { data: 'o-modal-header', customClasses: 'font-italic' },
     description: {
       data: 'Sección anclada a la parte superior del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-modal-title', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza dentro de o-modal-header, para establecer el título del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-modal-content', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza para establecer el contenido del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-modal-footer', customClasses: 'font-italic' },
     description: {
       data: 'Sección anclada a la parte inferior del componente.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const MODAL_SECTIONS = `

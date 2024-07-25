@@ -1,14 +1,14 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const BADGE_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/badge/api'
+    route: '/components/badge/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/badge/examples'
-  }
+    route: '/components/badge/examples',
+  },
 ];
 /* BADGE-API */
 export const BADGE_DATA_SOURCE: DataSource[] = [
@@ -16,37 +16,37 @@ export const BADGE_DATA_SOURCE: DataSource[] = [
     name: { data: '@Input() <br/> type: BadgeTypes', customClasses: '' },
     description: {
       data: 'Se utiliza para establecer el color de la etiqueta. Por defecto es secondary.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> link: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir la URL a la que se debe redirigir el componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> route: string', customClasses: '' },
     description: {
       data: 'Se utiliza para especificar la ruta de navegación que debe seguir el componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> text: string', customClasses: '' },
     description: {
       data: 'Puede ser utilizado para establecer el texto de la etiqueta.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const BADGE_TYPES = `

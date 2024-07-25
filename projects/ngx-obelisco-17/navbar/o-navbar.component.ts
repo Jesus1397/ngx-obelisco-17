@@ -4,8 +4,8 @@ import {
   NavbarRouteAccount,
   NavbarRouteLogin,
   SearchbarItem,
-} from '@gcba/ngx-obelisco/core/models';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
+} from '@gcba/ngx-obelisco-17/core/models';
+import { OCustomContentDirective } from '@gcba/ngx-obelisco-17/directives';
 import {
   AfterViewInit,
   Component,

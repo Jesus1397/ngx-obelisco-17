@@ -1,0 +1,58 @@
+<nav
+  [class.tabs-slider]="true"
+  [class.px-0]="!isSlidered"
+  [ngClass]="customClasses"
+  aria-label="Navegación por pestañas"
+>
+  <ul
+    #tabsList
+    class="nav nav-pills tabs"
+    [class.nav-box]="isItemsRounded"
+    [class.nav-box-bg]="isItemsRoundedLight"
+    [class.fixedWidth]="isFixedWidth"
+  >
+    <li class="nav-item" *ngFor="let tab of navTabsItems; let i = index">
+      <a
+        class="nav-link"
+        [class.active]="i === activeTabIndex"
+        [class.disabled]="tab.isDisabled"
+        (click)="handleTabClick(i, $event)"
+        [ngClass]="{
+          'nav-link-lg': size === 'lg',
+          'nav-link-sm': size === 'sm'
+        }"
+        tabindex="0"
+        (keyup)="handleTabKeyup($event, i)"
+      >
+        <div class="nav-icon">
+          <ng-container *ngIf="tab.icon">
+            <ng-container *ngIf="tab.icon.includes('bx')">
+              <i [ngClass]="tab.icon"></i>
+            </ng-container>
+            <ng-container *ngIf="!tab.icon.includes('bx')">
+              <span class="material-icons-round" aria-hidden="true">{{ tab.icon }}</span>
+            </ng-container>
+          </ng-container>
+          {{ tab.title }}
+          <ng-container *ngIf="tab.iconRight">
+            <ng-container *ngIf="tab.icon && tab.icon.includes('bx')">
+              <i [ngClass]="tab.icon"></i>
+            </ng-container>
+            <ng-container *ngIf="tab.icon && !tab.icon.includes('bx')">
+              <span class="material-icons-round" aria-hidden="true">{{ tab.icon }}</span>
+            </ng-container>
+          </ng-container>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+  <div class="icons-container" *ngIf="isSlidered">
+    <button type="button" class="right-left icon" id="left">
+      <span class="material-icons-round" aria-hidden="true">arrow_back_ios</span>
+    </button>
+    <button type="button" class="right-left icon" id="right">
+      <span class="material-icons-round" aria-hidden="true">arrow_forward_ios</span>
+    </button>
+  </div>
+</nav>

@@ -1,14 +1,14 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const BANNER_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/banner/api'
+    route: '/components/banner/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/banner/examples'
-  }
+    route: '/components/banner/examples',
+  },
 ];
 
 /* BANNER-API */
@@ -17,50 +17,53 @@ export const BANNER_DATA_SOURCE: DataSource[] = [
     name: { data: '@Input() <br/> isDark: boolean', customClasses: '' },
     description: {
       data: 'Se utiliza para establecer el color de fondo del banner. Por defecto es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> content: string', customClasses: '' },
-    description: { data: 'Se utiliza para establecer el contenido del banner.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para establecer el contenido del banner.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> icon: string', customClasses: '' },
     description: {
       data: 'Se utiliza para definir el ícono del banner. Se debe utilizar íconos de boxicons o material icons round.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 export const BANNER_SECTIONS_DATA_SOURCE: DataSource[] = [
   {
     name: { data: 'o-banner-text', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza para establecer el texto del banner.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-banner-icon', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza para establecer el ícono del banner.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-banner-actions', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza como contenedor para los botones.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 export const BANNER_SECTIONS = `
 <o-banner [isDark]="true">

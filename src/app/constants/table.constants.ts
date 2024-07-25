@@ -1,56 +1,70 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const TABLE_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/table/api'
+    route: '/components/table/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/table/examples'
-  }
+    route: '/components/table/examples',
+  },
 ];
 
 export const TABLE_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> id: string' },
-    description: { data: 'Se utiliza para definir el identificador de la tabla.' }
+    description: {
+      data: 'Se utiliza para definir el identificador de la tabla.',
+    },
   },
   {
     name: { data: '@Input() <br/> columns: Column[]' },
-    description: { data: 'Se utiliza para definir las columnas que se mostrarán en la tabla.' }
+    description: {
+      data: 'Se utiliza para definir las columnas que se mostrarán en la tabla.',
+    },
   },
   {
     name: { data: '@Input() <br/> dataSource: DataSource[]' },
-    description: { data: 'Se utiliza para definir los datos que se mostrarán en la tabla.' }
+    description: {
+      data: 'Se utiliza para definir los datos que se mostrarán en la tabla.',
+    },
   },
   {
     name: { data: '@Input() <br/> isBordered: boolean' },
-    description: { data: 'Se utiliza para definir si la tabla tendrá bordes.' }
+    description: { data: 'Se utiliza para definir si la tabla tendrá bordes.' },
   },
   {
     name: { data: '@Input() <br/> isStriped: boolean' },
-    description: { data: 'Se utiliza para definir si la tabla tendrá rayas.' }
+    description: { data: 'Se utiliza para definir si la tabla tendrá rayas.' },
   },
   {
     name: { data: '@Input() <br/> isScrollable: boolean' },
-    description: { data: 'Se utiliza para habilitar el desplazamiento horizontal de la tabla.' }
+    description: {
+      data: 'Se utiliza para habilitar el desplazamiento horizontal de la tabla.',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string' },
-    description: { data: 'Se utiliza para aplicar clases personalizadas al componente.' }
+    description: {
+      data: 'Se utiliza para aplicar clases personalizadas al componente.',
+    },
   },
   {
     name: { data: '@Input() <br/> checkbox: TableCheckbox' },
-    description: { data: 'Se utiliza para habilitar las casillas de verificación en la tabla.' }
-  }
+    description: {
+      data: 'Se utiliza para habilitar las casillas de verificación en la tabla.',
+    },
+  },
 ];
 
 export const TABLE_DATA_SOURCE_METHODS: DataSource[] = [
   {
-    name: { data: '@Output() <br/> dataSelectedChange: EventEmitter&lt;DataSource[]&gt' },
-    description: { data: 'Se utiliza para obtener el elemento seleccionado.' }
-  }
+    name: {
+      data: '@Output() <br/> dataSelectedChange: EventEmitter&lt;DataSource[]&gt',
+    },
+    description: { data: 'Se utiliza para obtener el elemento seleccionado.' },
+  },
 ];
 
 export const TABLA_COLUMN_INTERFACE: DataSource[] = [
@@ -58,59 +72,61 @@ export const TABLA_COLUMN_INTERFACE: DataSource[] = [
     name: { data: 'key' },
     description: {
       data: 'Se utiliza para definir el nombre de la propiedad del objeto. <br /> Que tiene que ser igual al que se especifica en el dataSource.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'value' },
     description: {
       data: 'Se utiliza para definir el nombre de la columna.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'customClasses' },
     description: {
       data: 'Se utiliza para definir clases para personalizar la columna.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const TABLA_DATASOURCE_INTERFACE: DataSource[] = [
   {
-    name: { data: '[key: string]: <br/>{ data: string; customClasses?: string } ' },
+    name: {
+      data: '[key: string]: <br/>{ data: string; customClasses?: string } ',
+    },
     description: {
-      data: 'Se utiliza para definir el esquema de datos para el origen de datos de la tabla. Cada clave representa una columna en la tabla, y su valor es un objeto que contiene los datos de la columna y opcionalmente clases personalizadas para esa columna.'
-    }
-  }
+      data: 'Se utiliza para definir el esquema de datos para el origen de datos de la tabla. Cada clave representa una columna en la tabla, y su valor es un objeto que contiene los datos de la columna y opcionalmente clases personalizadas para esa columna.',
+    },
+  },
 ];
 
 export const TABLA_TABLECHECKBOX_INTERFACE: DataSource[] = [
   {
     name: { data: 'title: string' },
     description: {
-      data: 'Se utiliza para definir el título de la casilla de verificación que permite seleccionar todas las filas de la tabla.'
-    }
+      data: 'Se utiliza para definir el título de la casilla de verificación que permite seleccionar todas las filas de la tabla.',
+    },
   },
   {
     name: { data: 'customClassesTh: string' },
     description: {
-      data: 'Se utiliza para aplicar clases personalizadas al encabezado de la columna de la casilla de verificación.'
-    }
+      data: 'Se utiliza para aplicar clases personalizadas al encabezado de la columna de la casilla de verificación.',
+    },
   },
   {
     name: { data: 'customClassesLabel: string' },
     description: {
-      data: 'Se utiliza para aplicar clases personalizadas a la etiqueta de la casilla de verificación.'
-    }
+      data: 'Se utiliza para aplicar clases personalizadas a la etiqueta de la casilla de verificación.',
+    },
   },
   {
     name: { data: 'isAllSelectable: string' },
     description: {
-      data: 'Se utiliza para definir si todas las filas de la tabla son seleccionables cuando se selecciona la casilla de verificación "Seleccionar todo".'
-    }
-  }
+      data: 'Se utiliza para definir si todas las filas de la tabla son seleccionables cuando se selecciona la casilla de verificación "Seleccionar todo".',
+    },
+  },
 ];
 
 export const TABLA_INTERFACE_COLUMN = `
@@ -173,7 +189,7 @@ export const TABLE_EXAMPLE_SELECTABLE_HTML = `
 ></o-table>`;
 export const TABLE_EXAMPLE_NORMAL_TS = `
 import { Component, OnInit } from '@angular/core';
-import { Column, DataSource } from '@gcba/ngx-obelisco/core/models';
+import { Column, DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -253,7 +269,7 @@ export class ExampleComponent {
 
 export const TABLE_EXAMPLE_SELECTABLE_TS = `
 import { Component, OnInit } from '@angular/core';
-import { Column, DataSource } from '@gcba/ngx-obelisco/core/models';
+import { Column, DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',

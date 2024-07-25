@@ -1,9 +1,9 @@
-import { CustomContent, DataSource } from '@gcba/ngx-obelisco/core/models';
+import { CustomContent, DataSource } from '@gcba/ngx-obelisco-17/core/models';
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
 const formattedExampleTsCodeAll = (array1: any, array2: any, array3: any) => `
 import { Component  } from '@angular/core';
-import { Link, Network, Phone } from '@gcba/ngx-obelisco/core/models';
+import { Link, Network, Phone } from '@gcba/ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -23,125 +23,171 @@ export class ExampleComponent {
 export const FOOTER_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/footer/api'
+    route: '/components/footer/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/footer/examples'
-  }
+    route: '/components/footer/examples',
+  },
 ];
 export const FOOTER_DATA_SOURCE: DataSource[] = [
   {
-    name: { data: '@Input() <br /> phoneCustomItems: Phone[]', customClasses: '' },
-    description: { data: 'Se utiliza para mostrar una lista personalizada de teléfonos.', customClasses: '' }
+    name: {
+      data: '@Input() <br /> phoneCustomItems: Phone[]',
+      customClasses: '',
+    },
+    description: {
+      data: 'Se utiliza para mostrar una lista personalizada de teléfonos.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br /> networkCustomItems: Network[]', customClasses: '' },
-    description: { data: 'Se utiliza para mostrar una lista personalizada de redes.', customClasses: '' }
+    name: {
+      data: '@Input() <br /> networkCustomItems: Network[]',
+      customClasses: '',
+    },
+    description: {
+      data: 'Se utiliza para mostrar una lista personalizada de redes.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br /> linkCustomItems: Link[]', customClasses: '' },
-    description: { data: 'Se utiliza para mostrar una lista personalizada de enlaces.', customClasses: '' }
+    name: {
+      data: '@Input() <br /> linkCustomItems: Link[]',
+      customClasses: '',
+    },
+    description: {
+      data: 'Se utiliza para mostrar una lista personalizada de enlaces.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br /> isPhoneSectionHidden: boolean', customClasses: '' },
-    description: { data: 'Se utiliza para ocultar la sección de teléfonos.', customClasses: '' }
+    name: {
+      data: '@Input() <br /> isPhoneSectionHidden: boolean',
+      customClasses: '',
+    },
+    description: {
+      data: 'Se utiliza para ocultar la sección de teléfonos.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br /> isNetworkSectionHidden: boolean', customClasses: '' },
-    description: { data: 'Se utiliza para ocultar la sección de redes.', customClasses: '' }
+    name: {
+      data: '@Input() <br /> isNetworkSectionHidden: boolean',
+      customClasses: '',
+    },
+    description: {
+      data: 'Se utiliza para ocultar la sección de redes.',
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br /> isLinkSectionHidden: boolean', customClasses: '' },
-    description: { data: 'Se utiliza para ocultar la sección de enlaces.', customClasses: '' }
+    name: {
+      data: '@Input() <br /> isLinkSectionHidden: boolean',
+      customClasses: '',
+    },
+    description: {
+      data: 'Se utiliza para ocultar la sección de enlaces.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> indicatorText: string', customClasses: '' },
-    description: { data: 'Se utiliza para ingresar el texto del indicador en la sección.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para ingresar el texto del indicador en la sección.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br /> customClassesIndicator: string', customClasses: '' },
+    name: {
+      data: '@Input() <br /> customClassesIndicator: string',
+      customClasses: '',
+    },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al Indicador componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const PHONE_CUSTOM_LIST = [
   {
     title: '101 - Numero Personalizado',
-    number: 101
+    number: 101,
   },
   {
     title: '102 - Numero Personalizado',
-    number: 102
+    number: 102,
   },
   {
     title: '103 - Numero Personalizado',
-    number: 103
-  }
+    number: 103,
+  },
 ];
 
 export const NETWORK_CUSTOM_LIST = [
   {
     title: 'Red personalizada',
     src: 'https://www.google.com/',
-    icon: 'bx bxs-info-circle'
+    icon: 'bx bxs-info-circle',
   },
   {
     title: 'Red personalizada',
     src: 'https://www.instagram.com/',
-    icon: 'bx bxs-info-circle'
+    icon: 'bx bxs-info-circle',
   },
   {
     title: 'Red personalizada',
     src: 'https://youtube.com/',
-    icon: 'bx bxs-info-circle'
-  }
+    icon: 'bx bxs-info-circle',
+  },
 ];
 
 export const LINK_CUSTOM_LIST = [
   {
     title: 'Título Personalizado',
-    src: 'https://buenosaires.gob.ar/inicio/'
+    src: 'https://buenosaires.gob.ar/inicio/',
   },
   {
     title: 'Título Personalizado',
-    src: 'https://buenosaires.gob.ar/inicio/'
+    src: 'https://buenosaires.gob.ar/inicio/',
   },
   {
     title: 'Título Personalizado',
-    src: 'https://buenosaires.gob.ar/inicio/'
-  }
+    src: 'https://buenosaires.gob.ar/inicio/',
+  },
 ];
 
 export const PHONE_CUSTOM_CONTENT: CustomContent = {
-  title: "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  title:
+    "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   content: [
     "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  ]
+    "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  ],
 };
 
 export const NETWORK_CUSTOM_CONTENT: CustomContent = {
-  title: "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  title:
+    "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   content: [
     "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  ]
+    "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  ],
 };
 
 export const LINK_CUSTOM_CONTENT: CustomContent = {
-  title: "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  content: "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  title:
+    "<i class='bx bxs-check-circle'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  content:
+    "<i class='bx bxs-wrench'></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 };
 
 export const FOOTER_INTERFACE_PHONE = `
@@ -169,38 +215,59 @@ interface Link {
 export const FOOTER_INTERFACE_PHONE_DATA_SOURCE: DataSource[] = [
   {
     name: { data: 'title: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el nombre.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir el nombre.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'number: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el número del telefono.', customClasses: '' }
-  }
+    description: {
+      data: 'Se utiliza para definir el número del telefono.',
+      customClasses: '',
+    },
+  },
 ];
 
 export const FOOTER_INTERFACE_NETWORK_DATA_SOURCE: DataSource[] = [
   {
     name: { data: 'title: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el nombre de la red social.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir el nombre de la red social.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'src: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir la url de la red social.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir la url de la red social.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'icon: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el icono de la red social.', customClasses: '' }
-  }
+    description: {
+      data: 'Se utiliza para definir el icono de la red social.',
+      customClasses: '',
+    },
+  },
 ];
 
 export const FOOTER_INTERFACE_LINKS_DATA_SOURCE: DataSource[] = [
   {
     name: { data: 'title: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir el nombre del enlace.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para definir el nombre del enlace.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'src: string', customClasses: '' },
-    description: { data: 'Se utiliza para definir la url del enlace.', customClasses: '' }
-  }
+    description: {
+      data: 'Se utiliza para definir la url del enlace.',
+      customClasses: '',
+    },
+  },
 ];
 
 export const FOOTER_EXAMPLE_LINKS_HTML = `
@@ -245,7 +312,7 @@ export const FOOTER_CUSTOM_LIST_TS = formattedExampleTsCodeAll(
 
 export const FOOTER_CUSTOM_CUSTOM_TS = `
 import { Component  } from '@angular/core';
-import { CustomContent } from '@gcba/ngx-obelisco/core/models';
+import { CustomContent } from '@gcba/ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',

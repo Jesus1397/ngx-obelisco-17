@@ -1,41 +1,44 @@
-import { AlertList, DataSource } from '@gcba/ngx-obelisco/core/models';
+import { AlertList, DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const ALERT_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/alert/api'
+    route: '/components/alert/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/alert/examples'
-  }
+    route: '/components/alert/examples',
+  },
 ];
 export const ALERT_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> type: AlertTypes', customClasses: '' },
-    description: { data: 'Se utiliza para establecer el tipo de la alerta. Por defecto es info.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para establecer el tipo de la alerta. Por defecto es info.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> isDismissible: boolean', customClasses: '' },
     description: {
       data: 'Se utiliza para definir si se mostrará el componente con cierre. Por defecto es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> listContent: AlertList', customClasses: '' },
     description: {
       data: 'Se utiliza para definir una lista en la alerta. ',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const ALERT_TYPES = `
@@ -55,19 +58,25 @@ export interface AlertListItems {
 `;
 export const ALERT_LIST_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
-    name: { data: '@Input() <br/> isUnorderedList: boolean', customClasses: '' },
+    name: {
+      data: '@Input() <br/> isUnorderedList: boolean',
+      customClasses: '',
+    },
     description: {
       data: 'Se utiliza para establecer si la lista dentro de la alerta debe ser una lista desordenada (con viñetas) o una lista ordenada (numerada). Por defecto es false (lista ordenada).',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br/> listItems: AlertListItems[]', customClasses: '' },
+    name: {
+      data: '@Input() <br/> listItems: AlertListItems[]',
+      customClasses: '',
+    },
     description: {
       data: 'Se utiliza para establecer los elementos de la lista, cada uno de los cuales puede tener un texto y una URL asociada. ',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const ALERT_EXAMPLE_COLORS = `
@@ -112,8 +121,8 @@ export const ALERT_EXAMPLE_LIST_LINK_ITEMS: AlertList = {
     { text: 'Ancla al error 2', url: '#' },
     { text: 'Ancla al error 3', url: '#' },
     { text: 'Ancla al error 4', url: '#' },
-    { text: 'Ancla al error 5', url: '#' }
-  ]
+    { text: 'Ancla al error 5', url: '#' },
+  ],
 };
 export const ALERT_EXAMPLE_LIST_ITEMS: AlertList = {
   listItems: [
@@ -121,8 +130,8 @@ export const ALERT_EXAMPLE_LIST_ITEMS: AlertList = {
     { text: 'Texto descriptivo 2' },
     { text: 'Texto descriptivo 3' },
     { text: 'Texto descriptivo 4' },
-    { text: 'Texto descriptivo 5' }
-  ]
+    { text: 'Texto descriptivo 5' },
+  ],
 };
 export const ALERT_EXAMPLE_LISTS_HTML = `
 <o-alert type="danger" [listContent]="listLinkItems">
@@ -137,7 +146,7 @@ export const ALERT_EXAMPLE_LISTS_HTML = `
 `;
 export const ALERT_EXAMPLE_LISTS_TS = `
 import { Component } from '@angular/core';
-import { AlertList } from '@gcba/ngx-obelisco/core/models';
+import { AlertList } from '@gcba/ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',

@@ -1,0 +1,119 @@
+<nav [ngClass]="customClasses">
+  <ul class="nav flex-column nav-pills nav-lg">
+    <li class="nav-item" *ngFor="let item of navVertItems; index as i">
+      <a
+        *ngIf="item.children && item.children?.length !== 0; else templateChild"
+        routerLinkActive="active-child"
+        class="nav-link"
+        [class.active-child]="navLink.isActive"
+        #navLink="routerLinkActive"
+        [class.disabled]="item.isDisabled"
+        [routerLink]="item.route"
+        (click)="scrollToTop()"
+      >
+        <div class="nav-icon">
+          <ng-container *ngIf="item.icon">
+            <i *ngIf="item.icon.includes('bx')" [ngClass]="item.icon"></i>
+            <span *ngIf="!item.icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{
+              item.icon
+            }}</span>
+          </ng-container>
+          <span>{{ item.title }}</span>
+        </div>
+      </a>
+      <ng-template #templateChild>
+        <a
+          class="nav-link"
+          [class.active]="navLinkSecondLevel.isActive"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: exactRouteActive ? true : false }"
+          #navLinkSecondLevel="routerLinkActive"
+          [routerLink]="item.route"
+          [class.disabled]="item.isDisabled"
+          (click)="scrollToTop()"
+        >
+          <div class="nav-icon">
+            <ng-container *ngIf="item.icon">
+              <i *ngIf="item.icon.includes('bx')" [ngClass]="item.icon"></i>
+              <span *ngIf="!item.icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{
+                item.icon
+              }}</span>
+            </ng-container>
+            <span>{{ item.title }}</span>
+          </div>
+        </a>
+      </ng-template>
+      <ul *ngFor="let secondItem of item.children; index as j" class="nav flex-column nav-pills">
+        <li class="nav-item">
+          <a
+            *ngIf="secondItem.children && secondItem.children?.length !== 0; else templateChild"
+            class="nav-link"
+            [class.active-child]="navLinkSecondLevel.isActive"
+            routerLinkActive="active-child"
+            #navLinkSecondLevel="routerLinkActive"
+            [routerLink]="secondItem.route"
+            [class.disabled]="item.isDisabled"
+            (click)="scrollToTop()"
+          >
+            <div class="nav-icon">
+              <ng-container *ngIf="secondItem.icon">
+                <i *ngIf="secondItem.icon.includes('bx')" [ngClass]="secondItem.icon"></i>
+                <span *ngIf="!secondItem.icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{
+                  secondItem.icon
+                }}</span>
+              </ng-container>
+              <i class="bx bxs-info-circle"></i>
+              <span>{{ secondItem.title }} </span>
+            </div>
+          </a>
+          <ng-template #templateChild>
+            <a
+              class="nav-link"
+              [class.active]="navLinkSecondLevel.isActive"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: exactRouteActive ? true : false }"
+              #navLinkSecondLevel="routerLinkActive"
+              [routerLink]="secondItem.route"
+              [class.disabled]="item.isDisabled"
+              (click)="scrollToTop()"
+            >
+              <div class="nav-icon">
+                <ng-container *ngIf="secondItem.icon">
+                  <i *ngIf="secondItem.icon.includes('bx')" [ngClass]="secondItem.icon"></i>
+                  <span *ngIf="!secondItem.icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{
+                    secondItem.icon
+                  }}</span>
+                </ng-container>
+                <span>{{ secondItem.title }} </span>
+              </div>
+            </a>
+          </ng-template>
+          <ul *ngFor="let thirdItem of secondItem.children; index as z" class="nav flex-column nav-pills">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [class.active]="navLinkThirdLevel.isActive"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: exactRouteActive ? true : false }"
+                #navLinkThirdLevel="routerLinkActive"
+                [routerLink]="thirdItem.route"
+                [class.disabled]="item.isDisabled"
+                (click)="scrollToTop()"
+              >
+                <div class="nav-icon">
+                  <ng-container *ngIf="thirdItem.icon">
+                    <i *ngIf="thirdItem.icon.includes('bx')" [ngClass]="thirdItem.icon"></i>
+                    <span *ngIf="!thirdItem.icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{
+                      thirdItem.icon
+                    }}</span>
+                  </ng-container>
+                  <span>{{ thirdItem.title }}</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

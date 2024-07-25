@@ -1,14 +1,14 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const BREADCRUMB_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/breadcrumb/api'
+    route: '/components/breadcrumb/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/breadcrumb/examples'
-  }
+    route: '/components/breadcrumb/examples',
+  },
 ];
 
 export const DATA_SOURCE_BREADCRUMB_INTERFACE: DataSource[] = [
@@ -16,44 +16,47 @@ export const DATA_SOURCE_BREADCRUMB_INTERFACE: DataSource[] = [
     name: { data: 'routes', customClasses: '' },
     description: {
       data: 'Se utiliza para agregar las rutas que se quieren agregar al breadcrumb. Cada ruta puede tener un nombre o un id, también se puede agregar una ruta específica',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'defaultRoute', customClasses: '' },
     description: {
       data: 'Se utiliza para agregar una route generica al breadcrumb. Para que lo puedan utilizar las <strong>routes</strong>',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const DATA_SOURCE_BREADCRUMB_ROUTE_INTERFACE: DataSource[] = [
   {
     name: { data: 'name', customClasses: '' },
-    description: { data: 'Se utiliza para agregar el nombre de la ruta.', customClasses: '' }
+    description: {
+      data: 'Se utiliza para agregar el nombre de la ruta.',
+      customClasses: '',
+    },
   },
   {
     name: { data: 'id', customClasses: '' },
     description: {
       data: 'Se utiliza para agregar el id de la ruta. Si se agrega un id, se va a agregar al final de la ruta.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'route', customClasses: '' },
     description: {
       data: 'Se utiliza para agregar una ruta específica. Si no se agrega una ruta, toma por defecto la ruta del breadcrumb.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const BREADCRUMB_INTERFACE1 = `

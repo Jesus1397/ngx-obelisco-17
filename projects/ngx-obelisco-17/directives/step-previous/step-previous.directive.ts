@@ -1,10 +1,17 @@
-import { Directive, ElementRef, HostListener, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  HostListener,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+} from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { StepService } from '@gcba/ngx-obelisco/core/services';
+import { StepService } from '@gcba/ngx-obelisco-17/core/services';
 
 @Directive({
   selector: '[oStepPrevious]',
-  standalone: true
+  standalone: true,
 })
 export class StepPreviousDirective implements OnInit, OnDestroy {
   private onDestroy$ = new Subject<void>();
@@ -20,13 +27,21 @@ export class StepPreviousDirective implements OnInit, OnDestroy {
   public ngOnInit(): void {
     this.renderer.setProperty(this.element.nativeElement, 'disabled', true);
 
-    this.stepService.isFirstStep.pipe(takeUntil(this.onDestroy$)).subscribe((event) => {
-      this.renderer.setProperty(this.element.nativeElement, 'disabled', event);
-    });
+    this.stepService.isFirstStep
+      .pipe(takeUntil(this.onDestroy$))
+      .subscribe((event) => {
+        this.renderer.setProperty(
+          this.element.nativeElement,
+          'disabled',
+          event
+        );
+      });
 
-    this.stepService.stopEmmiter.pipe(takeUntil(this.onDestroy$)).subscribe(() => {
-      this.stepService.stop();
-    });
+    this.stepService.stopEmmiter
+      .pipe(takeUntil(this.onDestroy$))
+      .subscribe(() => {
+        this.stepService.stop();
+      });
   }
 
   @HostListener('click') public onClick(): void {

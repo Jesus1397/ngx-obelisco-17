@@ -1,14 +1,14 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const BLOCK_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/block/api'
+    route: '/components/block/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/block/examples'
-  }
+    route: '/components/block/examples',
+  },
 ];
 
 //BLOCK EXAMPLES
@@ -43,33 +43,39 @@ export const BLOCK_EXAMPLE_BACKGROUND = `
 export const BLOCK_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> title: string', customClasses: '' },
-    description: { data: 'Establece el título del bloque.', customClasses: '' }
+    description: { data: 'Establece el título del bloque.', customClasses: '' },
   },
   {
     name: { data: '@Input() <br/> description: string', customClasses: '' },
-    description: { data: 'Define el contenido de texto principal del bloque.', customClasses: '' }
+    description: {
+      data: 'Define el contenido de texto principal del bloque.',
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br/> isBgLight: boolean', customClasses: '' },
     description: {
       data: 'Propiedad de entrada para indicar si el fondo del bloque es claro. Por defecto es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
-    name: { data: '@Input() <br/> isPositionRelative: boolean', customClasses: '' },
+    name: {
+      data: '@Input() <br/> isPositionRelative: boolean',
+      customClasses: '',
+    },
     description: {
       data: 'Propiedad de entrada para indicar si la posición del bloque es relative. Por defecto es false.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const BLOCK_DATA_SOURCE_SECTIONS: DataSource[] = [
@@ -77,30 +83,30 @@ export const BLOCK_DATA_SOURCE_SECTIONS: DataSource[] = [
     name: { data: 'o-block-header', customClasses: 'font-italic' },
     description: {
       data: 'Sección anclada a la parte superior del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-block-title', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza dentro de o-block-header, para establecer el título del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-block-text', customClasses: 'font-italic' },
     description: {
       data: 'Se utiliza para establecer el texto del componente.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: 'o-block-footer', customClasses: 'font-italic' },
     description: {
       data: 'Sección anclada a la parte inferior del componente.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const BLOCK_SECTIONS = `

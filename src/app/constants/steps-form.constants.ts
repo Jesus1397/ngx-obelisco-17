@@ -1,14 +1,14 @@
-import { DataSource } from '@gcba/ngx-obelisco/core/models';
+import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
 
 export const STEPS_FORM_NAVIGATION = [
   {
     title: 'Api',
-    route: '/components/steps-form/api'
+    route: '/components/steps-form/api',
   },
   {
     title: 'Ejemplos',
-    route: '/components/steps-form/examples'
-  }
+    route: '/components/steps-form/examples',
+  },
 ];
 
 export const DATA_SOURCE_STEPS_FORM_INPUT: DataSource[] = [
@@ -16,26 +16,29 @@ export const DATA_SOURCE_STEPS_FORM_INPUT: DataSource[] = [
     name: { data: '@Input() <br/> steps: string[]', customClasses: '' },
     description: {
       data: 'Se utiliza para definir los pasos que se mostrarán en la barra de estado.',
-      customClasses: ''
-    }
+      customClasses: '',
+    },
   },
   {
     name: { data: '@Input() <br /> customClasses: string', customClasses: '' },
     description: {
       data: 'Se utiliza para aplicar clases personalizadas al componente para personalizar su apariencia.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const DATA_SOURCE_STEPS_FORM_OUTPUT: DataSource[] = [
   {
-    name: { data: '@Output <br /> stopSteps: EventEmitter<boolean>', customClasses: '' },
+    name: {
+      data: '@Output <br /> stopSteps: EventEmitter<boolean>',
+      customClasses: '',
+    },
     description: {
       data: 'Se utiliza para detener el proceso. Ocurrirá cuando se llegue al último paso y la barra de progreso se complete. El valor emitido será true.',
-      customClasses: ''
-    }
-  }
+      customClasses: '',
+    },
+  },
 ];
 
 export const STEPS_FORM_EXAMPLE_DIRECTIVE_HTML = `

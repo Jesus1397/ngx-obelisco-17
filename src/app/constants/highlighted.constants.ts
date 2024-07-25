@@ -1,10 +1,10 @@
-import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
+import { DataSource } from 'ngx-obelisco-17/core/models';
 
 import {
   MediaIframe,
   MediaVideo,
   MediaImage,
-} from '@gcba/ngx-obelisco-17/core/models';
+} from 'ngx-obelisco-17/core/models';
 
 export const HIGHLIGHTED_NAVIGATION = [
   {

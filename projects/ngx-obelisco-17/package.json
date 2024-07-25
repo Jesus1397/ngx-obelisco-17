@@ -1,5 +1,5 @@
 {
-  "name": "@gcba/ngx-obelisco-17",
+  "name": "ngx-obelisco-17",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^17.3.0",

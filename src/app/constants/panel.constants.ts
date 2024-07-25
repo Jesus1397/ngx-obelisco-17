@@ -2,7 +2,7 @@ import {
   DataSource,
   MediaSizes,
   MediaPanel,
-} from '@gcba/ngx-obelisco-17/core/models';
+} from 'ngx-obelisco-17/core/models';
 
 export const PANEL_NAVIGATION = [
   {
@@ -88,7 +88,7 @@ export const PANEL_SMALL_HORIZONTAL = `
 
 export const PANEL_SMALL_LARGE_IMAGE_TS = `
 import { Component } from '@angular/core';
-import { MediaSizes, MediaPanel } from '@gcba/ngx-obelisco-17/core/models';
+import { MediaSizes, MediaPanel } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -109,7 +109,7 @@ export class ExampleComponent {
 
 export const PANEL_SMALL_TS = `
 import { Component } from '@angular/core';
-import { MediaPanel } from '@gcba/ngx-obelisco-17/core/models';
+import { MediaPanel } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',

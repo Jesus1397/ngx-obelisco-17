@@ -11,7 +11,7 @@ import {
   ChangeDetectorRef,
   OnDestroy,
 } from '@angular/core';
-import { Sizes, TabsProps } from '@gcba/ngx-obelisco-17/core/models';
+import { Sizes, TabsProps } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'o-tabs',

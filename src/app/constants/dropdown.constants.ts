@@ -2,7 +2,7 @@ import {
   DataSource,
   DropdownNavigationItem,
   DropdownSelectionItem,
-} from '@gcba/ngx-obelisco-17/core/models';
+} from 'ngx-obelisco-17/core/models';
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
 const formattedExampleTsCode = (
@@ -11,7 +11,7 @@ const formattedExampleTsCode = (
   interfaceName: string
 ) => `
 import { Component  } from '@angular/core';
-import { ${interfaceName} } from '@gcba/ngx-obelisco-17/core/models';
+import { ${interfaceName} } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -25,7 +25,7 @@ export class ExampleComponent {
 
 const formattedExampleTsCodeAlign = (arrayLeft: any, arrayRight: any) => `
 import { Component  } from '@angular/core';
-import { DropdownNavigationItem } from '@gcba/ngx-obelisco-17/core/models';
+import { DropdownNavigationItem } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -546,7 +546,7 @@ export const DROPDOWN_NAVIGATION_EXAMPLE_ALIGN_TS = formattedExampleTsCodeAlign(
 
 export const DROPDOWN_NAVIGATION_EXAMPLE_CASCADE_TS = `
 import { Component  } from '@angular/core';
-import { DropdownNavigationItem } from '@gcba/ngx-obelisco-17/core/models';
+import { DropdownNavigationItem } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',

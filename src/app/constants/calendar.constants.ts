@@ -1,4 +1,4 @@
-import { ActiveDay } from '@gcba/ngx-obelisco-17/core/models';
+import { ActiveDay } from 'ngx-obelisco-17/core/models';
 
 export const CALENDAR_NAVIGATION = [
   {

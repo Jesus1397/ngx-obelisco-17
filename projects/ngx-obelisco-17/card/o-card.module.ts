@@ -13,8 +13,8 @@ import { OCardFooterComponent } from './o-card/o-card-footer/o-card-footer.compo
 import { OCardBadgesComponent } from './o-card/o-card-badges/o-card-badges.component';
 import { OCardHeadlineComponent } from './o-card/o-card-headline/o-card-headline.component';
 import { OCardHeaderComponent } from './o-card/o-card-header/o-card-header.component';
-import { ODefaultImageDirective } from '@gcba/ngx-obelisco-17/directives';
-import { OBadgeModule } from '@gcba/ngx-obelisco-17/badge';
+import { ODefaultImageDirective } from 'ngx-obelisco-17/directives';
+import { OBadgeModule } from 'ngx-obelisco-17/badge';
 
 @NgModule({
   declarations: [

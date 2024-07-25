@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { NavbarRoute } from '@gcba/ngx-obelisco-17/core/models';
-import { ONavbarModule } from '@gcba/ngx-obelisco-17/navbar';
+import { NavbarRoute } from 'ngx-obelisco-17/core/models';
+import { ONavbarModule } from 'ngx-obelisco-17/navbar';
 import {
   COMPONENTS_NAVIGATION,
   OTHERS_NAVIGATION,

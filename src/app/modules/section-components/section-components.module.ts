@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SectionComponentsRoutingModule } from './section-components-routing.module';
-import { OCardModule } from '@gcba/ngx-obelisco-17/card';
+import { OCardModule } from 'ngx-obelisco-17/card';
 import { SectionComponentsComponent } from './section-components.component';
-import { ONavModule } from '@gcba/ngx-obelisco-17/nav';
+import { ONavModule } from 'ngx-obelisco-17/nav';
 
 @NgModule({
   declarations: [SectionComponentsComponent],

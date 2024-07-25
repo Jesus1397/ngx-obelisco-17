@@ -7,8 +7,8 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
-import { MediaImage, CardBadge } from '@gcba/ngx-obelisco-17/core/models';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco-17/directives';
+import { MediaImage, CardBadge } from 'ngx-obelisco-17/core/models';
+import { OCustomContentDirective } from 'ngx-obelisco-17/directives';
 
 @Component({
   selector: 'o-card',

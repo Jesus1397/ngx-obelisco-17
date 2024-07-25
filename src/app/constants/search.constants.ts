@@ -1,4 +1,4 @@
-import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
+import { DataSource } from 'ngx-obelisco-17/core/models';
 
 //Routes
 export const SEARCH_NAVIGATION = [
@@ -78,7 +78,7 @@ export const SEARCH_SIMPLE_EXAMPLE_HTML = `
 
 export const SEARCH_SIMPLE_EXAMPLE_TS = `
 import { Component  } from '@angular/core';
-import { SearchbarItem } from '@gcba/ngx-obelisco-17/core/models';
+import { SearchbarItem } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -114,7 +114,7 @@ export const SEARCH_EXAMPLE_HTML = `
 
 export const SEARCH_EXAMPLE_TS = `
 import { Component  } from '@angular/core';
-import { SearchbarItem } from '@gcba/ngx-obelisco-17/core/models';
+import { SearchbarItem } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',

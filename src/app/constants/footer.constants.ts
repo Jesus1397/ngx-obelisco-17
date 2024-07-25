@@ -1,9 +1,9 @@
-import { CustomContent, DataSource } from '@gcba/ngx-obelisco-17/core/models';
+import { CustomContent, DataSource } from 'ngx-obelisco-17/core/models';
 import { codeFormattingArrayList } from '../core/helpers/codeFormatting.helper';
 
 const formattedExampleTsCodeAll = (array1: any, array2: any, array3: any) => `
 import { Component  } from '@angular/core';
-import { Link, Network, Phone } from '@gcba/ngx-obelisco-17/core/models';
+import { Link, Network, Phone } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -312,7 +312,7 @@ export const FOOTER_CUSTOM_LIST_TS = formattedExampleTsCodeAll(
 
 export const FOOTER_CUSTOM_CUSTOM_TS = `
 import { Component  } from '@angular/core';
-import { CustomContent } from '@gcba/ngx-obelisco-17/core/models';
+import { CustomContent } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',

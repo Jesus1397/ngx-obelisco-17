@@ -1,6 +1,6 @@
 import { Component, Input, Optional } from '@angular/core';
 import { OCardComponent } from '../o-card.component';
-import { MediaImage } from '@gcba/ngx-obelisco-17/core/models';
+import { MediaImage } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'o-card-image',

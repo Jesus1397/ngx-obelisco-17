@@ -1,4 +1,4 @@
-import { AlertList, DataSource } from '@gcba/ngx-obelisco-17/core/models';
+import { AlertList, DataSource } from 'ngx-obelisco-17/core/models';
 
 export const ALERT_NAVIGATION = [
   {
@@ -146,7 +146,7 @@ export const ALERT_EXAMPLE_LISTS_HTML = `
 `;
 export const ALERT_EXAMPLE_LISTS_TS = `
 import { Component } from '@angular/core';
-import { AlertList } from '@gcba/ngx-obelisco-17/core/models';
+import { AlertList } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',

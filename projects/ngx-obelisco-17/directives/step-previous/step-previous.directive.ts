@@ -7,7 +7,7 @@ import {
   Renderer2,
 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { StepService } from '@gcba/ngx-obelisco-17/core/services';
+import { StepService } from 'ngx-obelisco-17/core/services';
 
 @Directive({
   selector: '[oStepPrevious]',

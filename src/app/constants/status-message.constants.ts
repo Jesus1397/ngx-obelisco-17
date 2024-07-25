@@ -1,7 +1,4 @@
-import {
-  DataSource,
-  StatusMessageTypes,
-} from '@gcba/ngx-obelisco-17/core/models';
+import { DataSource, StatusMessageTypes } from 'ngx-obelisco-17/core/models';
 
 interface StatusMessage {
   name: string;

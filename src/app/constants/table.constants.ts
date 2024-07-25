@@ -1,4 +1,4 @@
-import { DataSource } from '@gcba/ngx-obelisco-17/core/models';
+import { DataSource } from 'ngx-obelisco-17/core/models';
 
 export const TABLE_NAVIGATION = [
   {
@@ -189,7 +189,7 @@ export const TABLE_EXAMPLE_SELECTABLE_HTML = `
 ></o-table>`;
 export const TABLE_EXAMPLE_NORMAL_TS = `
 import { Component, OnInit } from '@angular/core';
-import { Column, DataSource } from '@gcba/ngx-obelisco-17/core/models';
+import { Column, DataSource } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',
@@ -269,7 +269,7 @@ export class ExampleComponent {
 
 export const TABLE_EXAMPLE_SELECTABLE_TS = `
 import { Component, OnInit } from '@angular/core';
-import { Column, DataSource } from '@gcba/ngx-obelisco-17/core/models';
+import { Column, DataSource } from 'ngx-obelisco-17/core/models';
 
 @Component({
   selector: 'app-example',

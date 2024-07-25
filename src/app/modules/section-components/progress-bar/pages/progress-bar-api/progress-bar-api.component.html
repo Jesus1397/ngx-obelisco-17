@@ -1,0 +1,114 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">
+      Referencia de API para el componente Barra de progreso de Obelisco
+    </h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OProgressBarModule } from 'ngx-obelisco-17/progress-bar';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-progress-bar</strong></p>
+
+    <div class="section-properties">
+      <h2 class="h3">Como se usa</h2>
+
+      <p>
+        Se puede usar las directivas <strong>StepNextDirective</strong> y
+        <strong>StepPreviousDirective</strong> importado en el modulo donde se
+        va a usar y agregarlo en botones
+      </p>
+      <div class=" ">
+        <code
+          highlight-js
+          [lang]="'ts'"
+          code="import { StepNextDirective } from 'ngx-obelisco';"
+        ></code>
+      </div>
+      <div class=" ">
+        <code
+          highlight-js
+          [lang]="'ts'"
+          code="import { StepPreviousDirective } from 'ngx-obelisco';"
+        ></code>
+      </div>
+
+      <p>
+        Ver ejemplo
+        <a
+          [routerLink]="['/components/progress-bar/examples']"
+          fragment="example-directive"
+          >con botones y directiva</a
+        >
+      </p>
+
+      <p>
+        O de otra manera, se puede usar inyectando su servicio para inicializar
+        los <strong>steps</strong> y luego darle funcionalidad.
+      </p>
+
+      <div class=" ">
+        <code
+          highlight-js
+          [lang]="'ts'"
+          code="import { StepService } from 'ngx-obelisco';"
+        ></code>
+      </div>
+
+      <p class="mb-4">
+        Ver ejemplo
+        <a
+          [routerLink]="['/components/progress-bar/examples']"
+          fragment="example-functionality"
+        >
+          con botones y funcionalidad
+        </a>
+      </p>
+
+      <h2 class="h3">Propiedades</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSourceProgressBarInput"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+      <br />
+
+      <h2 class="h3">Métodos</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSourceProgressBarOutput"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+
+    <br />
+    <h2 class="h3">Tipos de datos</h2>
+    <hr />
+
+    <div class="section-type">
+      <h3>ProgressBarTypes</h3>
+      <p>
+        Permite establecer los valores de la propiedad <strong>type</strong>.
+      </p>
+
+      <div class="section-interface">
+        <div class=" ">
+          <code highlight-js [lang]="'ts'">{{ types }}</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

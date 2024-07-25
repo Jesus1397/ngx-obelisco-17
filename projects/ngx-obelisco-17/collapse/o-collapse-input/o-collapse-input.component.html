@@ -1,0 +1,10 @@
+<label class="card-details" [for]="id" [ngClass]="customClasses">
+  <i *ngIf="icon && icon.includes('bx')" [ngClass]="icon!"></i>
+  <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{ icon }}</span>
+  <ng-content select="o-collapse-icon"></ng-content>
+  <div class="card-details-content">
+    <ng-content select="o-collapse-input-title"></ng-content>
+    <ng-content select="o-collapse-input-subtitle"></ng-content>
+  </div>
+  <input type="radio" class="form-radio" [name]="name" [id]="id" [checked]="value" />
+</label>

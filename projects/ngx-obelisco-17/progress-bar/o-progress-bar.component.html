@@ -1,0 +1,10 @@
+<p class="steps" *ngIf="description">{{ description }}</p>
+<div class="progress" [ngClass]="customClasses">
+  <div
+    class="progress-bar"
+    role="progressbar"
+    [ngClass]="'bg-' + type"
+    [attr.aria-valuenow]="percentage | number"
+    [style.width.%]="percentage | number"
+  ></div>
+</div>

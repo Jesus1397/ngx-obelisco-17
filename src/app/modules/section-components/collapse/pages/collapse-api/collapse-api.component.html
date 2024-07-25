@@ -1,0 +1,160 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">
+      Referencia de API para el componente Colapsable de Obelisco
+    </h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OCollapseModule } from 'ngx-obelisco-17/collapse';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-collapse</strong></p>
+
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+
+    <div class="section-properties">
+      <h2 class="h3">Métodos</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSourceOutput"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
+  <div class="section-type">
+    <h3>CollapseItems</h3>
+    <p>
+      Permite establecer los valores de la propiedad
+      <strong>collapseItems</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ interfaceCollapseItems }}</code>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="dataSourceCollapseItems"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h3>CollapseInputs</h3>
+    <p>
+      Permite establecer los valores de la propiedad
+      <strong>collapseInputs</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ interfaceCollapseInputs }}</code>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="dataSourceCollapseInputs"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-properties my-5">
+    <h2 class="h3">Secciones básicas de Colapsable</h2>
+    <hr />
+    <p>
+      El componente Colapsable puede ser utilizado con las propiedades
+      mencionadas previamente. Además, Ngx-obelisco proporciona una serie de
+      secciones predefinidas que pueden incluirse dentro de
+      &lt;o-collapse&gt;&lt;/o-collapse&gt;.
+    </p>
+    <o-table
+      [isScrollable]="true"
+      [columns]="columns"
+      [dataSource]="dataSourceSections"
+      [isStriped]="true"
+      [isBordered]="true"
+    ></o-table>
+  </div>
+  <div class="section-properties mb-5">
+    <p>
+      Todas las secciones mencionadas tienen la propiedad
+      <em><strong>customClasses</strong>: string</em>, la cual permite aplicar
+      clases personalizadas a los mismos.
+    </p>
+
+    <h3 class="h4">Propiedades de o-collapse-input</h3>
+    <o-table
+      [isScrollable]="true"
+      [columns]="columns"
+      [dataSource]="dataSourceSectionsInput"
+      [isStriped]="true"
+      [isBordered]="true"
+    ></o-table>
+  </div>
+  <div class="section-properties mb-5">
+    <p>Ejemplos:</p>
+    <app-viewer [isCodeVisible]="true">
+      <div
+        appClipboard
+        class="d-flex flex-column align-items-end p-0"
+        component-html
+      >
+        <button
+          class="btn btn-sm btn-outline-link btn-clipboard btn-icon"
+        ></button>
+        <code highlight-js>{{ sectionsExample }}</code>
+      </div>
+    </app-viewer>
+    <app-viewer [isCodeVisible]="true">
+      <div
+        appClipboard
+        class="d-flex flex-column align-items-end p-0"
+        component-html
+      >
+        <button
+          class="btn btn-sm btn-outline-link btn-clipboard btn-icon"
+        ></button>
+        <code highlight-js>{{ sectionsExampleInput }}</code>
+      </div>
+    </app-viewer>
+  </div>
+</section>

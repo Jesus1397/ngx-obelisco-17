@@ -1,0 +1,77 @@
+<h2 class="sr-only">Navegación de pie de página</h2>
+<div *ngIf="indicatorText" class="footer-info" [ngClass]="customClassesIndicator">
+  <div class="container">
+    <h3 class="footer-info-text">{{ indicatorText }}</h3>
+    <div class="footer-info-actions">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+<footer class="main-footer" [ngClass]="customClasses">
+  <ng-container *ngIf="!oCustomContent">
+    <div class="container">
+      <section *ngIf="!isPhoneSectionHidden">
+        <h3>Teléfonos útiles</h3>
+        <ul class="list-inline">
+          <li class="list-inline-item phone-items" *ngFor="let phone of phoneCustomItems">
+            <a [href]="'tel:' + phone.number">{{ phone.title }}</a>
+          </li>
+        </ul>
+        <a href="https://www.buenosaires.gob.ar/laciudad/telefonosutiles"> Ver todos los teléfonos </a>
+      </section>
+      <section *ngIf="!isNetworkSectionHidden">
+        <h3>Redes de la ciudad</h3>
+        <ul class="list-inline">
+          <li class="list-inline-item redes-items" *ngFor="let network of networkCustomItems">
+            <a [href]="network.src" target="_blank"><i class="bx {{ network.icon }}"></i>{{ network.title }}</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <hr class="divider" *ngIf="!isPhoneSectionHidden || !isNetworkSectionHidden" />
+    <div class="container">
+      <section class="footer-legal-section">
+        <h3 class="sr-only">Información gubernamental</h3>
+        <div class="row align-items-center">
+          <div class="col-12 col-md-5 col-xl-4 footer-content-img">
+            <img
+              oDefaultImage
+              class="d-lg-none"
+              src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba-sm.svg"
+              alt="Logo de Ciudad de Buenos Aires"
+              height="48"
+            />
+            <img
+              oDefaultImage
+              class="d-none d-lg-inline"
+              src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/ciudad-ba.svg"
+              alt="Logo de Ciudad de Buenos Aires"
+              height="40"
+            />
+            <img
+              oDefaultImage
+              class="img-vamos-ba"
+              src="https://raw.githubusercontent.com/gcba/Obelisco/8e3c51245a98c0c2c5fed1e43e20d53fa135e98d/static/footer/vamos-ba.svg"
+              alt="Logo de Vamos Buenos Aires"
+            />
+          </div>
+          <div class="col-12" *ngIf="!isLinkSectionHidden">
+            <ul class="list-inline">
+              <li class="list-inline-item" *ngFor="let link of linkCustomItems">
+                <a [href]="link.src">{{ link.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="footer-license-text">
+          Los contenidos de buenosaires.gob.ar están licenciados bajo Creative Commons Reconocimiento 2.5 Argentina
+          License.
+        </div>
+      </section>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"></ng-container>
+</footer>

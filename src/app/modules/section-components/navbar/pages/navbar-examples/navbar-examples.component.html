@@ -1,0 +1,71 @@
+<section class="section-example">
+  <app-viewer title="Con secciones" [isNavCode]="true">
+    <div component class="navbarOne">
+      <o-navbar component id="navbarOne" [routes]="routes" [routesLogin]="routesLogin"></o-navbar>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ navbarSectionsExampleHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ navbarSectionsExampleTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con secciones extras" [isNavCode]="true">
+    <div component class="navbarTwo">
+      <o-navbar component id="navbarTwo" [routesExtended]="routesExtended" [routesLogin]="routesLogin"></o-navbar>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ navbarSectionsExtendedExampleHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ navbarSectionsExtendedExampleTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con secciones - Logueado" [isNavCode]="true">
+    <div component class="navbarThree">
+      <o-navbar component id="navbarThree" [routes]="routes" [routesAccount]="routesAccount"></o-navbar>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ navbarLoginExampleHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ navbarLoginExampleTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con secciones extras - Logueado" [isNavCode]="true">
+    <div component class="navbarFour">
+      <o-navbar component id="navbarFour" [routesExtended]="routesExtended" [routesAccount]="routesAccount"></o-navbar>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ navbarExtendedLoginExampleHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ navbarExtendedLoginExampleTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con buscador" [isNavCode]="true">
+    <div component class="navbarFive">
+      <o-navbar component id="navbarFive" [routes]="routes" [searchbarItems]="searchbarItems"></o-navbar>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ navbarSearchbarExampleHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ navbarSearchbarExampleTs }}</code>
+    </div>
+  </app-viewer>
+</section>

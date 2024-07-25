@@ -1,0 +1,29 @@
+<section class="section-example">
+  <app-viewer title="Icono de Material Icons Round" [isNavCode]="true">
+    <div component class="text-center">
+      <o-mat-icon>{{ matIcons.info }}</o-mat-icon>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleMatIcon }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleIconTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Icono de Boxicons" [isNavCode]="true">
+    <div component class="text-center">
+      <o-bx-icon>{{ boxIcons.infoCircleSolid }}</o-bx-icon>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleBxIcon }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleIconTs }}</code>
+    </div>
+  </app-viewer>
+</section>

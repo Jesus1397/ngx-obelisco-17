@@ -1,0 +1,35 @@
+::ng-deep .card.panel-horizontal,
+.card.panel-vertical,
+.card.panel-lateral {
+  .card-body .panel-footer o-access {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+::ng-deep .card.panel-lateral {
+  .card-body .panel-footer {
+    o-button,
+    o-access {
+      width: 100%;
+    }
+  }
+}
+
+::ng-deep .panel-horizontal-content .card.panel-horizontal {
+  o-highlighted-image,
+  o-highlighted-video {
+    flex-shrink: 0;
+  }
+}
+
+::ng-deep .card-deck.max-cards-2.card-column {
+  .card.panel-horizontal,
+  .card.panel-vertical,
+  .card.panel-lateral {
+    o-access {
+      width: 100%;
+      max-width: 340px;
+    }
+  }
+}

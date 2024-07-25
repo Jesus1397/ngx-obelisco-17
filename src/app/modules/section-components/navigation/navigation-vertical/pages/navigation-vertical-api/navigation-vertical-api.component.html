@@ -1,0 +1,60 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">
+      Referencia de API para el componente Navegacion vertical de Obelisco
+    </h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { ONavModule } from 'ngx-obelisco-17/nav';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-nav-vertical</strong></p>
+
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSourceNavigationVertical"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
+  <div class="section-type">
+    <h3>NavVerticalItems</h3>
+    <p>
+      Permite establecer los valores de la propiedad
+      <strong>navVertItems</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ exampleIterface }}</code>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [dataSource]="dataSourceInterface"
+          [columns]="columns"
+          [isBordered]="true"
+          [isStriped]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

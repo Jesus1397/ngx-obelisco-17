@@ -1,0 +1,55 @@
+<section class="section-example">
+  <app-viewer title="De confirmación">
+    <div component>
+      <o-button dataToggle="modal" dataTarget="exampleModal">Ver modal</o-button>
+      <o-modal
+        dataTarget="exampleModal"
+        title="¡Importante!"
+        description="Antes de realizar la ficha de salud, tené en cuenta haber realizado los pasos previos correspondientes."
+      >
+        <o-button #children type="link" dataDismiss="modal">Volver atrás</o-button>
+        <o-button #children>Continuar</o-button>
+      </o-modal>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ exampleModalConfirmationHTML }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="De peligro">
+    <div component>
+      <o-button dataToggle="modal" dataTarget="dangerModal">Ver modal</o-button>
+      <o-modal
+        dataTarget="dangerModal"
+        title="Eliminar documento"
+        description="El documento que seleccionaste será eliminado."
+      >
+        <o-button #children type="secondary" [isOutline]="true" dataDismiss="modal">Cancelar</o-button>
+        <o-button #children type="danger">Eliminar</o-button>
+      </o-modal>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ exampleModalDangerHTML }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="De reconocimiento">
+    <div component>
+      <o-button dataToggle="modal" dataTarget="recognitionModal">Ver modal</o-button>
+      <o-modal
+        dataTarget="recognitionModal"
+        subtitle="CARGA EXITOSA"
+        title="Los archivos se cargaron correctamente"
+        [isHeaderUnbordered]="true"
+      >
+        <o-button #children dataDismiss="modal">Aceptar</o-button>
+      </o-modal>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ exampleModalRecognitionHTML }}</code>
+    </div>
+  </app-viewer>
+</section>

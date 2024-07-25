@@ -1,0 +1,58 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">Referencia de API para el componente Galería de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OGalleryModule } from 'ngx-obelisco-17/gallery';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-gallery</strong></p>
+
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columnsGallery"
+        [dataSource]="dataSourceGallery"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
+  <div class="section-type">
+    <h3>MediaGallery</h3>
+    <p>
+      Permite establecer los valores de la propiedad
+      <strong>galleryItems</strong>.
+    </p>
+
+    <div class="section-interface">
+      <pre>
+        <code highlight-js [lang]="'ts'" >{{ exampleIterfaceImageItem }}</code>
+      </pre>
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columnsGallery"
+          [dataSource]="dataSourceGalleryInterface"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

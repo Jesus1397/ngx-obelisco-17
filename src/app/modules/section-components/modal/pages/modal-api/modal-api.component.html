@@ -1,0 +1,81 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">Referencia de API para el componente Modal de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OModalModule } from 'ngx-obelisco-17/modal';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-modal</strong></p>
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
+  <div class="section-type">
+    <h3>ModalSizes</h3>
+    <p>Permite establecer el <strong>tamaño</strong> del modal</p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ sizes }}</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-properties mb-5">
+    <h2 class="h3 mt-0">Secciones básicas de Modal</h2>
+    <hr />
+    <p>
+      El componente Modal puede ser utilizado con las propiedades mencionadas
+      previamente. Además, Ngx-obelisco proporciona una serie de secciones
+      predefinidas que pueden incluirse dentro de
+      &lt;o-modal&gt;&lt;/o-modal&gt;.
+    </p>
+    <o-table
+      [isScrollable]="true"
+      [columns]="columns"
+      [dataSource]="dataSourceSections"
+      [isStriped]="true"
+      [isBordered]="true"
+    ></o-table>
+  </div>
+  <div class="section-properties mb-5">
+    <p>
+      Todas las secciones mencionadas tienen la propiedad
+      <em><strong>customClasses</strong>: string</em>, la cual permite aplicar
+      clases personalizadas a los mismos.
+    </p>
+    <p>
+      <em>o-modal-header</em> tiene la propiedad
+      <em><strong>isUnbordered</strong>: boolean</em>, la cual permite
+      establecer si no tiene borde. Por defecto, es false.
+    </p>
+  </div>
+  <div class="section-properties mb-5">
+    <p>Ejemplo:</p>
+    <div component-html class="code">
+      <code highlight-js language="html">
+        {{ modalSectionsHtml }}
+      </code>
+    </div>
+  </div>
+</section>

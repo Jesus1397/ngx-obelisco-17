@@ -1,0 +1,13 @@
+<iframe
+  *ngIf="iframe && iframe.src"
+  [src]="sanitizeUrl(iframe.src)"
+  [title]="iframe.title || 'Mapa de como llegar'"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  loading="lazy"
+  tabindex="-1"
+  referrerpolicy="no-referrer-when-downgrade"
+  style="border: 0px"
+  [ngClass]="customClasses"
+></iframe>

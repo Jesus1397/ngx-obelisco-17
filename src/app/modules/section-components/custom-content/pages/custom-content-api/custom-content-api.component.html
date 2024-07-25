@@ -1,0 +1,74 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">
+      Referencia de API para la directiva oCustomContent de Obelisco
+    </h2>
+    <div>
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OCustomContentDirective } from 'ngx-obelisco-17/directives'"
+      ></code>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="section-selector">
+    <p>Directiva estructural: <strong>*oCustomContent</strong></p>
+    <p>
+      La directiva <code>OCustomContent</code> permite definir contenido
+      personalizado de manera dinámica dentro de los componentes:
+    </p>
+
+    <br />
+
+    <h2 class="h3">Uso:</h2>
+    <p>
+      Agrega el atributo <code>OCustomContent</code> a la etiqueta HTML. Por
+      ejemplo:
+    </p>
+
+    <pre>
+      <code highlight-js >{{customExample}}</code>
+    </pre>
+
+    <br />
+
+    <h2 class="h3">Reglas y Consideraciones:</h2>
+    <ul>
+      <li>
+        La directiva <code>OCustomContent</code> debe usarse en elementos que
+        admitan contenido dinámico, como <code>&lt;div&gt;</code>,
+        <code>&lt;ng-container&gt;</code>, etc.
+      </li>
+      <li>
+        La directiva debe estar disponible en el módulo de Angular donde se
+        utilizará. Asegúrate de importar y declarar la directiva en el módulo
+        correspondiente.
+      </li>
+    </ul>
+
+    <br />
+
+    <h2 class="h3">Componentes con Directiva OCustomContent Integrada:</h2>
+    <ul class="d-flex flex-column flex-md-row">
+      <div>
+        <li>Alerta</li>
+        <li>Banner</li>
+        <li>Bloque de trámite</li>
+        <li>Colapsable</li>
+        <li>Destacado</li>
+        <li>Footer</li>
+      </div>
+      <div class="ml-md-5 ml-0">
+        <li>Header</li>
+        <li>Mapa</li>
+        <li>Mensaje de estado</li>
+        <li>Modal</li>
+        <li>Panel</li>
+        <li>Tarjetas</li>
+      </div>
+    </ul>
+  </div>
+</section>

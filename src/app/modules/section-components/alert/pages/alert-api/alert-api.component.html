@@ -1,0 +1,73 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">Referencia de API para el componente Alerta de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OAlertModule } from 'ngx-obelisco-17/alert';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-alert</strong></p>
+
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <br />
+
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
+  <div class="section-type">
+    <h3>AlertTypes</h3>
+    <p>Permite establecer los valores de la propiedad <strong>type</strong>.</p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ types }}</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-type">
+    <h3>AlertList</h3>
+    <p>
+      Permite establecer los valores de la propiedad
+      <strong>listContent</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ listInterface }}</code>
+      </div>
+    </div>
+
+    <div class="section-properties">
+      <h4>Propiedades</h4>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="listInterfaceData"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+</section>

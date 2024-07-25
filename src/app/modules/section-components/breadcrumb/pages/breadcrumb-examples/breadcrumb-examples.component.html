@@ -1,0 +1,15 @@
+<section class="section-example">
+  <app-viewer title="Migas de pan" [isNavCode]="true" id="customRoutes">
+    <o-breadcrumb component></o-breadcrumb>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-outline-link btn-sm btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleHtml }}</code>
+    </div>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-outline-link btn-sm btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleTS }}</code>
+    </div>
+  </app-viewer>
+</section>

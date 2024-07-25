@@ -1,0 +1,178 @@
+<section class="section-example">
+  <app-viewer title="Selección múltiple">
+    <div class="accordion" component>
+      <o-collapse
+        identifier="collapseOne"
+        title="Título"
+        content="Esta es la descripción que se encuentra dentro de un colapsable."
+      ></o-collapse>
+      <o-collapse
+        identifier="collapseTwo"
+        title="Título"
+        content="Esta es la descripción que se encuentra dentro de un colapsable."
+      ></o-collapse>
+      <o-collapse
+        identifier="collapseThree"
+        title="Título"
+        content="Esta es la descripción que se encuentra dentro de un colapsable."
+      ></o-collapse>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseMultipleHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Selección única">
+    <div class="accordion" component id="dataParent">
+      <o-collapse
+        identifier="collapseUniqueOne"
+        dataParent="dataParent"
+        title="Título"
+        content="Esta es la descripción que se encuentra dentro de un colapsable."
+      >
+      </o-collapse>
+      <o-collapse
+        identifier="collapseUniqueTwo"
+        dataParent="dataParent"
+        title="Título"
+        content="Esta es la descripción que se encuentra dentro de un colapsable."
+      >
+      </o-collapse>
+      <o-collapse
+        identifier="collapseUniqueThree"
+        dataParent="dataParent"
+        title="Título"
+        content="Esta es la descripción que se encuentra dentro de un colapsable."
+      >
+      </o-collapse>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseUniqueHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="De color blanco">
+    <div class="bg-light py-4" component>
+      <o-collapse
+        identifier="collapseWhite"
+        [isWhite]="true"
+        title="Título"
+        content="Esta es la descripción que se encuentra dentro de un colapsable."
+      >
+      </o-collapse>
+    </div>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseWhiteHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <p class="h3 mb-4">Variantes de Encabezado</p>
+  <app-viewer title="Con ícono">
+    <o-collapse
+      component
+      identifier="collapseIcon"
+      title="Título"
+      icon="bx bxs-user-circle"
+      content="Esta es la descripción que se encuentra dentro de un colapsable."
+    >
+    </o-collapse>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseIconExampleHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con ícono, volanta y descripción">
+    <o-collapse
+      component
+      identifier="collapseLabelDescription"
+      title="Título"
+      icon="bx bxs-user-circle"
+      label="Volanta"
+      subtitle="Descripción"
+      content="Esta es la descripción que se encuentra dentro de un colapsable."
+    >
+    </o-collapse>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseIconLabelExampleHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <p class="h3 mb-4">Variantes de Contenido</p>
+  <app-viewer title="Con texto">
+    <o-collapse
+      component
+      identifier="collapseText"
+      title="Título"
+      content="Esta es la descripción que se encuentra dentro de un colapsable."
+    ></o-collapse>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseTextExampleHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con lista">
+    <o-collapse
+      identifier="collapseList"
+      component
+      title="$450,00"
+      label="Total a pagar"
+      [children]="[
+        {
+          label: '$200,00',
+          title: 'Solicitud de informes varios',
+          subtitle: 'Boleta N° 2549-48758798'
+        },
+        {
+          label: '$200,00',
+          title: 'Solicitud de informes varios',
+          subtitle: 'Boleta N° 2549-48758798'
+        }
+      ]"
+    >
+    </o-collapse>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseListExampleHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con lista seleccionable">
+    <o-collapse
+      component
+      identifier="collapseListInputs"
+      title="Tarjeta de crédito / débito"
+      subtitle="VISA, MasterCard, AMEX, CABAL, Maestro"
+      [children]="[
+        {
+          icon: 'bx bxl-visa',
+          title: 'Visa Débito ****1234',
+          subtitle: 'Heraldo Paez',
+          id: 'visa',
+          name: 'credit_card',
+          value: false
+        },
+        {
+          icon: 'bx bxl-mastercard',
+          title: 'MasterCard Crédito ****5678',
+          subtitle: 'Heraldo Paez',
+          id: 'master',
+          name: 'credit_card',
+          value: true
+        }
+      ]"
+    >
+    </o-collapse>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ collapseListInputsExampleHtml }}</code>
+    </div>
+  </app-viewer>
+</section>

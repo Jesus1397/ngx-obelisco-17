@@ -1,0 +1,35 @@
+<section class="section-example">
+  <h2 class="mb-4">Documentación de Boxicons v2.1.4 - Categorías</h2>
+  <div class="accordion">
+    <o-collapse identifier="collapseRegular" title="Regular">
+      <o-collapse-content customClasses="px-2">
+        <div class="d-flex box-container">
+          <div class="d-flex box" *ngFor="let icon of regularBoxicons">
+            <o-bx-icon>{{ icon }}</o-bx-icon>
+            <small>&lt;o-bx-icon&gt;{{ icon }}&lt;/o-bx-icon&gt;</small>
+          </div>
+        </div>
+      </o-collapse-content>
+    </o-collapse>
+    <o-collapse identifier="collapseSolid" title="Sólidos">
+      <o-collapse-content customClasses="px-2">
+        <div class="d-flex box-container">
+          <div class="d-flex box" *ngFor="let icon of solidBoxicons">
+            <o-bx-icon>{{ icon }}</o-bx-icon>
+            <small>&lt;o-bx-icon&gt;{{ icon }}&lt;/o-bx-icon&gt;</small>
+          </div>
+        </div>
+      </o-collapse-content>
+    </o-collapse>
+    <o-collapse identifier="collapseLogo" title="Logo">
+      <o-collapse-content customClasses="px-2">
+        <div class="d-flex box-container">
+          <div class="d-flex box" *ngFor="let icon of logoBoxicons">
+            <o-bx-icon>{{ icon }}</o-bx-icon>
+            <small>&lt;o-bx-icon&gt;{{ icon }}&lt;/o-bx-icon&gt;</small>
+          </div>
+        </div>
+      </o-collapse-content>
+    </o-collapse>
+  </div>
+</section>

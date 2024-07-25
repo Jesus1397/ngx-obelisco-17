@@ -1,0 +1,16 @@
+.card-wrapper-horizontal {
+  width: 100%;
+  max-width: 526px;
+}
+.card-wrapper-vertical {
+  width: 100%;
+  max-width: 340px;
+}
+
+.card-wrapper-horizontal,
+.card-wrapper-vertical {
+  o-card:not(:first-child) {
+    margin-top: 1.5rem;
+    display: block;
+  }
+}

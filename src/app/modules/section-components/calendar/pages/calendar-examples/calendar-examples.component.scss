@@ -1,0 +1,19 @@
+::ng-deep o-calendar .calendar .calendar-body table {
+  @media (max-width: 350px) {
+    transform: translateX(-6%) scale(0.92);
+  }
+  @media (max-width: 315px) {
+    transform: translateX(-13%) scale(0.82);
+  }
+}
+::ng-deep .calendar-deck {
+  @media (max-width: 350px) {
+    transform: translateX(0) translateY(-445px) scale(0.85);
+    o-calendar .calendar .calendar-body table {
+      transform: translateX(0) scale(1);
+    }
+  }
+  @media (max-width: 315px) {
+    transform: translateX(0) translateY(-745px) scale(0.75);
+  }
+}

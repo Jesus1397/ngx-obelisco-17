@@ -1,0 +1,48 @@
+<ng-container *ngIf="!isDiscriptiveType; else descriptive">
+  <nav [attr.aria-label]="ariaLabel" [ngClass]="customClasses">
+    <ul class="pagination">
+      <o-pagination-item [class.hidden]="getIsFirstPage" (click)="onPrev()">
+        <span class="page-previous-icon" [attr.aria-hidden]="true"></span>
+        <span class="page-previous-text">Anterior</span>
+      </o-pagination-item>
+
+      <ng-container *ngIf="isShowBottomTrimmer">
+        <o-pagination-number [index]="0" [current]="currentPage" (click)="selectedPage(0)"> </o-pagination-number>
+        <o-pagination-item [isDisabled]="true" [isNoEvent]="true"></o-pagination-item>
+      </ng-container>
+
+      <o-pagination-number *ngFor="let i of pagesToShow" [index]="i" [current]="currentPage" (click)="selectedPage(i)">
+      </o-pagination-number>
+
+      <ng-container *ngIf="isShowTopTrimmer">
+        <o-pagination-item [isDisabled]="true" [isNoEvent]="true"></o-pagination-item>
+        <o-pagination-number [index]="lastIndex" [current]="currentPage" (click)="selectedPage(lastIndex)">
+        </o-pagination-number>
+      </ng-container>
+
+      <o-pagination-item [class.hidden]="getIsLastPage" (click)="onNext()">
+        <span class="page-next-text">Siguiente</span>
+        <span class="page-next-icon" [attr.aria-hidden]="true"></span>
+      </o-pagination-item>
+    </ul>
+  </nav>
+</ng-container>
+
+<ng-template #descriptive>
+  <div class="pagination" [ngClass]="customClasses">
+    <div class="page-navigation">
+      <div class="page-item" [class.hidden]="getIsFirstPage" (click)="onPrev()">
+        <a class="btn page-link" href="#">
+          <span class="page-previous-icon" [attr.aria-hidden]="true"></span>
+          <span class="page-next-text">Anterior</span>
+        </a>
+      </div>
+      <div class="page-item" [class.hidden]="getIsLastPage" (click)="onNext()">
+        <a class="btn page-link" href="#">
+          <span class="page-next-text">Siguiente</span>
+          <span class="page-next-icon" [attr.aria-hidden]="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</ng-template>

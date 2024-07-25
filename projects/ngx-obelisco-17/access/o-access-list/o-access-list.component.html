@@ -1,0 +1,120 @@
+<div class="list-group" [ngClass]="customClasses">
+  <div class="group-access">
+    <div class="card-access">
+      <!-- Header -->
+      <div
+        class="card-access-body"
+        [ngClass]="{
+          reverse: items.header!.iconPositionLeft
+        }"
+      >
+        <div>
+          <h4 class="mb-1">{{ items.header!.title }}</h4>
+          <p *ngIf="items.header!.description" class="mb-0">{{ items.header!.description }}</p>
+        </div>
+        <ng-container *ngIf="items.header!.icon">
+          <i
+            *ngIf="items.header!.icon.includes('bx'); else materialIcon"
+            class="card-access-icon {{ items.header!.icon }}"
+          ></i>
+          <ng-template #materialIcon>
+            <span class="card-access-icon material-icons-round" aria-hidden="true">{{ items.header!.icon }}</span>
+          </ng-template>
+        </ng-container>
+        <span *ngIf="items.header!.iconText" class="card-access-icon descriptive">{{ items.header!.iconText }}</span>
+      </div>
+      <hr class="clearfix" *ngIf="items.children" />
+      <!-- Items simples -->
+      <div class="container-access" *ngIf="accessList.length > 0">
+        <div class="access-option">
+          <ng-container *ngFor="let itemList of accessList">
+            <a [routerLink]="itemList.route" class="list-group-item item-sm">
+              <ng-container *ngIf="itemList.icon">
+                <i *ngIf="itemList.icon.includes('bx'); else materialIcon" class="{{ itemList.icon }}"></i>
+                <ng-template #materialIcon>
+                  <span class="material-icons-round" aria-hidden="true">{{ itemList.icon }}</span>
+                </ng-template>
+              </ng-container>
+              <div class="access-content">
+                <span class="access-title">{{ itemList.title }}</span>
+                <p *ngIf="itemList.description" class="access-text">{{ itemList.description }}</p>
+              </div>
+            </a>
+          </ng-container>
+          <ng-container *ngFor="let itemList of accessList">
+            <a *ngIf="itemList.link" [href]="itemList.link" class="list-group-item item-sm">
+              <ng-container *ngIf="itemList.icon">
+                <i *ngIf="itemList.icon.includes('bx'); else materialIcon" class="{{ itemList.icon }}"></i>
+                <ng-template #materialIcon>
+                  <span class="material-icons-round" aria-hidden="true">{{ itemList.icon }}</span>
+                </ng-template>
+              </ng-container>
+              <div class="access-content">
+                <span class="access-title">{{ itemList.title }}</span>
+                <p *ngIf="itemList.description" class="access-text">{{ itemList.description }}</p>
+              </div>
+            </a>
+          </ng-container>
+        </div>
+      </div>
+      <!-- Items con categorias -->
+      <div class="container-access" *ngIf="accessCategoryList.length > 0">
+        <div class="access-option" *ngFor="let itemCategory of accessCategoryList; let i = index">
+          <h5 class="title-option">{{ itemCategory.title }}</h5>
+          <ng-container *ngFor="let accessItem of itemCategory.children">
+            <a *ngIf="accessItem.route" class="list-group-item item-sm" [routerLink]="accessItem.route">
+              <span class="access-title">
+                <ng-container *ngIf="accessItem.icon">
+                  <i *ngIf="accessItem.icon.includes('bx'); else materialIcon" class="{{ accessItem.icon }}"></i>
+                  <ng-template #materialIcon>
+                    <span class="material-icons-round" aria-hidden="true">{{ accessItem.icon }}</span>
+                  </ng-template>
+                </ng-container>
+                {{ accessItem.title }}
+              </span>
+            </a>
+            <a *ngIf="accessItem.link" class="list-group-item item-sm" [href]="accessItem.link">
+              <span class="access-title">
+                <ng-container *ngIf="accessItem.icon">
+                  <i *ngIf="accessItem.icon.includes('bx'); else materialIcon" class="{{ accessItem.icon }}"></i>
+                  <ng-template #materialIcon>
+                    <span class="material-icons-round" aria-hidden="true">{{ accessItem.icon }}</span>
+                  </ng-template>
+                </ng-container>
+                {{ accessItem.title }}
+              </span>
+            </a>
+          </ng-container>
+        </div>
+      </div>
+      <hr *ngIf="items.footer" class="clearfix" />
+      <!-- Footer -->
+      <a
+        *ngIf="items.footer && items.footer!.route"
+        [routerLink]="items.footer!.route"
+        class="list-group-item card-item"
+      >
+        <span class="access-title">
+          <ng-container *ngIf="items.footer!.icon">
+            <i *ngIf="items.footer!.icon.includes('bx'); else materialIcon" class="{{ items.footer!.icon }}"></i>
+            <ng-template #materialIcon>
+              <span class="material-icons-round" aria-hidden="true">{{ items.footer!.icon }}</span>
+            </ng-template>
+          </ng-container>
+          {{ items.footer!.title }}
+        </span>
+      </a>
+      <a *ngIf="items.footer && items.footer!.link" [href]="items.footer!.link" class="list-group-item card-item">
+        <span class="access-title">
+          <ng-container *ngIf="items.footer!.icon">
+            <i *ngIf="items.footer!.icon.includes('bx'); else materialIcon" class="{{ items.footer!.icon }}"></i>
+            <ng-template #materialIcon>
+              <span class="material-icons-round" aria-hidden="true">{{ items.footer!.icon }}</span>
+            </ng-template>
+          </ng-container>
+          {{ items.footer!.title }}
+        </span>
+      </a>
+    </div>
+  </div>
+</div>

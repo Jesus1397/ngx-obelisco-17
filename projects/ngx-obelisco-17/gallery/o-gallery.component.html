@@ -1,0 +1,73 @@
+<div class="gallery-grid" [ngClass]="['gallery-max-' + galleryItems.length, customClasses]">
+  <ng-container *ngIf="isInteractive; else noInteractive">
+    <a
+      *ngFor="let image of galleryItems"
+      [href]="image.src"
+      [attr.data-target]="'#' + dataTarget"
+      class="gallery-grid-item"
+      data-toggle="modal"
+    >
+      <img oDefaultImage [src]="image.src" [alt]="image.title" />
+    </a>
+  </ng-container>
+  <ng-template #noInteractive>
+    <div class="gallery-grid-item" *ngFor="let image of galleryItems">
+      <img oDefaultImage [src]="image.src" [alt]="image.title" />
+    </div>
+  </ng-template>
+</div>
+
+<div
+  *ngIf="isInteractive"
+  [id]="dataTarget"
+  class="modal modal-carousel"
+  data-backdrop="static"
+  tabindex="-1"
+  role="dialog"
+  [ngClass]="customClassesInteractive"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <a class="modal-carousel-close" data-dismiss="modal">Cerrar ventana</a>
+      <div [id]="dataTarget + 'control'" class="carousel" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+          <ng-container *ngFor="let image of galleryItems; index as i">
+            <div class="carousel-item" [class.active]="i === 0">
+              <img oDefaultImage class="d-block w-100" [src]="image.src" [alt]="image.title" />
+              <div class="carousel-caption">
+                <div class="row mb-4">
+                  <div class="col">
+                    <small>{{ image.author }}</small>
+                  </div>
+                  <div class="col text-right">
+                    <small>Imagen {{ i + 1 }} / {{ galleryItems.length }}</small>
+                  </div>
+                </div>
+                <h5 class="h2">{{ image.title }}</h5>
+                <p [innerHTML]="image.content"></p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          [attr.data-target]="'#' + dataTarget + 'control'"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          [attr.data-target]="'#' + dataTarget + 'control'"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

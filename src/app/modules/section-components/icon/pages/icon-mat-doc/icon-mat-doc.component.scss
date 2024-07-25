@@ -1,0 +1,10 @@
+.box-container {
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  flex-wrap: wrap;
+}
+.box {
+  max-width: fit-content;
+  min-width: 350px;
+  gap: 0.25rem;
+}

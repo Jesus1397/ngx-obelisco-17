@@ -1,0 +1,94 @@
+<section class="section-example">
+  <app-viewer title="Inicial" [isNavCode]="true">
+    <o-pagination
+      component
+      [totalPages]="10"
+      [currentPage]="1"
+      ariaLabel="Ejemplo de paginación inicial"
+      (currentPageChange)="actualPage($event)"
+    >
+    </o-pagination>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleStartHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTS }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Central" [isNavCode]="true">
+    <o-pagination
+      component
+      [totalPages]="10"
+      [currentPage]="5"
+      ariaLabel="Ejemplo de paginación central"
+      (currentPageChange)="actualPage($event)"
+    >
+    </o-pagination>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleMidHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTS }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Final" [isNavCode]="true">
+    <o-pagination
+      component
+      [totalPages]="10"
+      [currentPage]="10"
+      ariaLabel="Ejemplo de paginación final"
+      (currentPageChange)="actualPage($event)"
+    >
+    </o-pagination>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleEndHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTS }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Descriptivo" [isNavCode]="true">
+    <o-pagination
+      component
+      [totalPages]="10"
+      [currentPage]="5"
+      [isDiscriptiveType]="true"
+      ariaLabel="Ejemplo de paginación sin numerado"
+      (currentPageChange)="actualPage($event)"
+    >
+    </o-pagination>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleWithoutNumbersHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTS }}
+      </code>
+    </div>
+  </app-viewer>
+</section>

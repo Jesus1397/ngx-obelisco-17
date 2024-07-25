@@ -1,0 +1,60 @@
+<section class="section-example">
+  <app-viewer title="Tipos">
+    <div component class="spinner-container">
+      <o-spinner></o-spinner>
+      <o-spinner type="primary"></o-spinner>
+      <o-spinner type="secondary"></o-spinner>
+      <o-spinner type="success"></o-spinner>
+      <o-spinner type="danger"></o-spinner>
+      <o-spinner type="light"></o-spinner>
+      <o-spinner type="dark"></o-spinner>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleColors }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Tamaños">
+    <div component class="spinner-container">
+      <o-spinner size="sm"></o-spinner>
+      <o-spinner></o-spinner>
+      <o-spinner size="lg"></o-spinner>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleSizes }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Expandible">
+    <div component class="spinner-container">
+      <div style="width: 64px">
+        <o-spinner [isExpandable]="true"></o-spinner>
+      </div>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleBlock }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con mensaje">
+    <div component class="d-flex flex-column align-items-center">
+      <o-spinner size="lg"></o-spinner>
+      <small class="mt-2">Cargando...</small>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ exampleMessage }}
+      </code>
+    </div>
+  </app-viewer>
+</section>

@@ -1,0 +1,15 @@
+<ng-container *ngIf="titleComponent || subtitleComponent || labelComponent || iconComponent; else customHeader">
+  <button
+    class="card-header collapsed"
+    data-toggle="collapse"
+    [attr.data-target]="'#' + identifierHeader"
+    aria-expanded="false"
+    [ngClass]="customClasses"
+  >
+    <ng-content select="o-collapse-icon"></ng-content>
+    <ng-content select="o-collapse-label"></ng-content>
+    <ng-content select="o-collapse-title"></ng-content>
+    <ng-content select="o-collapse-subtitle"></ng-content>
+  </button>
+</ng-container>
+<ng-template #customHeader><ng-content></ng-content></ng-template>

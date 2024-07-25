@@ -1,0 +1,41 @@
+<ng-template #highlightedContent>
+  <ng-content select="o-highlighted-image"></ng-content>
+  <ng-content select="o-highlighted-video"></ng-content>
+  <o-highlighted-image *ngIf="image" [image]="image"></o-highlighted-image>
+  <o-highlighted-video *ngIf="video" [video]="video"></o-highlighted-video>
+  <o-highlighted-video *ngIf="iframe" [iframe]="iframe"></o-highlighted-video>
+
+  <div class="card-body">
+    <ng-container *ngIf="!oCustomContent">
+      <ng-content select="o-highlighted-header"></ng-content>
+      <o-highlighted-title *ngIf="title">{{ title }}</o-highlighted-title>
+
+      <ng-content select="o-highlighted-content"></ng-content>
+      <o-highlighted-description *ngIf="description">{{ description }}</o-highlighted-description>
+
+      <ng-content select="o-highlighted-footer"></ng-content>
+      <o-highlighted-footer *ngIf="children"><ng-content></ng-content></o-highlighted-footer>
+    </ng-container>
+    <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"></ng-container>
+  </div>
+</ng-template>
+
+<ng-container *ngIf="type === 'banner'">
+  <div class="panel-horizontal-content" [class.bg-light]="isBgLight" [ngClass]="customClasses">
+    <div class="card card-simple panel-horizontal">
+      <ng-container *ngTemplateOutlet="highlightedContent"></ng-container>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="type === 'grouping'">
+  <div class="card card-simple panel-vertical" [ngClass]="customClasses">
+    <ng-container *ngTemplateOutlet="highlightedContent"></ng-container>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="type === 'lateral'">
+  <div class="card card-simple panel-lateral" [ngClass]="customClasses">
+    <ng-container *ngTemplateOutlet="highlightedContent"></ng-container>
+  </div>
+</ng-container>

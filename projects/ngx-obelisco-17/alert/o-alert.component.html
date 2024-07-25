@@ -1,0 +1,46 @@
+<div
+  class="alert"
+  [ngClass]="
+    (type && 'alert-' + type) +
+    (isDismissible ? ' alert-dismissible show fade' : '') +
+    (customClasses ? ' ' + customClasses : '')
+  "
+  role="alert"
+>
+  <ng-container *ngIf="!oCustomContent">
+    <p><ng-content></ng-content></p>
+
+    <ng-container *ngIf="listContent?.listItems?.length != 0">
+      <ul
+        *ngIf="listContent?.isUnorderedList; else orderedList"
+        [class.list-links]="checkUrls()"
+        [class]="!checkUrls() ? '' : null"
+      >
+        <ng-container [ngTemplateOutlet]="liItems"></ng-container>
+      </ul>
+    </ng-container>
+
+    <ng-template #orderedList>
+      <ol [class.list-links]="checkUrls()" [class]="!checkUrls() ? '' : null">
+        <ng-container [ngTemplateOutlet]="liItems"></ng-container>
+      </ol>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"> </ng-container>
+
+  <button *ngIf="isDismissible" type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+    <span class="material-icons-round" aria-hidden="true">close</span>
+  </button>
+
+  <ng-template #liItems>
+    <li *ngFor="let item of listContent?.listItems">
+      <ng-container *ngIf="item.url; else itemList">
+        <a [href]="item.url">{{ item.text }}</a>
+      </ng-container>
+      <ng-template #itemList>
+        {{ item.text }}
+      </ng-template>
+    </li>
+  </ng-template>
+</div>

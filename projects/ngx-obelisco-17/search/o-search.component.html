@@ -1,0 +1,37 @@
+<div class="navbar-search" *ngIf="searchbarItems">
+  <form class="form-search">
+    <div class="form-group">
+      <label class="sr-only" for="search-input">Buscador</label>
+      <input
+        #inputElement
+        type="search"
+        class="form-control input-search"
+        [ngClass]="type ? 'bg-' + type : ''"
+        id="name-input"
+        name="name"
+        aria-label="Ingrese su búsqueda"
+        [placeholder]="placeholder"
+        [(ngModel)]="term"
+        (input)="search()"
+        (keydown.enter)="onEnter()"
+        (keydown.ArrowUp)="onUp()"
+        (keydown.ArrowDown)="onDown()"
+      />
+      <button class="reset" type="reset" aria-label="Borrar" (click)="resetSearch()"></button>
+    </div>
+  </form>
+  <div class="search-results" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <ng-container *ngIf="filteredResults.length > 0">
+      <div
+        class="search-item"
+        *ngFor="let result of filteredResults; let i = index"
+        [class.selected-search-item]="i === selectedIndex"
+        [class.first-search-item]="i === selectedIndex && !isHover"
+        (click)="goTo(result)"
+      >
+        {{ result.title }}
+      </div>
+    </ng-container>
+    <div class="no-results" *ngIf="noResults">No se encontraron resultados😢.</div>
+  </div>
+</div>

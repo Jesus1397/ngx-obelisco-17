@@ -1,0 +1,4 @@
+<p class="banner-text" *ngIf="text; else children" [innerHTML]="text" [ngClass]="customClasses"></p>
+<ng-template #children>
+  <p class="banner-text" [ngClass]="customClasses"><ng-content></ng-content></p>
+</ng-template>

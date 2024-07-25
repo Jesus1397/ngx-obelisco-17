@@ -1,0 +1,227 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">
+      Referencia de API para el componente Encabezado de Obelisco
+    </h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { ONavbarModule } from 'ngx-obelisco-17/navbar';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-navbar</strong></p>
+
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
+  <div class="section-type">
+    <h3>LogoHeader</h3>
+    <p>Permite establecer los valores de la propiedad <strong>logo</strong>.</p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ logoInterface }}</code>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="logoDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+
+    <h3>MediaHeader</h3>
+    <p>Permite establecer los valores de la propiedad <strong>img</strong>.</p>
+    <div class="section-interface">
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="mediaDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h3>NavbarRouteBase</h3>
+    <p>
+      Interfaz base utilizada en <strong>NavbarRoute</strong>,
+      <strong>NavbarRouteItem</strong>, <strong>NavbarRouteAccount</strong>,
+      <strong>NavbarRouteAccountItem</strong> y
+      <strong>NavbarRouteLogin</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ navbarRouteBaseInterface }}</code>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="navbarRouteBaseDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h3>NavbarRoute</h3>
+    <p>
+      Permite establecer los valores de la propiedad <strong>routes</strong> y
+      <strong>routesExtended</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ navbarRouteInterface }}</code>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades de NavbarRoute</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="navbarRouteDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+
+      <div class="section-properties">
+        <h4>Propiedades de NavbarRouteItem</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="navbarRouteItemDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h3>NavbarRouteAccount</h3>
+    <p>
+      Permite establecer los valores de la propiedad
+      <strong>routesAccount</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{
+          navbarRouteAccountInterface
+        }}</code>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades de NavbarRouteAccount</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="navbarRouteAccountDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades de NavbarRouteAccountItem</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="navbarRouteAccountItemDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h3>NavbarRouteLogin</h3>
+    <p>
+      Permite establecer los valores de la propiedad
+      <strong>routesLogin</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ navbarRouteLoginInterface }}</code>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="section-type">
+    <h3>SearchbarItem</h3>
+    <p>
+      Permite establecer los valores de la propiedad
+      <strong>searchbarItems</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ navbarSearchitemInterface }}</code>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [columns]="columns"
+          [dataSource]="searchbarItemDataSource"
+          [isStriped]="true"
+          [isBordered]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+</section>

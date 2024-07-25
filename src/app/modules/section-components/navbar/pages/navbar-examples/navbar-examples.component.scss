@@ -1,0 +1,74 @@
+:host ::ng-deep {
+  o-navbar > * {
+    transform: scale(0.6);
+  }
+
+  .navbar {
+    width: 160%;
+    left: -30%;
+  }
+
+  @media (max-width: 1080px) {
+    o-navbar > * {
+      transform: scale(0.5);
+    }
+
+    .navbar {
+      width: 220%;
+      left: -60%;
+    }
+  }
+
+  @media (max-width: 975px) {
+    .navbarOne {
+      margin-bottom: 120px;
+    }
+
+    .navbarTwo {
+      margin-bottom: 200px;
+    }
+
+    .navbarThree {
+      margin-bottom: 290px;
+    }
+
+    .navbarFour {
+      margin-bottom: 380px;
+    }
+
+    .navbarFive {
+      margin-bottom: 160px;
+    }
+  }
+
+  @media (max-width: 765px) {
+    o-navbar > * {
+      transform: scale(0.7);
+    }
+
+    .navbar {
+      width: 140%;
+      left: -20%;
+    }
+
+    .navbarOne {
+      margin-bottom: 160px;
+    }
+
+    .navbarTwo {
+      margin-bottom: 280px;
+    }
+
+    .navbarThree {
+      margin-bottom: 400px;
+    }
+
+    .navbarFour {
+      margin-bottom: 520px;
+    }
+
+    .navbarFive {
+      margin-bottom: 220px;
+    }
+  }
+}

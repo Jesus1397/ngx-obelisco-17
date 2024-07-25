@@ -1,0 +1,71 @@
+<section class="section-example">
+  <app-viewer title="Tipos" [isNavCode]="true">
+    <div class="mb-4" component>
+      <o-banner [content]="content"></o-banner>
+      <br />
+      <o-banner [content]="content" [isDark]="true"></o-banner>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ bannerTypesHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ bannerTypesTS }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con Botón" [isNavCode]="true">
+    <div class="mb-4" component>
+      <o-banner [content]="textButton" [icon]="icon">
+        <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
+      </o-banner>
+      <br />
+      <o-banner [content]="textButton" [icon]="icon" [isDark]="true">
+        <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
+      </o-banner>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ bannerButtonHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ bannerButtonTS }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con Botones" [isNavCode]="true">
+    <div class="mb-4" component>
+      <o-banner [content]="textButton" [icon]="iconCookie">
+        <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
+        <o-button #children size="sm" link="#">Botón</o-button>
+      </o-banner>
+      <br />
+      <o-banner [content]="textButton" [icon]="iconCookie" [isDark]="true">
+        <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
+        <o-button #children size="sm" link="#">Botón</o-button>
+      </o-banner>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ bannerButtonsHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ bannerButtonTS }}
+      </code>
+    </div>
+  </app-viewer>
+</section>

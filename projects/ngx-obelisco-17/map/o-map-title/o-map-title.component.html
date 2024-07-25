@@ -1,0 +1,12 @@
+<ng-template #content><ng-content></ng-content></ng-template>
+
+<ng-container *ngIf="isLateral; else institutionalTitle">
+  <h2 class="card-title" [ngClass]="customClasses">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </h2>
+</ng-container>
+<ng-template #institutionalTitle>
+  <h3 class="card-title" [ngClass]="customClasses">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </h3>
+</ng-template>

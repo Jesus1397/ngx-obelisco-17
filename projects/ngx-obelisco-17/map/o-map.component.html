@@ -1,0 +1,28 @@
+<div class="card card-map" [ngClass]="customClasses">
+  <div class="card-body">
+    <ng-container *ngIf="!oCustomContent">
+      <ng-container *ngIf="title">
+        <ng-container *ngIf="type == 'lateral'; else institutionalTitle">
+          <h2 class="card-title">{{ title }}</h2>
+        </ng-container>
+        <ng-template #institutionalTitle>
+          <h3 class="card-title">{{ title }}</h3>
+        </ng-template>
+      </ng-container>
+      <ng-content select="o-map-header"></ng-content>
+
+      <o-map-description *ngIf="description">{{ description }}</o-map-description>
+
+      <ng-content select="o-map-content"></ng-content>
+
+      <o-map-content *ngIf="iframe">
+        <o-map-iframe [iframe]="iframe"></o-map-iframe>
+      </o-map-content>
+
+      <ng-content select="o-map-footer"></ng-content>
+
+      <ng-content></ng-content>
+    </ng-container>
+    <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"> </ng-container>
+  </div>
+</div>

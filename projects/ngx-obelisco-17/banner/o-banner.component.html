@@ -1,0 +1,14 @@
+<div class="banner" [class.banner-dark]="isDark" [ngClass]="customClasses">
+  <div class="banner-content" *ngIf="!oCustomContent">
+    <ng-content select="o-banner-icon"></ng-content>
+    <i *ngIf="icon && icon?.includes('bx')" class="{{ icon }}"></i>
+    <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{ icon }}</span>
+
+    <ng-content select="o-banner-text"></ng-content>
+    <o-banner-text *ngIf="content" [text]="content"></o-banner-text>
+
+    <ng-content select="o-banner-actions"></ng-content>
+    <o-banner-actions *ngIf="children"><ng-content></ng-content></o-banner-actions>
+  </div>
+  <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"> </ng-container>
+</div>

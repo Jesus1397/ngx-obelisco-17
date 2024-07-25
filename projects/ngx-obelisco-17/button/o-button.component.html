@@ -1,0 +1,34 @@
+<ng-template #content><ng-content></ng-content></ng-template>
+<ng-container *ngIf="link || route || download || rel || target; else isButton">
+  <ng-container *ngIf="link || download || rel || target; else isRouterLink">
+    <a
+      [ngClass]="getClassNames()"
+      [attr.aria-label]="ariaLabel"
+      [attr.download]="download"
+      [attr.rel]="rel ? rel : 'noreferrer'"
+      [attr.target]="target ? target : '_blank'"
+      [attr.href]="link ? link : '#'"
+    >
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </a>
+  </ng-container>
+  <ng-template #isRouterLink>
+    <a [ngClass]="getClassNames()" [attr.aria-label]="ariaLabel" [routerLink]="route">
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </a>
+  </ng-template>
+</ng-container>
+
+<ng-template #isButton>
+  <button
+    type="button"
+    [ngClass]="getClassNames()"
+    [attr.aria-label]="ariaLabel"
+    [disabled]="isDisabled ? true : null"
+    [attr.data-target]="dataTarget ? '#' + dataTarget : null"
+    [attr.data-toggle]="dataToggle"
+    [attr.data-dismiss]="dataDismiss"
+  >
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </button>
+</ng-template>

@@ -1,0 +1,118 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">Referencia de API para el componente Mapa de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OMapModule } from 'ngx-obelisco-17/map';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-map</strong></p>
+
+    <div class="section-properties mb-5">
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="map"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
+  <div class="section-type">
+    <h3>MediaIframe</h3>
+    <p>
+      Permite establecer los valores de la propiedad <strong>iframe</strong>.
+    </p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ interface }}</code>
+      </div>
+      <div class="section-properties">
+        <h4>Propiedades</h4>
+        <o-table
+          [isScrollable]="true"
+          [dataSource]="dataSourceInterface"
+          [columns]="columns"
+          [isBordered]="true"
+          [isStriped]="true"
+        ></o-table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-properties mb-5">
+    <h2 class="h3">Secciones básicas de OMap</h2>
+    <p>
+      El componente OMap puede ser utilizado con las propiedades mencionadas
+      divviamente. Además, Ngx-obelisco proporciona una serie de secciones
+      divestablecidas que pueden incluirse dentro de
+      &lt;o-map&gt;&lt;/o-map&gt;.
+    </p>
+    <o-table
+      [isScrollable]="true"
+      [columns]="columns"
+      [dataSource]="mapSections"
+      [isBordered]="true"
+      [isStriped]="true"
+      [isScrollable]="true"
+    ></o-table>
+  </div>
+  <div class="section-properties mb-5">
+    <p>
+      Tanto <em>o-map-title</em>, <em>o-map-description</em>,
+      <em>o-map-content</em> como <em>o-map-iframe</em> tienen la propiedad
+      <em><strong>customClasses</strong>: string</em>, la cual permite aplicar
+      clases personalizadas a los mismos.
+    </p>
+    <h3>Propiedades de <span class="font-italic">o-map-iframe</span></h3>
+    <o-table
+      [isScrollable]="true"
+      [columns]="columns"
+      [dataSource]="mapIframe"
+      [isBordered]="true"
+      [isStriped]="true"
+      [isScrollable]="true"
+    ></o-table>
+  </div>
+  <div class="section-properties mb-5">
+    <p>Ejemplo:</p>
+    <app-viewer [isNavCode]="true" [isCodeVisible]="true">
+      <div
+        appClipboard
+        class="d-flex flex-column align-items-end p-0"
+        component-html
+      >
+        <button
+          class="btn btn-sm btn-outline-link btn-clipboard btn-icon"
+        ></button>
+        <code highlight-js>{{ mapSectionsHtml }}</code>
+      </div>
+      <div
+        appClipboard
+        class="d-flex flex-column align-items-end p-0"
+        component-ts
+      >
+        <button
+          class="btn btn-sm btn-outline-link btn-clipboard btn-icon"
+        ></button>
+        <code highlight-js [lang]="'ts'" [lang]="'ts'">{{
+          mapSectionsTs
+        }}</code>
+      </div>
+    </app-viewer>
+  </div>
+</section>

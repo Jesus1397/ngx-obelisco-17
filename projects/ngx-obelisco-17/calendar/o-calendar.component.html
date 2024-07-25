@@ -1,0 +1,100 @@
+<div class="calendar" [ngClass]="customClasses">
+  <div class="calendar-header">
+    <h2 class="calendar-title">{{ monthsTitles(month!) }}</h2>
+    <span class="calendar-year">{{ year }}</span>
+  </div>
+  <div class="calendar-body">
+    <table>
+      <thead>
+        <tr class="calendar-week-header">
+          <th *ngFor="let day of DAYS_HEADER_TABLE">
+            <span>{{ day }}</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="calendar-week">
+          <ng-container *ngIf="emptyDaysArray.length != 0">
+            <td *ngFor="let empatyDay of emptyDaysArray"></td>
+          </ng-container>
+          <td *ngFor="let day of firstWeekDaysArray">
+            <ng-container *ngTemplateOutlet="activeDay; context: { day: day }"></ng-container>
+          </td>
+        </tr>
+
+        <tr class="calendar-week" *ngFor="let chunkObject of weekDaysArrayRows.rows">
+          <ng-container *ngFor="let day of chunkObject; let i = index">
+            <td>
+              <ng-container *ngIf="day >= 0">
+                <ng-container *ngTemplateOutlet="activeDay; context: { day: day }"></ng-container>
+              </ng-container>
+              <ng-container *ngIf="day < 0">
+                <span></span>
+              </ng-container>
+            </td>
+          </ng-container>
+        </tr>
+        <tr class="calendar-week" *ngIf="weekDaysArrayRows.counter === 4">
+          <td *ngFor="let _ of [1, 2, 3, 4, 5, 6, 7]">
+            <span></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="calendar-footer" *ngIf="activeDays && hasList">
+    <ng-container *ngIf="isCollapsed; else calendarList">
+      <div class="accordion">
+        <div class="card">
+          <button
+            class="card-header collapsed"
+            data-toggle="collapse"
+            [attr.data-target]="'#collapse' + monthsTitles(month!)"
+          >
+            <i class="bx bx-calendar"></i>
+            <span class="collapse-title">Referencias</span>
+          </button>
+          <div id="collapse{{ monthsTitles(month!) }}" class="collapse">
+            <div class="card-body">
+              <ng-container *ngTemplateOutlet="calendarList"></ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #calendarList>
+  <ul class="calendar-footer-list">
+    <li *ngFor="let activeDay of activeDays">
+      <strong>
+        {{ typeOfDays(activeDay.day) }}
+      </strong>
+      {{ activeDay.title }}
+    </li>
+  </ul>
+</ng-template>
+
+<ng-template #activeDay let-day="day">
+  <ng-container *ngIf="isActiveDay(day); else notActive">
+    <a
+      *ngIf="getActiveDay(day)?.url != undefined; else activeNoLink"
+      href="{{ getActiveDay(day)?.url }}"
+      class="calendar-link"
+      title="{{ getActiveDay(day)?.title }}"
+      [class.disabled]="getActiveDay(day)?.isDisabled"
+      (click)="getActiveDay(day)?.isDisabled && $event.preventDefault()"
+    >
+      <span [ngClass]="getClassByType(getActiveDay(day)?.type)">{{ day }}</span>
+    </a>
+    <ng-template #activeNoLink>
+      <span title="{{ getActiveDay(day)?.title }}" [class.disabled]="getActiveDay(day)?.isDisabled">
+        <span [ngClass]="getClassByType(getActiveDay(day)?.type)">{{ day }}</span>
+      </span>
+    </ng-template>
+  </ng-container>
+  <ng-template #notActive>
+    <span>{{ day }}</span>
+  </ng-template>
+</ng-template>

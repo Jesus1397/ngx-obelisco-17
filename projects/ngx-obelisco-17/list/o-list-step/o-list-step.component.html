@@ -1,0 +1,16 @@
+<ul
+  class="list-steps"
+  [class.list-steps-light]="isStepLight"
+  [class.list-steps-numbers]="isStepNumber"
+  [class.list-steps-lg]="size === 'lg'"
+  [class.list-steps-sm]="size === 'sm'"
+  [ngClass]="customClasses"
+>
+  <li class="list-steps-item" *ngFor="let step of steps; let i = index">
+    <h3 *ngIf="step.title">{{ step.title }}</h3>
+    <p class="status-text" *ngIf="!isTextArray; else isAarray" [innerHTML]="step.description"></p>
+    <ng-template #isAarray>
+      <p class="status-text" *ngFor="let item of textArray(i)" [innerHTML]="item"></p>
+    </ng-template>
+  </li>
+</ul>

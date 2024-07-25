@@ -1,0 +1,44 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">
+      Referencia de API para el componente Mensaje de estado de Obelisco
+    </h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OStatusMessageModule } from 'ngx-obelisco-17/status-message';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-status-message</strong></p>
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <br />
+  <h2 class="h3">Tipos de datos</h2>
+  <hr />
+
+  <div class="section-type">
+    <h3>StatusMessageTypes</h3>
+    <p>Permite establecer los diferentes tipos de Mensaje de estado.</p>
+
+    <div class=" ">
+      <code highlight-js [lang]="'ts'">{{ type }}</code>
+    </div>
+  </div>
+</section>

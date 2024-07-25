@@ -1,0 +1,29 @@
+<section class="section-example">
+  <app-viewer title="Simple" id="example-directive" [isNavCode]="true">
+    <div component class="search-container">
+      <o-search [searchbarItems]="routes" [onSelectItem]="handleSelectItem"></o-search>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ searchExampleHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ searchExampleTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con redireccionamiento" id="example-directive" [isNavCode]="true">
+    <div component class="search-container">
+      <o-search [searchbarItems]="routes"></o-search>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ searchExampleHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ searchExampleTs }}</code>
+    </div>
+  </app-viewer>
+</section>

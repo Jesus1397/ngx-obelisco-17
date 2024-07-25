@@ -1,0 +1,39 @@
+<div class="example-wrapper">
+  <div class="example-viewer p-3" *ngIf="title">
+    <h2 class="h5">{{ title }}</h2>
+    <nav *ngIf="!isCodeVisible">
+      <ul class="nav flex-row nav-pills">
+        <li class="nav-item d-flex">
+          <a class="btn btn-sm btn-link" [class.active]="isOpenCode" (click)="isOpenCode = !isOpenCode">
+            <span>{{ linkCode }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrapper">
+    <nav class="tabs-slider px-0 mb-3" *ngIf="isOpenCode && isNavCode">
+      <ul class="nav nav-pills tabs fixedWidth">
+        <li class="nav-item">
+          <a class="nav-link active" [class.active]="isWindowHTML" (click)="isWindowHTML = true">HTML</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="!isWindowHTML" (click)="isWindowHTML = false">TS</a>
+        </li>
+      </ul>
+    </nav>
+    <ng-container *ngIf="!isOpenCode; else codeTemplate">
+      <ng-content select="[component]"></ng-content>
+    </ng-container>
+
+    <ng-template #codeTemplate>
+      <ng-container *ngIf="isWindowHTML; else windowTs">
+        <ng-content select="[component-html]"></ng-content>
+      </ng-container>
+    </ng-template>
+
+    <ng-template #windowTs>
+      <ng-content select="[component-ts]"></ng-content>
+    </ng-template>
+  </div>
+</div>

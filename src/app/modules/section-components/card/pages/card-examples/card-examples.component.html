@@ -1,0 +1,249 @@
+<section class="section-example">
+  <app-viewer title="Horizontal - Temática">
+    <div component class="card-wrapper-horizontal">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageTheme"
+        [isThemeCard]="true"
+      ></o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardThemeHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Horizontal - Con ícono">
+    <div component class="card-wrapper-horizontal">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="info"
+        [isHorizontal]="true"
+      ></o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardIconHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Horizontal - Con imagen">
+    <div component class="card-wrapper-horizontal">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageHorizontal"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageHorizontal"
+        [isHorizontal]="true"
+      ></o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardImageHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Horizontal - Solo texto">
+    <div component class="card-wrapper-horizontal">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [isHorizontal]="true"
+      ></o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardTextHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Vertical - Con ícono">
+    <div component class="card-wrapper-vertical">
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isBordered]="true"
+      >
+      </o-card>
+      <o-card title="Título de la tarjeta" description="Descripción de la tarjeta" route="/components" icon="info">
+      </o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardIconVerticalHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Vertical - Con imagen">
+    <div component class="card-wrapper-vertical">
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageVertical"
+        [isBordered]="true"
+      >
+      </o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardImageVerticalHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Vertical - Noticia">
+    <div component class="card-wrapper-vertical">
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageVertical"
+        [cardBadges]="[{ text: 'Etiqueta 1' }, { text: 'Etiqueta 2' }]"
+        [isBordered]="true"
+      >
+        <small #info>Fecha de publicación</small>
+      </o-card>
+      <o-card
+        title="Título de la tarjeta Noticias truncado con texto extendido que supera las tres líneas de longitud."
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageVertical"
+        [cardBadges]="[{ text: 'Etiqueta 1' }, { text: 'Etiqueta 2' }]"
+        [isTitleTruncate]="true"
+        [isBordered]="true"
+      >
+        <small #info>Fecha de publicación</small>
+      </o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardNewsHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Vertical - Agenda">
+    <div component class="card-wrapper-vertical">
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="imageVertical"
+        headline="sobrelinea"
+        [isBordered]="true"
+      >
+        <div class="pt-2" #info>
+          <small><span class="material-icons-round" aria-hidden="true">calendar_today</span> Lun 01/1</small>
+          <small><span class="material-icons-round" aria-hidden="true">watch_later</span> 17 | 18 | 19 hs</small>
+        </div>
+      </o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardEventHtml }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Disposición - Tres columnas">
+    <div component class="card-deck card-column max-cards-3">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardLayoutThree }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Disposición - Dos columnas">
+    <div component class="card-deck card-column max-cards-2">
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título de la tarjeta con más de una línea"
+        description="Descripción de la tarjeta"
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ cardLayoutTwo }}</code>
+    </div>
+  </app-viewer>
+</section>

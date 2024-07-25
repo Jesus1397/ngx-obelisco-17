@@ -1,0 +1,20 @@
+<div
+  class="card card-block"
+  [ngStyle]="isPositionRelative ? null : { top: '48px' }"
+  [class.bg-light]="isBgLight"
+  [class.position-sticky]="!isPositionRelative"
+  [class]="customClasses"
+>
+  <div class="card-body" *ngIf="!oCustomContent">
+    <o-block-title *ngIf="title">{{ title }}</o-block-title>
+    <o-block-text *ngIf="description">{{ description }}</o-block-text>
+
+    <ng-content select="o-block-header"></ng-content>
+    <ng-content select="o-block-text"></ng-content>
+
+    <ng-container *ngIf="children"><ng-content></ng-content></ng-container>
+
+    <ng-content select="o-block-footer"></ng-content>
+  </div>
+  <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"></ng-container>
+</div>

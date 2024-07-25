@@ -1,0 +1,248 @@
+<section class="section-example">
+  <app-viewer title="Simple" [isNavCode]="true">
+    <div component>
+      <o-tabs [navTabsItems]="navigationTabsComponent"></o-tabs>
+    </div>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Simple con icono" [isNavCode]="true">
+    <div component>
+      <o-tabs [navTabsItems]="simpleIcon"></o-tabs>
+    </div>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTMLIcon }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exmapleTsIcon }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Ancho completo" [isNavCode]="true">
+    <div component>
+      <o-tabs [navTabsItems]="navigationTabsComponent" [isFixedWidth]="true"></o-tabs>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTMLFixedWidth }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Desplazable" [isNavCode]="true">
+    <div component>
+      <o-tabs [navTabsItems]="navigationTabsComponent" [isFixedWidth]="true" [isSlidered]="true"></o-tabs>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTMLSlider }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Simple gris" [isNavCode]="true">
+    <div component>
+      <o-tabs [navTabsItems]="navigationTabsComponent" [isItemsRounded]="true"></o-tabs>
+    </div>
+
+    <div component class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Ancho completo" [isNavCode]="true">
+    <div component>
+      <o-tabs [navTabsItems]="navigationTabsComponent" [isItemsRounded]="true" [isFixedWidth]="true"></o-tabs>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Desplazable" [isNavCode]="true">
+    <div component>
+      <o-tabs
+        [navTabsItems]="navigationTabsComponent"
+        [isItemsRounded]="true"
+        [isFixedWidth]="true"
+        [isSlidered]="true"
+      ></o-tabs>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Simple con fondo" [isNavCode]="true">
+    <div class="wrapper-bg bg-light" component>
+      <o-tabs [navTabsItems]="navigationTabsComponent" [isItemsRoundedLight]="true"></o-tabs>
+    </div>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Ancho completo" [isNavCode]="true">
+    <div class="wrapper-bg bg-light" component>
+      <o-tabs [navTabsItems]="navigationTabsComponent" [isItemsRoundedLight]="true" [isFixedWidth]="true"></o-tabs>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Desplazable" [isNavCode]="true">
+    <div class="wrapper-bg bg-light" component>
+      <o-tabs
+        [navTabsItems]="navigationTabsComponent"
+        [isItemsRoundedLight]="true"
+        [isFixedWidth]="true"
+        [isSlidered]="true"
+      ></o-tabs>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ simpleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Tamaños" [isNavCode]="true">
+    <div component class="option-container">
+      <form component class="mb-5">
+        <div class="mb-5">
+          <o-tabs [navTabsItems]="navigationTabsComponent" [size]="'sm'" [isFixedWidth]="true"></o-tabs>
+        </div>
+        <div class="mb-5">
+          <o-tabs [navTabsItems]="navigationTabsComponent" [isFixedWidth]="true"></o-tabs>
+        </div>
+        <div class="mb-5">
+          <o-tabs [navTabsItems]="navigationTabsComponent" [size]="'lg'" [isFixedWidth]="true"></o-tabs>
+        </div>
+      </form>
+      <form component>
+        <div class="mb-5">
+          <o-tabs
+            [navTabsItems]="navigationTabsComponent"
+            [size]="'sm'"
+            [isFixedWidth]="true"
+            [isItemsRounded]="true"
+          ></o-tabs>
+        </div>
+        <div class="mb-5">
+          <o-tabs [navTabsItems]="navigationTabsComponent" [isFixedWidth]="true" [isItemsRounded]="true"></o-tabs>
+        </div>
+        <div class="mb-5">
+          <o-tabs
+            [navTabsItems]="navigationTabsComponent"
+            [size]="'lg'"
+            [isFixedWidth]="true"
+            [isItemsRounded]="true"
+          ></o-tabs>
+        </div>
+      </form>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ sizesHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ exampleTs }}
+      </code>
+    </div>
+  </app-viewer>
+</section>

@@ -1,0 +1,46 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">Referencia de API para el componente Badge de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OBadgeModule } from 'ngx-obelisco-17/badge';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-badge</strong></p>
+
+    <div class="section-properties mb-5">
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+
+    <h2 class="h3">Tipos de datos</h2>
+    <hr />
+
+    <div class="section-type">
+      <h3>BadgeTypes</h3>
+      <p>
+        Permite establecer los valores de la propiedad <strong>type</strong>.
+      </p>
+
+      <div class="section-interface mb-5">
+        <div class=" ">
+          <code highlight-js [lang]="'ts'">{{ colors }}</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

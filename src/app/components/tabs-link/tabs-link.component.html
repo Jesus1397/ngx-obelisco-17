@@ -1,0 +1,7 @@
+<nav class="tabs-slider" aria-label="width tab list">
+  <ul class="nav nav-pills tabs fixedWidth" id="width-myTab" role="tablist">
+    <li class="nav-item" role="presentation" *ngFor="let route of routes">
+      <a [routerLink]="route.route" routerLinkActive="active" class="nav-link" role="tab">{{ route.title }}</a>
+    </li>
+  </ul>
+</nav>

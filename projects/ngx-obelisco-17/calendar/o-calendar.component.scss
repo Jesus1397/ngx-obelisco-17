@@ -1,0 +1,11 @@
+.calendar .calendar-body table .calendar-week td {
+  .calendar-link.disabled,
+  > span.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    span {
+      background-color: transparent !important;
+      color: #9eaab8;
+    }
+  }
+}

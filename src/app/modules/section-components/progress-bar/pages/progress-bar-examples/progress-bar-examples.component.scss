@@ -1,0 +1,7 @@
+:host::ng-deep .progress {
+  margin-bottom: 1rem;
+}
+
+::ng-deep o-button + o-button {
+  margin-left: 0.5rem;
+}

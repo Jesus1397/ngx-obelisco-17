@@ -1,0 +1,130 @@
+<div class="dropdown">
+  <button
+    type="button"
+    class="btn btn-dropdown btn-dropdown-lg"
+    [class.btn-dropdown-border]="isBordered"
+    [class.dropdown-toggle]="!hasChildren"
+    [attr.data-toggle]="hasChildren ? 'collapse' : 'dropdown'"
+    [attr.data-target]="hasChildren ? '#' + dataTarget : null"
+    [attr.aria-controls]="hasChildren ? dataTarget : null"
+    aria-haspopup="true"
+    aria-expanded="false"
+    [ngClass]="customClasses"
+    [attr.aria-label]="ariaLabel"
+  >
+    <ng-container *ngIf="iconLeft">
+      <i *ngIf="iconLeft.includes('bx')" class="{{ iconLeft }}" [class.btn-dropdown-icon]="isAnimatedIconLeft"></i>
+      <span
+        *ngIf="!iconLeft.includes('bx')"
+        class="material-icons-round"
+        aria-hidden="true"
+        [class.btn-dropdown-icon]="isAnimatedIconLeft"
+        >{{ iconLeft }}</span
+      >
+    </ng-container>
+    <span class="btn-dropdown-text" *ngIf="title">{{ title }}</span>
+    <ng-container *ngIf="iconRight">
+      <i *ngIf="iconRight.includes('bx')" class="{{ iconRight }}" [class.btn-dropdown-icon]="isAnimatedIconRight"></i>
+      <span
+        *ngIf="!iconRight.includes('bx')"
+        class="material-icons-round"
+        aria-hidden="true"
+        [class.btn-dropdown-icon]="isAnimatedIconRight"
+        >{{ iconRight }}</span
+      >
+    </ng-container>
+  </button>
+  <div
+    class="dropdown-menu"
+    [class.dropdown-menu-right]="isPositionRight"
+    [class.collapse]="hasChildren"
+    [id]="hasChildren ? dataTarget : null"
+  >
+    <ng-container *ngFor="let item of dropNavItems">
+      <a
+        *ngIf="item.route && !item.children"
+        class="dropdown-item"
+        [class.disabled]="item.isDisabled"
+        [class.item-danger]="item.isItemDanger"
+        [routerLink]="item.route"
+        [ngClass]="item.customClasses"
+      >
+        <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: item.iconLeft }"></ng-container>
+        <span class="item-text" [class.text-right]="item.textPosition == 'right'">{{ item.text }}</span>
+        <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: item.iconRight }"></ng-container>
+      </a>
+      <a
+        *ngIf="item.link && !item.children"
+        class="dropdown-item"
+        [class.disabled]="item.isDisabled"
+        [class.item-danger]="item.isItemDanger"
+        [href]="item.link"
+        target="_blank"
+        [ngClass]="item.customClasses"
+      >
+        <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: item.iconLeft }"></ng-container>
+        <span class="item-text" [class.text-right]="item.textPosition == 'right'">{{ item.text }}</span>
+        <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: item.iconRight }"></ng-container>
+      </a>
+
+      <div *ngIf="item.children" class="dropdown sub-dropdown">
+        <button
+          type="button"
+          class="btn btn-dropdown btn-dropdown-lg dropdown-toggle sub-btn-dropdown"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [ngClass]="item.customClasses"
+        >
+          <ng-container
+            *ngTemplateOutlet="iconTemplate; context: { icon: item.iconLeft, animated: item.isAnimatedIconLeft }"
+          ></ng-container>
+          <span class="item-text" [class.text-right]="item.textPosition == 'right'">{{ item.text }}</span>
+          <ng-container
+            *ngTemplateOutlet="iconTemplate; context: { icon: item.iconRight, animated: item.isAnimatedIconRight }"
+          ></ng-container>
+        </button>
+        <div class="dropdown-menu sub-dropdown-menu">
+          <ng-container *ngFor="let subitem of item.children">
+            <a
+              *ngIf="subitem.route"
+              class="dropdown-item sub-item"
+              [class.item-danger]="subitem.isItemDanger"
+              [routerLink]="subitem.route"
+              [ngClass]="subitem.customClasses"
+            >
+              <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: subitem.iconLeft }"></ng-container>
+              <span class="item-text" [class.text-right]="subitem.textPosition == 'right'">{{ subitem.text }}</span>
+              <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: subitem.iconRight }"></ng-container>
+            </a>
+            <a
+              *ngIf="subitem.link"
+              class="dropdown-item sub-item"
+              [class.item-danger]="subitem.isItemDanger"
+              [href]="subitem.link"
+              target="_blank"
+              [ngClass]="subitem.customClasses"
+            >
+              <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: subitem.iconLeft }"></ng-container>
+              <span class="item-text" [class.text-right]="subitem.textPosition == 'right'">{{ subitem.text }}</span>
+              <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: subitem.iconRight }"></ng-container>
+            </a>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #iconTemplate let-icon="icon" let-animated="animated">
+  <ng-container *ngIf="icon">
+    <i *ngIf="icon.includes('bx')" class="{{ icon }}" [class.btn-dropdown-icon]="animated"></i>
+    <span
+      *ngIf="!icon.includes('bx')"
+      class="material-icons-round"
+      aria-hidden="true"
+      [class.btn-dropdown-icon]="animated"
+      >{{ icon }}</span
+    >
+  </ng-container>
+</ng-template>

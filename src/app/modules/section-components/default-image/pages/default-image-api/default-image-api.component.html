@@ -1,0 +1,65 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">
+      Referencia de API para la directiva oDefaultImage de Obelisco
+    </h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { ODefaultImageDirective } from 'ngx-obelisco-17/directives'"
+      ></code>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="section-selector">
+    <p>
+      La directiva <code>oDefaultImage</code> en Angular se utiliza para
+      proporcionar una imagen predeterminada en caso de que la imagen original
+      no se cargue correctamente.
+    </p>
+
+    <br />
+
+    <h2 class="h3">Uso:</h2>
+    <p>
+      Agrega el atributo <code>oDefaultImage</code> a la etiqueta
+      <code>&lt;img&gt;</code> en tu plantilla HTML. La directiva se encargará
+      automáticamente de cambiar la imagen en caso de error de carga.
+    </p>
+
+    <br />
+
+    <h2 class="h3">Reglas y Consideraciones:</h2>
+    <ul>
+      <li>
+        La directiva <code>oDefaultImage</code> debe ser aplicada únicamente a
+        elementos <code>&lt;img&gt;</code>.
+      </li>
+      <li>
+        La directiva debe estar disponible en el módulo de Angular donde se
+        utilizará. Asegúrate de importar y declarar la directiva en el módulo
+        correspondiente.
+      </li>
+      <li>
+        La imagen predeterminada que se mostrará en caso de error puede ser
+        definida mediante la propiedad
+        <code>defaultImageUrl</code> en la etiqueta <code>&lt;img&gt;</code>,
+        permitiendo así la flexibilidad de usar cualquier imagen deseada.
+      </li>
+    </ul>
+
+    <br />
+
+    <h2 class="h3">Componentes con Directiva oDefaultImage Integrada:</h2>
+    <p>
+      Algunos componentes de Angular, como <code>OCard</code>,
+      <code>OGallery</code> y <code>OHighlighted</code>, ya vienen con la
+      directiva <code>oDefaultImage</code> integrada. Puedes utilizar estos
+      componentes directamente en tu aplicación sin necesidad de agregar la
+      directiva manualmente a las imágenes dentro de ellos.
+    </p>
+  </div>
+</section>

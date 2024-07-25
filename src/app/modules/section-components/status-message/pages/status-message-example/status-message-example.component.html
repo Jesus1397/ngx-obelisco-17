@@ -1,0 +1,52 @@
+<section class="section-example">
+  <app-viewer
+    *ngFor="let statusMessage of statusMessageList; index as i"
+    [title]="statusMessage.name"
+    [isNavCode]="!!statusMessage.exampleTS"
+    [id]="'example-' + statusMessage.name.toLowerCase()"
+  >
+    <div component>
+      <o-status-message
+        *ngIf="statusMessage.listContent; else noList"
+        [type]="statusMessage.type"
+        [title]="statusMessage.title"
+        [content]="statusMessage.content"
+        [listContent]="statusMessage.listContent"
+      >
+        <ng-container *ngIf="i !== 0; else onlyButton">
+          <o-button type="secondary">Botón</o-button>
+          <o-button type="secondary" [isOutline]="true">Botón</o-button>
+        </ng-container>
+
+        <ng-template #onlyButton>
+          <o-button type="secondary">Botón</o-button>
+        </ng-template>
+      </o-status-message>
+
+      <ng-template #noList>
+        <o-status-message [type]="statusMessage.type" [title]="statusMessage.title" [content]="statusMessage.content">
+          <ng-container *ngIf="i === 4; else clasicButton">
+            <o-button type="link" [isOutline]="true" link="https://buenosaires.gob.ar/">Ir al sitio web</o-button>
+          </ng-container>
+
+          <ng-template #clasicButton>
+            <o-button type="secondary">Botón</o-button>
+          </ng-template>
+        </o-status-message>
+      </ng-template>
+    </div>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ statusMessage.exampleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ statusMessage.exampleTS }}
+      </code>
+    </div>
+  </app-viewer>
+</section>

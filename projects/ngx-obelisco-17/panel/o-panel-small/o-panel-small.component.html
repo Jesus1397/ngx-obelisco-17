@@ -1,0 +1,39 @@
+<ng-template #smallPanelContent>
+  <img
+    *ngIf="image"
+    [src]="image.src"
+    [alt]="image.alt"
+    class="rounded-lg"
+    [width]="image.size ? sizeToPx(image.size) : sizeToPx('md')"
+    [height]="image.size ? sizeToPx(image.size) : sizeToPx('md')"
+  />
+  <div class="card-body">
+    <ng-container *ngIf="!oCustomContent">
+      <h3 class="card-title">{{ title }}</h3>
+      <p class="card-text">
+        {{ description }}
+      </p>
+    </ng-container>
+    <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"> </ng-container>
+  </div>
+</ng-template>
+
+<div *ngIf="!isVertical" class="card card-simple panel-sm-horizontal" [ngClass]="customClasses">
+  <ng-container *ngTemplateOutlet="smallPanelContent"></ng-container>
+</div>
+
+<div
+  *ngIf="isVertical"
+  class="card card-simple"
+  [class.panel-list-link]="listLinkContent"
+  [class.panel-sm]="!listLinkContent"
+  [class.bg-white]="isBgWhite"
+  [class.bg-light]="isBgLight"
+  [ngClass]="customClasses"
+>
+  <ng-container *ngTemplateOutlet="smallPanelContent"></ng-container>
+
+  <div [ngClass]="{ 'panel-footer': panelFooterContent, 'list-link': listLinkContent }">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="stepper" [ngClass]="customClasses">
+  <h2 class="step-title">{{ actualStep.name }}</h2>
+  <p class="step-next" *ngIf="!isLastStep; else lastStep">Paso siguiente: {{ nextStepName }}</p>
+  <ng-template #lastStep><p class="step-next">Ultimo paso</p></ng-template>
+
+  <div class="steps">
+    <div class="step" [class.active]="step.active" *ngFor="let step of stepsForm"></div>
+  </div>
+  <span class="step-text">Paso {{ currentStepNumber }} de {{ stepsForm.length }}</span>
+</div>

@@ -1,0 +1,124 @@
+<section class="section-example">
+  <app-viewer title="Sin eventos">
+    <o-calendar component [date]="{ month: 10, year: 2024 }" customClasses="mx-auto"></o-calendar>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ calendarNoEvents }}</code>
+    </div>
+  </app-viewer>
+
+  <h3 class="font-weight-bold">Con eventos</h3>
+
+  <app-viewer title="Predeterminado" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarDefault"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ calendarDefaultHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ calendarDefaultTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con enlace" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarLink"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ calendarLinkHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ calendarLinkTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con 2 referencias" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarTwoReferences"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ calendarTwoReferencesHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ calendarTwoReferencesTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con colapsable" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarCollapse"
+      [isCollapsed]="true"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ calendarCollapseHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ calendarCollapseTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con referencias cromáticas" [isNavCode]="true">
+    <o-calendar
+      component
+      [date]="{ month: 10, year: 2024 }"
+      [activeDays]="calendarCromaticRef"
+      [isCollapsed]="true"
+      customClasses="mx-auto"
+    ></o-calendar>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ calendarCromaticRefHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ calendarCromaticRefTs }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Disposición" [isNavCode]="true">
+    <div component class="calendar-deck">
+      <o-calendar [date]="{ month: 1, year: 2024 }" [activeDays]="calendarDeck['JANUARY']"></o-calendar>
+      <o-calendar [date]="{ month: 2, year: 2024 }" [activeDays]="calendarDeck['FEBRUARY']"></o-calendar>
+      <o-calendar [date]="{ month: 3, year: 2024 }" [activeDays]="calendarDeck['MARCH']"></o-calendar>
+      <o-calendar [date]="{ month: 4, year: 2024 }" [activeDays]="calendarDeck['APRIL']"></o-calendar>
+      <o-calendar [date]="{ month: 5, year: 2024 }" [activeDays]="calendarDeck['MAY']"></o-calendar>
+      <o-calendar [date]="{ month: 6, year: 2024 }" [activeDays]="calendarDeck['JUNE']"></o-calendar>
+      <o-calendar [date]="{ month: 7, year: 2024 }" [activeDays]="calendarDeck['JULY']"></o-calendar>
+      <o-calendar [date]="{ month: 8, year: 2024 }" [activeDays]="calendarDeck['AUGUST']"></o-calendar>
+      <o-calendar [date]="{ month: 9, year: 2024 }" [activeDays]="calendarDeck['SEPTEMBER']"></o-calendar>
+      <o-calendar [date]="{ month: 10, year: 2024 }" [activeDays]="calendarDeck['OCTOBER']"></o-calendar>
+      <o-calendar [date]="{ month: 11, year: 2024 }" [activeDays]="calendarDeck['NOVEMBER']"></o-calendar>
+      <o-calendar [date]="{ month: 12, year: 2024 }" [activeDays]="calendarDeck['DECEMBER']"></o-calendar>
+    </div>
+
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ calendarDeckHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ calendarDeckTs }}</code>
+    </div>
+  </app-viewer>
+</section>

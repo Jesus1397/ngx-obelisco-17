@@ -1,0 +1,45 @@
+<section class="section-example">
+  <app-viewer title="Solo legales">
+    <o-footer component [isPhoneSectionHidden]="true" [isNetworkSectionHidden]="true"></o-footer>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleLinksHTML }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Completo">
+    <o-footer component></o-footer>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleAllHTML }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con indicador">
+    <o-footer component [isPhoneSectionHidden]="true" indicatorText="¿Te fue útil esta página?">
+      <button class="btn btn-primary">Sí, me fue útil</button>
+      <button class="btn btn-secondary">No me sirvió</button>
+    </o-footer>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleIndicatorHTML }}</code>
+    </div>
+  </app-viewer>
+
+  <app-viewer title="Con listas personalizables" [isNavCode]="true">
+    <o-footer
+      component
+      [phoneCustomItems]="phoneCustomList"
+      [networkCustomItems]="networkCustomList"
+      [linkCustomItems]="linkCustomList"
+    ></o-footer>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js>{{ exampleCustomListHTML }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
+      <code highlight-js [lang]="'ts'">{{ exampleCustomListTS }}</code>
+    </div>
+  </app-viewer>
+</section>

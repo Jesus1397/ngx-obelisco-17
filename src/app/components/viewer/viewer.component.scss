@@ -1,0 +1,54 @@
+:host {
+  .example-wrapper {
+    border-radius: 8px;
+    padding: 16px 24px 0 24px;
+    border: 1px solid #cfcfcf;
+    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 100%;
+
+    .example-viewer {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 8px 8px 0px;
+      width: 100%;
+
+      > p {
+        margin: 0;
+      }
+    }
+
+    > h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .wrapper {
+      width: 100%;
+      width: 100%;
+      max-width: 100%;
+      padding: 1rem;
+    }
+
+    .d-flex {
+      gap: 0.625rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .example-wrapper {
+      width: 100%;
+      padding: 0px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .example-wrapper {
+      width: 100%;
+      padding: 0px;
+    }
+  }
+}

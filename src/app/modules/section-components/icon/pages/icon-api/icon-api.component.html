@@ -1,0 +1,84 @@
+<section>
+  <h2 class="h3">Iconos de Material Icons Round</h2>
+  <hr />
+  <div class="mb-4">
+    <p>
+      Obelisco utiliza la librería de
+      <a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Rounded">Material Icons Rounded</a>,
+      donde pueden encontrarse los iconos disponibles.
+    </p>
+
+    <p>Ejemplo:</p>
+    <div class="bg-light p-4 text-center col-12 col-xl-6 mb-3 mx-auto">
+      <em>&lt;span class="material-icons-round"&gt; info &lt;/span&gt;</em>
+    </div>
+    <p>
+      Por motivos de accesibilidad, la etiqueta <code>&lt;span&gt;</code> con clase <em>material-icons-round</em> debe
+      tener el atributo <code>aria-hidden="true"</code>.
+    </p>
+  </div>
+
+  <div class="section-selector">
+    <h3 class="h4">Componente o-mat-icon</h3>
+    <p>Selector: <strong>o-mat-icon</strong></p>
+
+    <p>
+      Presenta como propiedad <em><strong>customClasses</strong>: string</em>, la cual permite aplicar clases
+      personalizadas al mismo.
+    </p>
+    <p>Para más información, ver <a routerLink="bx-mat">Documentación de Material Icons Round</a>.</p>
+  </div>
+</section>
+<section class="mt-5">
+  <h2 class="h3">Iconos de Boxicons</h2>
+  <hr />
+
+  <div class="mb-4">
+    <p>
+      Obelisco utiliza la librería de
+      <a href="https://boxicons.com/">Boxicons</a>, donde pueden encontrarse los iconos disponibles.
+    </p>
+
+    <p>Ejemplo:</p>
+    <div class="bg-light p-4 text-center col-12 col-xl-6 mb-3 mx-auto">
+      <em>&lt;i class="bx bxs-info-circle"&gt; &lt;/i&gt;</em>
+    </div>
+  </div>
+
+  <div class="section-selector">
+    <h3 class="h4">Componente o-bx-icon</h3>
+    <p>Selector: <strong>o-bx-icon</strong></p>
+
+    <p>
+      Presenta como propiedad <em><strong>customClasses</strong>: string</em>, la cual permite aplicar clases
+      personalizadas al mismo.
+    </p>
+    <p>Para más información, ver <a routerLink="bx-doc">Documentación de Boxicons v2.1.4</a>.</p>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h2 class="h3">Iconos con Enums</h2>
+    <hr />
+    <p>Estos enums permiten establecer y utilizar íconos de manera consistente y fácil en la aplicación.</p>
+
+    <h4>Boxicons</h4>
+    <p>Permite establecer los valores de los iconos de Boxicons.</p>
+
+    <div class="section-interface mb-5">
+      <div>
+        <code highlight-js [lang]="'ts'">{{ boxIcons }}</code>
+      </div>
+    </div>
+
+    <h4>Material Icons</h4>
+    <p>Permite establecer los valores de los iconos de Material Icons.</p>
+
+    <div class="section-interface">
+      <div>
+        <code highlight-js [lang]="'ts'">{{ materialIcons }}</code>
+      </div>
+    </div>
+  </div>
+</section>

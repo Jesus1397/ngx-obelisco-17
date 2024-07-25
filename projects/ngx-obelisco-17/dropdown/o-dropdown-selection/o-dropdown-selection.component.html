@@ -1,0 +1,80 @@
+<div class="dropdown dropdown-form">
+  <button
+    type="button"
+    class="btn btn-dropdown"
+    [class.btn-dropdown-border]="isBordered"
+    [class.btn-dropdown-sm]="size == 'sm'"
+    [class.btn-dropdown-lg]="size == 'lg'"
+    data-toggle="collapse"
+    [attr.data-target]="'#' + dataTarget"
+    [attr.aria-controls]="dataTarget"
+    aria-expanded="false"
+    [attr.aria-label]="ariaLabel"
+    [ngClass]="customClasses"
+  >
+    <ng-container *ngIf="iconLeft">
+      <i *ngIf="iconLeft.includes('bx')" class="{{ iconLeft }}" [class.btn-dropdown-icon]="isAnimatedIconLeft"></i>
+      <span
+        *ngIf="!iconLeft.includes('bx')"
+        class="material-icons-round"
+        aria-hidden="true"
+        [class.btn-dropdown-icon]="isAnimatedIconLeft"
+        >{{ iconLeft }}</span
+      >
+    </ng-container>
+    <span class="btn-dropdown-text" *ngIf="isSelectionMultiple"
+      >{{ title }} {{ selectedCheckboxCount ? '(' + selectedCheckboxCount + ')' : '' }}</span
+    >
+    <span class="btn-dropdown-text" *ngIf="!isSelectionMultiple">
+      {{ selectedItem!.text ? selectedItem!.text : title }}</span
+    >
+    <ng-container *ngIf="iconRight">
+      <i *ngIf="iconRight.includes('bx')" class="{{ iconRight }}" [class.btn-dropdown-icon]="isAnimatedIconRight"></i>
+      <span
+        *ngIf="!iconRight.includes('bx')"
+        class="material-icons-round"
+        aria-hidden="true"
+        [class.btn-dropdown-icon]="isAnimatedIconRight"
+        >{{ iconRight }}</span
+      >
+    </ng-container>
+  </button>
+  <div class="dropdown-menu dropdown-body collapse" [id]="dataTarget">
+    <ng-container *ngIf="!isSelectionMultiple">
+      <div class="custom-control custom-radio" *ngFor="let item of dropSelectItems; let i = index">
+        <label class="btn btn-chip" [class.active]="i === activeIndex" [ngClass]="item.customClasses">
+          <input
+            class="btn-check"
+            type="radio"
+            [id]="item.id"
+            [name]="item.name"
+            [value]="item.value"
+            (change)="onRadioSelectionChange(item, i)"
+          />
+          <span class="btn-chip-text">{{ item.text }}</span>
+          <span class="material-icons-round" aria-hidden="true">done</span>
+        </label>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="isSelectionMultiple">
+      <div
+        class="custom-control custom-checkbox"
+        [class.disabled]="item.isDisabled"
+        *ngFor="let item of dropSelectItems"
+        [ngClass]="item.customClasses"
+      >
+        <input
+          class="custom-control-input"
+          type="checkbox"
+          [id]="item.id"
+          [name]="item.name"
+          [value]="item.value"
+          [disabled]="item.isDisabled"
+          (change)="onCheckboxSelectionChange(item)"
+        />
+        <label class="custom-control-label" [for]="item.id"> {{ item.text }}</label>
+      </div>
+    </ng-container>
+  </div>
+</div>

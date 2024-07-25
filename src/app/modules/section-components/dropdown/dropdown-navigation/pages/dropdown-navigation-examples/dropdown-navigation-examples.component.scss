@@ -1,0 +1,32 @@
+:host::ng-deep {
+  .d-container-1 {
+    padding-bottom: 170px;
+
+    @media screen and (max-width: 900px) {
+      padding-bottom: 240px;
+    }
+  }
+
+  .d-container-2 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 210px;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      padding-bottom: 180px;
+
+      & > *:last-child {
+        align-self: flex-end;
+      }
+
+      o-dropdown-navigation {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  .d-container-3 {
+    padding-bottom: 260px;
+  }
+}

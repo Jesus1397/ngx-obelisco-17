@@ -1,0 +1,24 @@
+<ng-container *ngIf="video">
+  <p class="sr-only">{{ video.title }}</p>
+  <video class="card-img" [ngClass]="customClasses" controls="">
+    <source [src]="video.src" type="video/mp4" />
+    <ng-container *ngIf="video.track">
+      <track [src]="video.track" default="" kind="captions" srclang="es" />
+    </ng-container>
+    <p>
+      Su navegador no soporta vídeos HTML5. Puedes ver el video haciendo clic en
+      <a [href]="video.src">este enlace</a>.
+    </p>
+  </video>
+</ng-container>
+<ng-container *ngIf="iframe">
+  <iframe
+    [src]="sanitizeUrl(iframe.src ? iframe.src : '')"
+    class="card-img"
+    [ngClass]="customClasses"
+    [title]="iframe.title ? iframe.title : ' '"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen=""
+  ></iframe>
+</ng-container>

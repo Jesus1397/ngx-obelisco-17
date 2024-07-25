@@ -1,0 +1,29 @@
+<section class="section-example">
+  <app-viewer title="Tipos">
+    <div class="mb-4 text-center" component>
+      <o-badge>Etiqueta</o-badge>
+      <o-badge type="info">Etiqueta</o-badge>
+      <o-badge type="primary">Etiqueta</o-badge>
+      <o-badge type="success">Etiqueta</o-badge>
+      <o-badge type="danger">Etiqueta</o-badge>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ badgeTypes }}
+      </code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Con enlace">
+    <div class="mb-4 text-center" component>
+      <o-badge link="https://gcba.github.io/Obelisco">Etiqueta con link</o-badge>
+      <o-badge route="#">Etiqueta con route</o-badge>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ badgeLink }}
+      </code>
+    </div>
+  </app-viewer>
+</section>

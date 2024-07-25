@@ -1,0 +1,10 @@
+<li class="page-item" [class.active]="isActive" [class.no-events]="isNoEvent" [class.disabled]="isDisabled">
+  <ng-container *ngIf="isNoEvent; else showLink">
+    <span class="page-link">...</span>
+  </ng-container>
+  <ng-template #showLink>
+    <a class="page-link" href="#">
+      <ng-content></ng-content>
+    </a>
+  </ng-template>
+</li>

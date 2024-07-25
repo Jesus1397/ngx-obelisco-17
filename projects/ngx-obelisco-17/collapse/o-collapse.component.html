@@ -1,0 +1,86 @@
+<div class="accordion" [class.accordion-white]="isWhite" [id]="dataParent ? dataParent : null">
+  <div class="card" [ngClass]="customClasses">
+    <ng-container *ngIf="!oCustomContent">
+      <ng-container *ngIf="!title || !label || !subtitle || !icon">
+        <ng-content select="o-collapse-header"></ng-content>
+      </ng-container>
+
+      <ng-container *ngIf="title || label || subtitle || icon">
+        <button
+          class="card-header collapsed"
+          data-toggle="collapse"
+          [attr.data-target]="'#' + identifier"
+          aria-expanded="false"
+          [ngClass]="customClassesHeader"
+        >
+          <i *ngIf="icon && icon.includes('bx')" [ngClass]="icon!"></i>
+          <span *ngIf="icon && !icon.includes('bx')" class="material-icons-round" aria-hidden="true">{{ icon }}</span>
+          <!-- label -->
+          <span *ngIf="label" class="collapse-label">{{ label }}</span>
+          <!-- title -->
+          <ng-container *ngIf="isTitleAlone; else titleNotAlone">
+            {{ title }}
+          </ng-container>
+          <ng-template #titleNotAlone>
+            <span *ngIf="title" class="collapse-title">{{ title }}</span>
+          </ng-template>
+          <!-- subtitle -->
+          <span *ngIf="subtitle" class="collapse-subtitle">{{ subtitle }}</span>
+        </button>
+      </ng-container>
+
+      <ng-container *ngIf="!content || !children">
+        <ng-content select="o-collapse-content"></ng-content>
+      </ng-container>
+
+      <ng-container *ngIf="content || children">
+        <div [id]="identifier" class="collapse" [attr.data-parent]="dataParent ? '#' + dataParent : null">
+          <!-- Items de tipo texto -->
+          <div class="card-body" *ngIf="content">
+            <p class="mb-0" *ngIf="!content; else isAarray" [innerHTML]="content"></p>
+            <ng-template #isAarray>
+              <p class="mb-0" *ngFor="let item of textArray()" [innerHTML]="item"></p>
+            </ng-template>
+          </div>
+          <!-- Items de tipo info -->
+          <div class="card-body" *ngIf="itemInfoList.length > 0">
+            <ng-container *ngFor="let itemInfo of itemInfoList; let isLastItem = last">
+              <small class="text-success">{{ itemInfo.label }}</small>
+              <span>{{ itemInfo.title }}</span>
+              <small>{{ itemInfo.subtitle }}</small>
+              <hr *ngIf="!isLastItem" />
+            </ng-container>
+          </div>
+          <!-- Items de tipo input -->
+          <form class="card-body" *ngIf="itemInputList.length > 0">
+            <ng-container *ngFor="let itemInput of itemInputList; let isLastIinput = last">
+              <label class="card-details" [for]="itemInput.id">
+                <i *ngIf="itemInput.icon && itemInput.icon.includes('bx')" [ngClass]="itemInput.icon!"></i>
+                <span
+                  *ngIf="itemInput.icon && !itemInput.icon.includes('bx')"
+                  class="material-icons-round"
+                  aria-hidden="true"
+                  >{{ itemInput.icon }}</span
+                >
+                <div class="card-details-content">
+                  <span>{{ itemInput.title }}</span>
+                  <small>{{ itemInput.subtitle }}</small>
+                </div>
+                <input
+                  type="radio"
+                  class="form-radio"
+                  [name]="itemInput.name"
+                  [id]="itemInput.id"
+                  [checked]="itemInput.value"
+                  (click)="toggleValue(itemInput)"
+                />
+              </label>
+              <hr *ngIf="!isLastIinput" />
+            </ng-container>
+          </form>
+        </div>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"></ng-container>
+  </div>
+</div>

@@ -1,0 +1,164 @@
+<section class="section-example">
+  <!-- Destacado horizontal (BANNER) -->
+  <app-viewer title="Horizontal con imagen" [isNavCode]="true">
+    <o-highlighted component [title]="title" [description]="description" [image]="picture">
+      <o-button #children link="#" size="lg">Botón</o-button>
+      <o-button #children link="#" size="lg" type="secondary">Botón</o-button>
+    </o-highlighted>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ bannerImageHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ imageTS }}</code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Horizontal con video" [isNavCode]="true">
+    <o-highlighted component [title]="title" [description]="description" [video]="video">
+      <o-button #children link="#" size="lg">Botón</o-button>
+    </o-highlighted>
+    <o-highlighted component [title]="title" [description]="description" [iframe]="iframe">
+      <a #children class="external" href="#" target="_blank">Enlace externo</a>
+    </o-highlighted>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ bannerVideoHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ videoTS }}</code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Horizontal sin multimedia" [isNavCode]="true">
+    <o-highlighted component [title]="title" [description]="description">
+      <o-button #children size="lg" type="secondary" link="#" download="" [hasIcon]="true">
+        <span class="material-icons-round" aria-hidden="true">file_download</span>
+        Descargar
+      </o-button>
+    </o-highlighted>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ bannerHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ noMediaTS }}</code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Horizontal con fondo" [isNavCode]="true">
+    <o-highlighted component [title]="title" [description]="description" [image]="picture" [isBgLight]="true">
+      <o-access #children title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+    </o-highlighted>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ bannerBgHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ imageTS }}</code>
+    </div>
+  </app-viewer>
+
+  <!-- Destacado vertical (CONJUNTO) -->
+  <app-viewer title="Vertical con imagen" [isNavCode]="true">
+    <div class="container" component>
+      <div class="card-deck card-column max-cards-2">
+        <o-highlighted type="grouping" [title]="title" [description]="description" [image]="picture">
+          <o-button #children link="#" size="lg">Botón</o-button>
+        </o-highlighted>
+        <o-highlighted type="grouping" [title]="title" [description]="description" [image]="picture">
+          <o-button #children size="lg" type="secondary" link="#" download="" [hasIcon]="true">
+            <span class="material-icons-round" aria-hidden="true">file_download</span>
+            Descargar
+          </o-button>
+        </o-highlighted>
+      </div>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ groupingImageHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ imageTS }}</code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Vertical con video" [isNavCode]="true">
+    <div class="container" component>
+      <div class="card-deck card-column max-cards-2">
+        <o-highlighted type="grouping" [title]="title" [description]="description" [video]="video">
+          <a #children class="external" href="#" target="_blank">Enlace externo</a>
+        </o-highlighted>
+        <o-highlighted type="grouping" [title]="title" [description]="description" [iframe]="iframe">
+          <a #children class="external" href="#" target="_blank">Enlace externo</a>
+        </o-highlighted>
+      </div>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ groupingVideoHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ videoTS }}</code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Vertical sin multimedia" [isNavCode]="true">
+    <div class="container" component>
+      <div class="card-deck card-column max-cards-2">
+        <o-highlighted type="grouping" [title]="title" [description]="description">
+          <o-access #children title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+        </o-highlighted>
+        <o-highlighted type="grouping" [title]="title" [description]="description">
+          <o-access #children title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+        </o-highlighted>
+      </div>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ groupingHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ noMediaTS }}</code>
+    </div>
+  </app-viewer>
+
+  <!-- Destacado lateral -->
+  <app-viewer title="Lateral" [isNavCode]="true">
+    <div class="container__highlighted-lateral" component>
+      <div>
+        <o-highlighted type="lateral" [title]="title" [description]="shortDescription">
+          <o-button #children link="#" size="lg" [isExpandable]="true">Botón</o-button>
+        </o-highlighted>
+      </div>
+      <div>
+        <o-highlighted type="lateral" [title]="title" [description]="shortDescription">
+          <o-button #children size="lg" type="secondary" link="#" download="" [hasIcon]="true">
+            <span class="material-icons-round" aria-hidden="true">file_download</span>
+            Descargar
+          </o-button>
+        </o-highlighted>
+      </div>
+      <div>
+        <o-highlighted type="lateral" [title]="title" [description]="shortDescription">
+          <a #children class="external" href="#" target="_blank">Enlace externo</a>
+        </o-highlighted>
+      </div>
+      <div>
+        <o-highlighted type="lateral" [title]="title" [description]="shortDescription">
+          <o-access #children title="Acceso" icon="bx bxs-info-circle" route="/home" size="sm"></o-access>
+        </o-highlighted>
+      </div>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ lateralHtml }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">{{ noMediaTS }}</code>
+    </div>
+  </app-viewer>
+</section>

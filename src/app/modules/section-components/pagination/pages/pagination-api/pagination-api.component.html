@@ -1,0 +1,41 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2 class="h3">
+      Referencia de API para el componente Paginacion de Obelisco
+    </h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OPaginationModule } from 'ngx-obelisco-17/pagination';"
+      ></code>
+    </div>
+  </div>
+
+  <h2 class="h3">Etiqueta</h2>
+  <hr />
+
+  <div class="section-selector">
+    <p>Selector: <strong>o-pagination</strong></p>
+    <div class="section-properties">
+      <h2 class="h3">Propiedades</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columnsPagination"
+        [dataSource]="dataSourcePaginationProperties"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+    <div class="section-properties">
+      <h2 class="h3">Métodos</h2>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columnsPagination"
+        [dataSource]="dataSourcePaginationMethods"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+</section>

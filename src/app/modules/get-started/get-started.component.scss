@@ -1,0 +1,60 @@
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.9);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(150, 150, 150, 0.9);
+}
+
+.intro-menu {
+  position: sticky;
+  top: 16px;
+  left: 0;
+  padding: 1rem;
+  // background-color: rgba(230, 235, 240, 0.5);
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 14px;
+  color: #505e70;
+  .intro-menu__title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+  }
+  button {
+    color: #505e70;
+    display: block;
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    &.current-section {
+      font-weight: 700;
+      border-left: 2px solid black;
+      padding-left: 10px;
+    }
+  }
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+pre {
+  height: auto;
+}

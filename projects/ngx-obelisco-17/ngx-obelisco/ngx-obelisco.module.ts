@@ -28,6 +28,7 @@ import { OStatusMessageModule } from 'ngx-obelisco-17/status-message';
 import { OStepsFormModule } from 'ngx-obelisco-17/steps-form';
 import { OSwitchModule } from 'ngx-obelisco-17/switch';
 import { OTableModule } from 'ngx-obelisco-17/table';
+import { OTooltipModule } from 'ngx-obelisco-17/tooltip';
 
 @NgModule({
   declarations: [],
@@ -61,6 +62,7 @@ import { OTableModule } from 'ngx-obelisco-17/table';
     OTableModule,
     OCardModule,
     OIconModule,
+    OTooltipModule,
   ],
   exports: [
     CommonModule,
@@ -92,6 +94,7 @@ import { OTableModule } from 'ngx-obelisco-17/table';
     OTableModule,
     OCardModule,
     OIconModule,
+    OTooltipModule,
   ],
 })
 export class NgxObeliscoModule {}

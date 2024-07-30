@@ -1,6 +1,6 @@
 {
   "name": "ngx-obelisco-17",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0",
@@ -9,5 +9,21 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "description": "Componentes funcionales y reutilizables para Angular.",
+  "author": "Dirección General de Experiencia Digital",
+  "homepage": "https://ngx-obelisco-17.web.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jesus1397/ngx-obelisco-17"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "gcba",
+    "obelisco",
+    "components",
+    "design",
+    "ui"
+  ]
 }

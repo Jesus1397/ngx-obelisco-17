@@ -31,6 +31,7 @@ import { StatusMessageComponent } from './status-message/status-message.componen
 import { StepsFormComponent } from './steps-form/steps-form.component';
 import { SwitchComponent } from './switch/switch.component';
 import { TableComponent } from './table/table.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
 
 const routes: Routes = [
   {
@@ -224,6 +225,12 @@ const routes: Routes = [
     path: 'icon',
     component: IconComponent,
     loadChildren: () => import('./icon/icon.module').then((m) => m.IconModule),
+  },
+  {
+    path: 'tooltip',
+    component: TooltipComponent,
+    loadChildren: () =>
+      import('./tooltip/tooltip.module').then((m) => m.TooltipModule),
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];

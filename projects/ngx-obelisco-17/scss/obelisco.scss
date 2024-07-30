@@ -1,124 +1,124 @@
 @import "https://gcba.github.io/Obelisco/obelisco.css";
-// @import '~tippy.js/dist/tippy.css';
-// @import '~tippy.js/themes/light.css';
-// @import '~tippy.js/animations/scale.css';
+@import "node_modules/tippy.js/dist/tippy.css";
+@import "node_modules/tippy.js/themes/light.css";
+@import "node_modules/tippy.js/animations/scale.css";
 
-// .tippy-box[data-theme~='custom-theme'] {
-//   background-color: #505e70 !important;
-//   border-radius: 0.5rem !important;
-//   color: #fff !important;
-//   width: max-content !important;
-//   max-width: 18rem !important;
-//   text-align: left !important;
-//   font-family: 'Open Sans', Roboto, Arial, sans-serif !important;
-//   font-size: 1rem !important;
-//   font-weight: 400 !important;
-//   line-height: 1.5 !important;
+.tippy-box[data-theme~="custom-theme"] {
+  background-color: #505e70 !important;
+  border-radius: 0.5rem !important;
+  color: #fff !important;
+  width: max-content !important;
+  max-width: 18rem !important;
+  text-align: left !important;
+  font-family: "Open Sans", Roboto, Arial, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
 
-//   .tippy-content {
-//     padding: 1rem !important;
-//   }
+  .tippy-content {
+    padding: 1rem !important;
+  }
 
-//   .tippy-arrow {
-//     color: #505e70 !important;
-//     z-index: 51689745964651 !important;
+  .tippy-arrow {
+    color: #505e70 !important;
+    z-index: 51689745964651 !important;
 
-//     &::before {
-//       content: '';
-//       position: absolute;
-//       width: 20px;
-//       height: 20px;
-//       background: #505e70;
-//       transform: rotate(45deg);
-//       border-radius: 4px;
-//     }
-//   }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #505e70;
+      transform: rotate(45deg);
+      border-radius: 4px;
+    }
+  }
 
-//   // ///////// TOP /////////
-//   &[data-placement^='top'] {
-//     .tippy-arrow::before {
-//       transform: translateX(calc(50% - 4px)) rotate(45deg) !important;
-//     }
-//   }
+  // ///////// TOP /////////
+  &[data-placement^="top"] {
+    .tippy-arrow::before {
+      transform: translateX(calc(50% - 4px)) rotate(45deg) !important;
+    }
+  }
 
-//   &[data-placement^='top-start'] {
-//     .tippy-arrow::before {
-//       transform: translateX(calc(50% - 8px)) rotate(45deg) !important;
-//     }
-//   }
+  &[data-placement^="top-start"] {
+    .tippy-arrow::before {
+      transform: translateX(calc(50% - 8px)) rotate(45deg) !important;
+    }
+  }
 
-//   &[data-placement^='top-end'] {
-//     .tippy-arrow::before {
-//       transform: translateX(calc(50% - 8px)) rotate(45deg) !important;
-//     }
-//   }
+  &[data-placement^="top-end"] {
+    .tippy-arrow::before {
+      transform: translateX(calc(50% - 8px)) rotate(45deg) !important;
+    }
+  }
 
-//   // ///////// BOTTOM /////////
-//   &[data-placement^='bottom'] {
-//     .tippy-arrow::before {
-//       transform: translateX(calc(50% - 20px)) rotate(45deg) !important;
-//     }
-//   }
+  // ///////// BOTTOM /////////
+  &[data-placement^="bottom"] {
+    .tippy-arrow::before {
+      transform: translateX(calc(50% - 20px)) rotate(45deg) !important;
+    }
+  }
 
-//   &[data-placement^='bottom-start'] {
-//     .tippy-arrow::before {
-//       transform: translateX(calc(50% - 20px)) rotate(45deg) !important;
-//     }
-//   }
+  &[data-placement^="bottom-start"] {
+    .tippy-arrow::before {
+      transform: translateX(calc(50% - 20px)) rotate(45deg) !important;
+    }
+  }
 
-//   &[data-placement^='bottom-end'] {
-//     .tippy-arrow::before {
-//       // left: calc(50%) !important;
-//       transform: translateX(calc(50% - 20px)) rotate(45deg) !important;
-//     }
-//   }
-//   // ///////// LEFT /////////
-//   &[data-placement^='left'] {
-//     .tippy-arrow {
-//       left: calc(100% - 16px) !important;
-//       transform: translateY(calc(100% + 8px)) !important;
-//     }
-//   }
+  &[data-placement^="bottom-end"] {
+    .tippy-arrow::before {
+      // left: calc(50%) !important;
+      transform: translateX(calc(50% - 20px)) rotate(45deg) !important;
+    }
+  }
+  // ///////// LEFT /////////
+  &[data-placement^="left"] {
+    .tippy-arrow {
+      left: calc(100% - 16px) !important;
+      transform: translateY(calc(100% + 8px)) !important;
+    }
+  }
 
-//   &[data-placement^='left-end'] {
-//     .tippy-arrow {
-//       left: calc(100% - 16px) !important ;
-//       transform: translateY(calc(300% - 8px)) !important;
-//     }
-//   }
+  &[data-placement^="left-end"] {
+    .tippy-arrow {
+      left: calc(100% - 16px) !important ;
+      transform: translateY(calc(300% - 8px)) !important;
+    }
+  }
 
-//   &[data-placement^='left-start'] {
-//     .tippy-arrow {
-//       left: calc(100% - 16px) !important;
-//       transform: translateY(calc(60%)) !important;
-//     }
-//   }
+  &[data-placement^="left-start"] {
+    .tippy-arrow {
+      left: calc(100% - 16px) !important;
+      transform: translateY(calc(60%)) !important;
+    }
+  }
 
-//   // ///////// RIGHT /////////
-//   &[data-placement^='right'] {
-//     .tippy-arrow {
-//       right: calc(100% - 4px) !important;
-//       transform: translateY(calc(200% + 8px)) !important;
-//     }
-//   }
+  // ///////// RIGHT /////////
+  &[data-placement^="right"] {
+    .tippy-arrow {
+      right: calc(100% - 4px) !important;
+      transform: translateY(calc(200% + 8px)) !important;
+    }
+  }
 
-//   &[data-placement^='right-end'] {
-//     .tippy-arrow {
-//       right: calc(100%);
-//       transform: translateY(calc(350%)) !important;
-//     }
-//   }
+  &[data-placement^="right-end"] {
+    .tippy-arrow {
+      right: calc(100%);
+      transform: translateY(calc(350%)) !important;
+    }
+  }
 
-//   &[data-placement^='right-start'] {
-//     .tippy-arrow {
-//       right: calc(100%) !important;
-//       transform: translateY(calc(60% + 10px)) !important;
-//     }
-//   }
+  &[data-placement^="right-start"] {
+    .tippy-arrow {
+      right: calc(100%) !important;
+      transform: translateY(calc(60% + 10px)) !important;
+    }
+  }
 
-//   // 975
-//   @media only screen and (max-width: 975.98px) {
-//     max-width: 10rem !important;
-//   }
-// }
+  // 975
+  @media only screen and (max-width: 975.98px) {
+    max-width: 10rem !important;
+  }
+}
 // @import 'https://gcba.github.io/Obelisco/obelisco.css';

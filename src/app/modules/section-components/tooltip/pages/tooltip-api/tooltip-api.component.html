@@ -1,0 +1,43 @@
+<section class="section-api">
+  <div class="section-title">
+    <h2>Referencia de API para el componente Tooltip de Obelisco</h2>
+    <div class=" ">
+      <code
+        highlight-js
+        [lang]="'ts'"
+        code="import { OTooltipModule } from 'ngx-obelisco-17/tooltip';"
+      ></code>
+    </div>
+  </div>
+
+  <h3>Etiqueta</h3>
+  <hr />
+
+  <div class="section-selector">
+    <h4>OTooltip</h4>
+    <p>Selector: <strong>o-tooltip</strong></p>
+    <div class="section-properties">
+      <h5>Propiedades</h5>
+      <o-table
+        [isScrollable]="true"
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [isStriped]="true"
+        [isBordered]="true"
+      ></o-table>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="section-type">
+    <h4>TooltipDirections</h4>
+    <p>Permite establecer la direcciones del componente.</p>
+
+    <div class="section-interface">
+      <div class=" ">
+        <code highlight-js [lang]="'ts'">{{ directions }}</code>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/ngx-obelisco-17-demo/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

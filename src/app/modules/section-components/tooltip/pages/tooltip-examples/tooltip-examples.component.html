@@ -1,0 +1,43 @@
+<section class="section-example">
+  <app-viewer
+    *ngFor="let tooltip of tooltipList; index as i"
+    [title]="tooltip.name"
+    [isNavCode]="!!tooltip.exampleTS"
+    [id]="'example-' + tooltip.name.toLowerCase()"
+  >
+    <div component class="d-flex justify-content-center">
+      <ng-container *ngFor="let direction of tooltip.direction; index as i">
+        <o-button
+          *ngIf="!tooltip.customClasses"
+          oTooltip
+          [description]="tooltip.text"
+          [direction]="direction"
+          customClasses="mx-2"
+          >{{ direction | titlecase }}</o-button
+        >
+
+        <span
+          *ngIf="tooltip.customClasses"
+          oTooltip
+          [description]="tooltip.text"
+          [direction]="direction"
+          class="icon-box bg-light mx-2"
+        >
+          <span class="material-icons-round" aria-hidden="true">help</span>
+        </span>
+      </ng-container>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>
+        {{ tooltip.exampleHTML }}
+      </code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ tooltip.exampleTS }}
+      </code>
+    </div>
+  </app-viewer>
+</section>

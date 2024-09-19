@@ -1,7 +1,6 @@
-@import './media-query.scss';
+@import "./media-query.scss";
 
 @mixin card-deck-4 {
-  o-access,
   o-highlighted,
   o-card,
   .card {
@@ -15,7 +14,6 @@
 }
 
 @mixin card-deck-3 {
-  o-access,
   o-highlighted,
   o-card,
   .card {
@@ -29,7 +27,6 @@
 }
 
 @mixin card-deck-2 {
-  o-access,
   o-highlighted,
   o-card,
   .card {
@@ -43,7 +40,6 @@
 }
 
 @mixin card-deck-1 {
-  o-access,
   o-highlighted,
   o-card,
   .card {
@@ -62,7 +58,6 @@
   }
 
   .card-deck {
-    o-access,
     o-highlighted,
     o-card {
       .card,
@@ -91,7 +86,6 @@
     }
 
     @include media-breakpoint-down(xs) {
-      o-access,
       o-highlighted,
       o-card,
       .card {
@@ -123,7 +117,7 @@
     @include media-breakpoint-down(xs) {
       width: 100%;
     }
-    o-access,
+
     o-highlighted,
     o-card,
     .card {
@@ -144,7 +138,7 @@
         height: fit-content;
         margin-right: auto;
         margin-left: auto;
-        &[ng-reflect-is-horizontal='true'] {
+        &[ng-reflect-is-horizontal="true"] {
           max-width: 100%;
         }
       }
@@ -152,7 +146,6 @@
   }
 
   .card-deck.max-cards-3.card-column {
-    o-access,
     o-highlighted,
     o-card,
     .card {
@@ -164,7 +157,7 @@
 
       @include media-breakpoint-down(xs) {
         max-width: 328px;
-        &[ng-reflect-is-horizontal='true'] {
+        &[ng-reflect-is-horizontal="true"] {
           max-width: 100%;
         }
       }
@@ -172,7 +165,6 @@
   }
 
   .card-deck.max-cards-2.card-column {
-    o-access,
     o-highlighted,
     o-card,
     .card {
@@ -180,7 +172,7 @@
 
       @include media-breakpoint-down(xs) {
         max-width: 328px;
-        &[ng-reflect-is-horizontal='true'] {
+        &[ng-reflect-is-horizontal="true"] {
           max-width: 100%;
         }
       }
@@ -188,7 +180,6 @@
   }
 
   .card-deck.max-cards-1.card-column {
-    o-access,
     o-highlighted,
     o-card,
     .card {
@@ -208,29 +199,6 @@
 
       @include media-breakpoint-down(xs) {
         max-width: 100%;
-      }
-    }
-  }
-
-  .access-deck {
-    @extend .card-deck;
-
-    &.access-column {
-      @extend .card-column;
-    }
-
-    &.max-cards-1 {
-      o-access {
-        &:first-of-type {
-          @include media-breakpoint-down(sm) {
-            margin-top: 0 !important;
-          }
-        }
-      }
-      @include media-breakpoint-down(sm) {
-        .list-group-item {
-          margin-top: 0 !important;
-        }
       }
     }
   }

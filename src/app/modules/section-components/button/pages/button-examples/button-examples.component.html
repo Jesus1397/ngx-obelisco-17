@@ -1,24 +1,51 @@
 <section class="section-example">
-  <app-viewer title="Tipos" [isNavCode]="true">
+  <p class="h4">Tipos</p>
+  <app-viewer title="Predeterminados" [isNavCode]="true">
     <div component class="button-container">
       <o-button (click)="alert()">Botón</o-button>
       <o-button type="secondary" (click)="alert()">Botón</o-button>
       <o-button type="success" (click)="alert()">Botón</o-button>
       <o-button type="danger" (click)="alert()">Botón</o-button>
       <o-button type="link" (click)="alert()">Botón</o-button>
-      <o-button link="https://www.google.com/">Enlace</o-button>
     </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ buttonTypesSolid }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ buttonTypesTs }}
+      </code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Con borde" [isNavCode]="true">
     <div component class="button-container">
       <o-button (click)="alert()" [isOutline]="true">Botón</o-button>
       <o-button type="secondary" (click)="alert()" [isOutline]="true">Botón</o-button>
       <o-button type="success" (click)="alert()" [isOutline]="true">Botón</o-button>
       <o-button type="danger" (click)="alert()" [isOutline]="true">Botón</o-button>
       <o-button type="link" (click)="alert()" [isOutline]="true">Botón</o-button>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ buttonTypesBorder }}</code>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js [lang]="'ts'">
+        {{ buttonTypesTs }}
+      </code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Enlace" [isNavCode]="true">
+    <div component class="button-container">
+      <o-button link="https://www.google.com/">Enlace</o-button>
       <o-button link="https://www.google.com/" [isOutline]="true">Enlace</o-button>
     </div>
     <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
       <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
-      <code highlight-js>{{ buttonTypes }}</code>
+      <code highlight-js>{{ buttonTypesLink }}</code>
     </div>
     <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
       <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
@@ -52,28 +79,28 @@
 
   <app-viewer title="Con ícono">
     <div component class="button-container">
-      <o-button size="sm" [hasIcon]="true">
-        <span class="material-icons-round" aria-hidden="true">info</span>
+      <o-button size="sm">
+        <span class="material-symbols-rounded o-icon" aria-hidden="true">info</span>
         Botón
       </o-button>
-      <o-button [hasIcon]="true">
-        <i class="bx bxs-info-circle"></i>
+      <o-button>
+        <i class="bx bxs-info-circle o-icon"></i>
         Botón
       </o-button>
-      <o-button size="lg" [hasIcon]="true">
-        <span class="material-icons-round" aria-hidden="true">info</span>
+      <o-button size="lg">
+        <span class="material-symbols-rounded o-icon" aria-hidden="true">info</span>
         Botón
       </o-button>
     </div>
     <div component class="button-container">
-      <o-button size="sm" [hasIcon]="true" ariaLabel="Botón">
-        <span class="material-icons-round" aria-hidden="true">info</span>
+      <o-button size="sm" ariaLabel="Botón">
+        <span class="material-symbols-rounded o-icon" aria-hidden="true">info</span>
       </o-button>
-      <o-button [hasIcon]="true" ariaLabel="Botón">
-        <i class="bx bxs-info-circle"></i>
+      <o-button ariaLabel="Botón">
+        <i class="bx bxs-info-circle o-icon"></i>
       </o-button>
-      <o-button size="lg" [hasIcon]="true" ariaLabel="Botón">
-        <span class="material-icons-round" aria-hidden="true">info</span>
+      <o-button size="lg" ariaLabel="Botón">
+        <span class="material-symbols-rounded o-icon" aria-hidden="true">info</span>
       </o-button>
     </div>
     <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
@@ -84,45 +111,45 @@
 
   <app-viewer title="Con spinner">
     <div component class="button-container">
-      <o-button [hasSpinner]="true">
-        <o-spinner type="dark" size="sm"></o-spinner>
-        Botón
-      </o-button>
-      <o-button type="secondary" [hasSpinner]="true">
+      <o-button>
         <o-spinner type="light" size="sm"></o-spinner>
         Botón
       </o-button>
-      <o-button type="success" [hasSpinner]="true">
+      <o-button type="secondary">
         <o-spinner type="light" size="sm"></o-spinner>
         Botón
       </o-button>
-      <o-button type="danger" [hasSpinner]="true">
+      <o-button type="success">
+        <o-spinner type="light" size="sm"></o-spinner>
+        Botón
+      </o-button>
+      <o-button type="danger">
         <o-spinner type="light" size="sm"></o-spinner>
         Botón</o-button
       >
-      <o-button type="link" [hasSpinner]="true">
+      <o-button type="link">
         <o-spinner type="info" size="sm"></o-spinner>
         Botón
       </o-button>
     </div>
     <div component class="button-container">
-      <o-button [hasSpinner]="true" [isOutline]="true">
-        <o-spinner type="dark" size="sm"></o-spinner>
+      <o-button [isOutline]="true">
+        <o-spinner type="primary" size="sm"></o-spinner>
         Botón
       </o-button>
-      <o-button type="secondary" [hasSpinner]="true" [isOutline]="true">
+      <o-button type="secondary" [isOutline]="true">
         <o-spinner type="secondary" size="sm"></o-spinner>
         Botón
       </o-button>
-      <o-button type="success" [hasSpinner]="true" [isOutline]="true">
+      <o-button type="success" [isOutline]="true">
         <o-spinner type="success" size="sm"></o-spinner>
         Botón
       </o-button>
-      <o-button type="danger" [hasSpinner]="true" [isOutline]="true">
+      <o-button type="danger" [isOutline]="true">
         <o-spinner type="danger" size="sm"></o-spinner>
         Botón</o-button
       >
-      <o-button type="link" [hasSpinner]="true" [isOutline]="true">
+      <o-button type="link" [isOutline]="true">
         <o-spinner type="info" size="sm"></o-spinner>
         Botón
       </o-button>
@@ -130,6 +157,26 @@
     <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
       <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
       <code highlight-js>{{ buttonSpinner }}</code>
+    </div>
+  </app-viewer>
+  <app-viewer title="Botón XS - Icono">
+    <div component class="button-container">
+      <o-button size="xs" aria-label="Editar">
+        <span class="material-symbols-rounded o-icon" aria-hidden="true">edit</span>
+      </o-button>
+      <o-button size="xs" aria-label="Eliminar">
+        <i class="bx bxs-trash-alt o-icon"></i>
+      </o-button>
+      <o-button size="xs" aria-label="Visualizar" link="#">
+        <span class="material-symbols-rounded o-icon" aria-hidden="true">visibility</span>
+      </o-button>
+      <o-button size="xs" aria-label="Descargar">
+        <i class="bx bxs-download o-icon"></i>
+      </o-button>
+    </div>
+    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+      <code highlight-js>{{ buttonSizeXs }}</code>
     </div>
   </app-viewer>
 </section>

@@ -5,6 +5,14 @@ export enum EnumSizes {
   Md = 'md',
   Lg = 'lg'
 }
+export type ButtonSizes = 'xs' | 'sm' | 'md' | 'lg';
+
+export enum EnumButtonSizes {
+  Xs = 'xs',
+  Sm = 'sm',
+  Md = 'md',
+  Lg = 'lg'
+}
 
 export type ModalSizes = Sizes | 'xl';
 

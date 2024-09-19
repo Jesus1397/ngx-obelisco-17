@@ -30,7 +30,7 @@
               <i [ngClass]="tab.icon"></i>
             </ng-container>
             <ng-container *ngIf="!tab.icon.includes('bx')">
-              <span class="material-icons-round" aria-hidden="true">{{ tab.icon }}</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">{{ tab.icon }}</span>
             </ng-container>
           </ng-container>
           {{ tab.title }}
@@ -39,7 +39,7 @@
               <i [ngClass]="tab.icon"></i>
             </ng-container>
             <ng-container *ngIf="tab.icon && !tab.icon.includes('bx')">
-              <span class="material-icons-round" aria-hidden="true">{{ tab.icon }}</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">{{ tab.icon }}</span>
             </ng-container>
           </ng-container>
         </div>
@@ -49,10 +49,10 @@
 
   <div class="icons-container" *ngIf="isSlidered">
     <button type="button" class="right-left icon" id="left">
-      <span class="material-icons-round" aria-hidden="true">arrow_back_ios</span>
+      <span class="material-symbols-rounded o-icon" aria-hidden="true">arrow_back_ios</span>
     </button>
     <button type="button" class="right-left icon" id="right">
-      <span class="material-icons-round" aria-hidden="true">arrow_forward_ios</span>
+      <span class="material-symbols-rounded o-icon" aria-hidden="true">arrow_forward_ios</span>
     </button>
   </div>
 </nav>

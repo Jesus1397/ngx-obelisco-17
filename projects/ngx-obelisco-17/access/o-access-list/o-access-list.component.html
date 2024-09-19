@@ -18,7 +18,7 @@
             class="card-access-icon {{ items.header!.icon }}"
           ></i>
           <ng-template #materialIcon>
-            <span class="card-access-icon material-icons-round" aria-hidden="true">{{ items.header!.icon }}</span>
+            <span class="card-access-icon material-symbols-rounded o-icon" aria-hidden="true">{{ items.header!.icon }}</span>
           </ng-template>
         </ng-container>
         <span *ngIf="items.header!.iconText" class="card-access-icon descriptive">{{ items.header!.iconText }}</span>
@@ -32,7 +32,7 @@
               <ng-container *ngIf="itemList.icon">
                 <i *ngIf="itemList.icon.includes('bx'); else materialIcon" class="{{ itemList.icon }}"></i>
                 <ng-template #materialIcon>
-                  <span class="material-icons-round" aria-hidden="true">{{ itemList.icon }}</span>
+                  <span class="material-symbols-rounded o-icon" aria-hidden="true">{{ itemList.icon }}</span>
                 </ng-template>
               </ng-container>
               <div class="access-content">
@@ -46,7 +46,7 @@
               <ng-container *ngIf="itemList.icon">
                 <i *ngIf="itemList.icon.includes('bx'); else materialIcon" class="{{ itemList.icon }}"></i>
                 <ng-template #materialIcon>
-                  <span class="material-icons-round" aria-hidden="true">{{ itemList.icon }}</span>
+                  <span class="material-symbols-rounded o-icon" aria-hidden="true">{{ itemList.icon }}</span>
                 </ng-template>
               </ng-container>
               <div class="access-content">
@@ -67,7 +67,7 @@
                 <ng-container *ngIf="accessItem.icon">
                   <i *ngIf="accessItem.icon.includes('bx'); else materialIcon" class="{{ accessItem.icon }}"></i>
                   <ng-template #materialIcon>
-                    <span class="material-icons-round" aria-hidden="true">{{ accessItem.icon }}</span>
+                    <span class="material-symbols-rounded o-icon" aria-hidden="true">{{ accessItem.icon }}</span>
                   </ng-template>
                 </ng-container>
                 {{ accessItem.title }}
@@ -78,7 +78,7 @@
                 <ng-container *ngIf="accessItem.icon">
                   <i *ngIf="accessItem.icon.includes('bx'); else materialIcon" class="{{ accessItem.icon }}"></i>
                   <ng-template #materialIcon>
-                    <span class="material-icons-round" aria-hidden="true">{{ accessItem.icon }}</span>
+                    <span class="material-symbols-rounded o-icon" aria-hidden="true">{{ accessItem.icon }}</span>
                   </ng-template>
                 </ng-container>
                 {{ accessItem.title }}
@@ -98,7 +98,7 @@
           <ng-container *ngIf="items.footer!.icon">
             <i *ngIf="items.footer!.icon.includes('bx'); else materialIcon" class="{{ items.footer!.icon }}"></i>
             <ng-template #materialIcon>
-              <span class="material-icons-round" aria-hidden="true">{{ items.footer!.icon }}</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">{{ items.footer!.icon }}</span>
             </ng-template>
           </ng-container>
           {{ items.footer!.title }}
@@ -109,7 +109,7 @@
           <ng-container *ngIf="items.footer!.icon">
             <i *ngIf="items.footer!.icon.includes('bx'); else materialIcon" class="{{ items.footer!.icon }}"></i>
             <ng-template #materialIcon>
-              <span class="material-icons-round" aria-hidden="true">{{ items.footer!.icon }}</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">{{ items.footer!.icon }}</span>
             </ng-template>
           </ng-container>
           {{ items.footer!.title }}

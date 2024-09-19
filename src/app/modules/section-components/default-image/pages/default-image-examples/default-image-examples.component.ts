@@ -18,11 +18,11 @@ export class DefaultImageExamplesComponent {
     <div class="card-info">
       <div class="pt-2">
         <small>
-          <span class="material-icons-round" aria-hidden="true">calendar_today</span>
+          <span class="material-symbols-rounded o-icon" aria-hidden="true">calendar_today</span>
           Lun 01/1
         </small>
         <small>
-          <span class="material-icons-round" aria-hidden="true">watch_later</span>
+          <span class="material-symbols-rounded o-icon" aria-hidden="true">watch_later</span>
           17 | 18 | 19 hs
         </small>
       </div>
@@ -49,11 +49,11 @@ export class DefaultImageExamplesComponent {
     <div class="card-info">
       <div class="pt-2">
         <small>
-          <span class="material-icons-round" aria-hidden="true">calendar_today</span>
+          <span class="material-symbols-rounded o-icon" aria-hidden="true">calendar_today</span>
           Lun 01/1
         </small>
         <small>
-          <span class="material-icons-round" aria-hidden="true">watch_later</span>
+          <span class="material-symbols-rounded o-icon" aria-hidden="true">watch_later</span>
           17 | 18 | 19 hs
         </small>
       </div>

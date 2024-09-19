@@ -114,7 +114,7 @@ export class OTabsComponent implements AfterViewInit, OnDestroy {
   @HostListener('mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    if (target.classList.contains('material-icons-round')) {
+    if (target.classList.contains('material-symbols-rounded o-icon')) {
       return;
     }
 

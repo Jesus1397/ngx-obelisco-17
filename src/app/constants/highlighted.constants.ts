@@ -366,8 +366,8 @@ export class ExampleComponent {
 
 export const HIGHLIGHTED_BANNER_NO_MEDIA_HTML = `
 <o-highlighted [title]="title" [description]="description">
-  <o-button #children size="lg" type="secondary" link="#" download="" [hasIcon]="true">
-    <span class="material-icons-round" aria-hidden="true">file_download</span>
+  <o-button #children size="lg" type="secondary" link="#" download="">
+    <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
     Descargar
   </o-button>
 </o-highlighted>
@@ -406,8 +406,8 @@ export const HIGHLIGHTED_GROUPING_IMAGE_HTML = `
       <o-button #children link="#" size="lg">Botón</o-button>
     </o-highlighted>
     <o-highlighted type="grouping" [title]="title" [description]="description" [image]="picture">
-      <o-button #children size="lg" type="secondary" link="#" download="" [hasIcon]="true">
-        <span class="material-icons-round" aria-hidden="true">file_download</span>
+      <o-button #children size="lg" type="secondary" link="#" download="">
+        <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
         Descargar
       </o-button>
     </o-highlighted>
@@ -447,8 +447,8 @@ export const HIGHLIGHTED_LATERAL_HTML = `
 </o-highlighted>
 
 <o-highlighted type="lateral" [title]="title" [description]="shortDescription">
-  <o-button #children size="lg" type="secondary" link="#" download="" [hasIcon]="true">
-    <span class="material-icons-round" aria-hidden="true">file_download</span>
+  <o-button #children size="lg" type="secondary" link="#" download="">
+    <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
     Descargar
   </o-button>
 </o-highlighted>

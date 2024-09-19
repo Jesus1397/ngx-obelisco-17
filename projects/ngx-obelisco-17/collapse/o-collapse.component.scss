@@ -90,7 +90,7 @@ $accordion-bg-white: $white;
       }
 
       i,
-      .material-icons-round,
+      .material-symbols-rounded o-icon,
       o-collapse-icon {
         display: inline-block;
         font-size: 1.75rem;
@@ -199,7 +199,7 @@ $accordion-bg-white: $white;
       border: none;
       /* @include border-bottom-radius($card-border-radius); */
 
-      span:not(.material-icons-round) {
+      span:not(.material-symbols-rounded o-icon) {
         font-size: 1.125rem;
         font-weight: 600;
         font-family: $font-family-headings;
@@ -246,7 +246,7 @@ $accordion-bg-white: $white;
         }
 
         i,
-        .material-icons-round {
+        .material-symbols-rounded o-icon {
           margin: auto 0;
           font-size: 1.5rem;
         }

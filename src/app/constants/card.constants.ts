@@ -304,7 +304,7 @@ export class ExampleComponent {
 export const CARD_SECTIONS_HORIZONTAL = `
 <o-card [isHorizontal]="true" [isBordered]="true">
   <o-card-icon>
-    <span class="material-icons-round" aria-hidden="true">info</span>
+    <span class="material-symbols-rounded o-icon" aria-hidden="true">info</span>
   </o-card-icon>
   <o-card-header>
     <o-card-title route="/components">
@@ -476,8 +476,8 @@ export const CARD_EVENT_HTML = `
   }"
 >
   <div class="pt-2" #info>
-    <small><span class="material-icons-round" aria-hidden="true">calendar_today</span> Lun 01/1</small>
-    <small><span class="material-icons-round" aria-hidden="true">watch_later</span> 17 | 18 | 19 hs</small>
+    <small><span class="material-symbols-rounded o-icon" aria-hidden="true">calendar_today</span> Lun 01/1</small>
+    <small><span class="material-symbols-rounded o-icon" aria-hidden="true">watch_later</span> 17 | 18 | 19 hs</small>
   </div>
 </o-card>
 `;

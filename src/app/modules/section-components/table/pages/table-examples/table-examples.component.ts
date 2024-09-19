@@ -59,16 +59,16 @@ export class TableExamplesComponent {
         data: `
           <div class="actions-table">
             <button class="btn button-actions-table" aria-label="Editar">
-              <span class="material-icons-round" aria-hidden="true">edit</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">edit</span>
             </button>
             <button class="btn button-actions-table" aria-label="Visualizar">
-              <span class="material-icons-round" aria-hidden="true">visibility</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">visibility</span>
             </button>
             <button class="btn button-actions-table" aria-label="Descargar">
-              <span class="material-icons-round" aria-hidden="true">file_download</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
             </button>
             <button class="btn button-actions-table" aria-label="Eliminar">
-              <span class="material-icons-round" aria-hidden="true">delete</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">delete</span>
             </button>
           </div>`,
       },
@@ -93,16 +93,16 @@ export class TableExamplesComponent {
         data: `
           <div class="actions-table">
             <button class="btn button-actions-table" aria-label="Editar">
-              <span class="material-icons-round" aria-hidden="true">edit</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">edit</span>
             </button>
             <button class="btn button-actions-table" aria-label="Visualizar">
-              <span class="material-icons-round" aria-hidden="true">visibility</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">visibility</span>
             </button>
             <button class="btn button-actions-table" aria-label="Descargar">
-              <span class="material-icons-round" aria-hidden="true">file_download</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
             </button>
             <button class="btn button-actions-table" aria-label="Eliminar">
-              <span class="material-icons-round" aria-hidden="true">delete</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">delete</span>
             </button>
           </div>`,
       },
@@ -127,16 +127,16 @@ export class TableExamplesComponent {
         data: `
           <div class="actions-table">
             <button class="btn button-actions-table" aria-label="Editar">
-              <span class="material-icons-round" aria-hidden="true">edit</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">edit</span>
             </button>
             <button class="btn button-actions-table" aria-label="Visualizar">
-              <span class="material-icons-round" aria-hidden="true">visibility</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">visibility</span>
             </button>
             <button class="btn button-actions-table" aria-label="Descargar">
-              <span class="material-icons-round" aria-hidden="true">file_download</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
             </button>
             <button class="btn button-actions-table" aria-label="Eliminar">
-              <span class="material-icons-round" aria-hidden="true">delete</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">delete</span>
             </button>
           </div>`,
       },
@@ -161,16 +161,16 @@ export class TableExamplesComponent {
         data: `
           <div class="actions-table">
             <button class="btn button-actions-table" aria-label="Editar">
-              <span class="material-icons-round" aria-hidden="true">edit</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">edit</span>
             </button>
             <button class="btn button-actions-table" aria-label="Visualizar">
-              <span class="material-icons-round" aria-hidden="true">visibility</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">visibility</span>
             </button>
             <button class="btn button-actions-table" aria-label="Descargar">
-              <span class="material-icons-round" aria-hidden="true">file_download</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
             </button>
             <button class="btn button-actions-table" aria-label="Eliminar">
-              <span class="material-icons-round" aria-hidden="true">delete</span>
+              <span class="material-symbols-rounded o-icon" aria-hidden="true">delete</span>
             </button>
           </div>`,
       },

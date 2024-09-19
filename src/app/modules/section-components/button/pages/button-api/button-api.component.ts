@@ -3,9 +3,10 @@ import {
   BUTTON_DATA_SOURCE,
   BUTTON_GENERAL_DATA_SOURCE,
   BUTTON_LINK_DATA_SOURCE,
+  BUTTON_SIZES_TYPE,
   BUTTON_TYPES
 } from 'src/app/constants/button.constants';
-import { COLUMNS, SIZES } from 'src/app/constants/components.constants';
+import { COLUMNS } from 'src/app/constants/components.constants';
 
 @Component({
   selector: 'app-button-api',
@@ -18,5 +19,5 @@ export class ButtonApiComponent {
   public linkDataSource = BUTTON_LINK_DATA_SOURCE;
   public buttonDataSource = BUTTON_DATA_SOURCE;
   public types = BUTTON_TYPES;
-  public sizes = SIZES;
+  public sizes = BUTTON_SIZES_TYPE;
 }

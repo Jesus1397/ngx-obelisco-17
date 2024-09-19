@@ -231,7 +231,7 @@ export class ExampleComponent {
   direction="left"
   class="icon-box bg-light mx-2"
 >
-  <span class="material-icons-round" aria-hidden="true">help</span>
+  <span class="material-symbols-rounded o-icon" aria-hidden="true">help</span>
 </span>
 
 <span
@@ -241,7 +241,7 @@ export class ExampleComponent {
   direction="top"
   class="icon-box bg-light mx-2"
 >
-  <span class="material-icons-round" aria-hidden="true">help</span>
+  <span class="material-symbols-rounded o-icon" aria-hidden="true">help</span>
 </span>
 
 <span
@@ -251,7 +251,7 @@ export class ExampleComponent {
   direction="right"
   class="icon-box bg-light mx-2"
 >
-  <span class="material-icons-round" aria-hidden="true">help</span>
+  <span class="material-symbols-rounded o-icon" aria-hidden="true">help</span>
 </span>
     `,
     exampleTS: `

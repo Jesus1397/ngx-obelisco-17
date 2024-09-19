@@ -5,7 +5,7 @@
       [ngClass]="getClassNames()"
       [attr.aria-label]="ariaLabel"
       [attr.download]="download"
-      [attr.rel]="rel ? rel : 'noreferrer'"
+      [attr.rel]="rel ? rel : 'noopener noreferrer'"
       [attr.target]="target ? target : '_blank'"
       [attr.href]="link ? link : '#'"
     >
@@ -25,9 +25,9 @@
     [ngClass]="getClassNames()"
     [attr.aria-label]="ariaLabel"
     [disabled]="isDisabled ? true : null"
-    [attr.data-target]="dataTarget ? '#' + dataTarget : null"
-    [attr.data-toggle]="dataToggle"
-    [attr.data-dismiss]="dataDismiss"
+    [attr.data-bs-target]="dataTarget ? '#' + dataTarget : null"
+    [attr.data-bs-toggle]="dataToggle"
+    [attr.data-bs-dismiss]="dataDismiss"
   >
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </button>

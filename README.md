@@ -33,7 +33,7 @@ npm install ngx-obelisco-17
 
 En lugar de mostrar cada importación individualmente, a continuación se presenta un ejemplo de cómo incluir todas las dependencias y recursos necesarios en un archivo HTML.
 
-- Iconografía: Incluye enlaces a la librería de iconos Boxicons y Material Icons Rounded, proporcionando una amplia gama de iconos para utilizar en la interfaz de usuario.
+- Iconografía: Incluye enlaces a la librería de iconos Boxicons y Material Symbols Rounded, proporcionando una amplia gama de iconos para utilizar en la interfaz de usuario.
 - Tipografías: Integra fuentes de Google como Nunito y Open Sans para mantener la coherencia visual y mejorar la legibilidad.
 - JavaScript: Enlaces a jQuery y Bootstrap para proporcionar funcionalidad adicional y componentes interactivos.
 
@@ -44,8 +44,8 @@ En lugar de mostrar cada importación individualmente, a continuación se presen
     <!-- Importar Boxicons desde CDN -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <!-- Importar Material Icons Rounded desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <!-- Importar Material Symbols Rounded desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet" />
 
     <!-- Importar tipografías Nunito y Open Sans desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />

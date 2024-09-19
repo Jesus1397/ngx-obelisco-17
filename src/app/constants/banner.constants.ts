@@ -68,7 +68,7 @@ export const BANNER_SECTIONS_DATA_SOURCE: DataSource[] = [
 export const BANNER_SECTIONS = `
 <o-banner [isDark]="true">
   <o-banner-icon>
-    <span class="material-icons-round" aria-hidden="true">cookie</span>
+    <span class="material-symbols-rounded o-icon" aria-hidden="true">cookie</span>
   </o-banner-icon>
   <o-banner-text>
     Este banner tiene dos botones y <strong>puede tener énfasis</strong>. Se truncan los textos que superen más de

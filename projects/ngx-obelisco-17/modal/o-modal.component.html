@@ -4,6 +4,7 @@
   [attr.id]="dataTarget"
   [ngClass]="customClasses"
   aria-hidden="true"
+  [attr.aria-labelledby]="dataTarget"
 >
   <div
     class="modal-dialog"
@@ -18,7 +19,6 @@
       isScrollable ? 'modal-dialog-scrollable' : '',
       isOnTop ? '' : 'modal-dialog-centered'
     ]"
-    role="document"
   >
     <div class="modal-content">
       <ng-container *ngIf="!oCustomContent">

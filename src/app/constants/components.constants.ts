@@ -105,7 +105,7 @@ export const COMPONENTS_NAVIGATION = [
   //   route: '/components/map'
   // },
   {
-    title: 'Modal ❌',
+    title: 'Modal ✅',
     image: { src: 'assets/component-cards/Modal.svg' },
     route: '/components/modal',
   },

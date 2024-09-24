@@ -90,7 +90,7 @@ export const COMPONENTS_NAVIGATION = [
   //   route: '/components/progress-bar'
   // },
   {
-    title: 'Botón ❌',
+    title: 'Botón ✅',
     image: { src: 'assets/component-cards/boton.jpg' },
     route: '/components/button',
   },

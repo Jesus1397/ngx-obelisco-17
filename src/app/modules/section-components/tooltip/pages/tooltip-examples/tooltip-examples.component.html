@@ -10,6 +10,8 @@
         <o-button
           *ngIf="!tooltip.customClasses"
           oTooltip
+          type="link"
+          [isOutline]="true"
           [description]="tooltip.text"
           [direction]="direction"
           customClasses="mx-2"
@@ -23,18 +25,32 @@
           [direction]="direction"
           class="icon-box bg-light mx-2"
         >
-          <span class="material-symbols-rounded o-icon" aria-hidden="true">help</span>
+          <span class="material-symbols-rounded o-icon" aria-hidden="true"
+            >help</span
+          >
         </span>
       </ng-container>
     </div>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
-      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+    <div
+      appClipboard
+      class="d-flex flex-column align-items-end p-0"
+      component-html
+    >
+      <button
+        class="btn btn-sm btn-outline-link btn-clipboard btn-icon"
+      ></button>
       <code highlight-js>
         {{ tooltip.exampleHTML }}
       </code>
     </div>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
-      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+    <div
+      appClipboard
+      class="d-flex flex-column align-items-end p-0"
+      component-ts
+    >
+      <button
+        class="btn btn-sm btn-outline-link btn-clipboard btn-icon"
+      ></button>
       <code highlight-js [lang]="'ts'">
         {{ tooltip.exampleTS }}
       </code>

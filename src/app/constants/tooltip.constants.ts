@@ -73,6 +73,8 @@ export const TOOLTIP_LIST: Tooltip[] = [
     exampleHTML: `
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="top-start"
   customClasses="mx-2"
@@ -80,6 +82,8 @@ export const TOOLTIP_LIST: Tooltip[] = [
 
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="top"
   customClasses="mx-2"
@@ -87,6 +91,8 @@ export const TOOLTIP_LIST: Tooltip[] = [
 
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="top-end"
   customClasses="mx-2"
@@ -111,6 +117,8 @@ export class ExampleComponent {
     exampleHTML: `
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="right-start"
   customClasses="mx-2"
@@ -118,6 +126,8 @@ export class ExampleComponent {
 
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="right"
   customClasses="mx-2"
@@ -125,6 +135,8 @@ export class ExampleComponent {
 
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="right-end"
   customClasses="mx-2"
@@ -149,6 +161,8 @@ export class ExampleComponent {
     exampleHTML: `
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="left-start"
   customClasses="mx-2"
@@ -156,6 +170,8 @@ export class ExampleComponent {
 
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="left"
   customClasses="mx-2"
@@ -163,6 +179,8 @@ export class ExampleComponent {
 
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="left-end"
   customClasses="mx-2"
@@ -187,6 +205,8 @@ export class ExampleComponent {
     exampleHTML: `
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="bottom-start"
   customClasses="mx-2"
@@ -194,6 +214,8 @@ export class ExampleComponent {
 
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="bottom"
   customClasses="mx-2"
@@ -201,6 +223,8 @@ export class ExampleComponent {
 
 <o-button
   oTooltip
+  type="link"
+  [isOutline]="true"
   [description]="text"
   direction="bottom-end"
   customClasses="mx-2"

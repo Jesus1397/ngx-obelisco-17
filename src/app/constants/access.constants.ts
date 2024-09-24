@@ -88,11 +88,11 @@ export const ACCESS_SIZES_INTERFACE = `
 `;
 
 export const ACCESS_SIMPLE_TITLE_HTML = `
-  <o-access title="Acceso"></o-access>
+  <o-access title="Acceso" route="/home"></o-access>
 `;
 
 export const ACCESS_SIMPLE_DESCRIPTION_HTML = `
-  <o-access title="Acceso" description="Descripción (Opcional)"></o-access>
+  <o-access title="Acceso" description="Descripción (Opcional)" route="/home"></o-access>
 `;
 
 export const ACCESS_SIMPLE_ICON_HTML = `
@@ -122,32 +122,43 @@ export const ACCESS_SIMPLE_SIZES_HTML = `
 `;
 
 export const ACCESS_LAYOUT_FOUR = `
-<div class="access-deck access-column max-cards-4">
-  <o-access title="Acceso" size="sm"></o-access>
-  <o-access title="Acceso" size="sm"></o-access>
-  <o-access title="Acceso" size="sm"></o-access>
-  <o-access title="Acceso" size="sm"></o-access>
+<div component class="access-items-4">
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+</div>
+`;
+export const ACCESS_LAYOUT_FOUR_TABLET = `
+<div component class="access-items-4 row-cols-md-1">
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
 </div>
 `;
 export const ACCESS_LAYOUT_THREE = `
-<div class="access-deck access-column max-cards-3">
-  <o-access title="Acceso" size="sm"></o-access>
-  <o-access title="Acceso" size="sm"></o-access>
-  <o-access title="Acceso" size="sm"></o-access>
+<div component class="access-items-3">
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
 </div>
 `;
-export const ACCESS_LAYOUT_TWO = `
-<div class="access-deck access-column max-cards-2">
-  <o-access title="Acceso" size="sm"></o-access>
-  <o-access title="Acceso" size="sm"></o-access>
+export const ACCESS_LAYOUT_THREE_TABLET = `
+<div component class="access-items-3 row-cols-md-1">
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
 </div>
 `;
 export const ACCESS_LAYOUT_ONE = `
-<div class="access-deck max-cards-1">
-  <o-access title="Acceso" size="sm"></o-access>
-  <o-access title="Acceso" size="sm"></o-access>
-  <o-access title="Acceso" size="sm"></o-access>
-  <o-access title="Acceso" size="sm"></o-access>
+<div component class="access-items-1">
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
+  <o-access title="Acceso" size="sm" route="/home"></o-access>
 </div>
 `;
 

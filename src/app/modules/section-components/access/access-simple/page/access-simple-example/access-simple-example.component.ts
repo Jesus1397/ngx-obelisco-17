@@ -6,8 +6,9 @@ import {
   ACCESS_SIMPLE_TITLE_HTML,
   ACCESS_LAYOUT_FOUR,
   ACCESS_LAYOUT_THREE,
-  ACCESS_LAYOUT_TWO,
-  ACCESS_LAYOUT_ONE
+  ACCESS_LAYOUT_ONE,
+  ACCESS_LAYOUT_FOUR_TABLET,
+  ACCESS_LAYOUT_THREE_TABLET
 } from 'src/app/constants/access.constants';
 
 @Component({
@@ -22,7 +23,8 @@ export class AccessSimpleExampleComponent {
   public exampleAccessSizesHtml = ACCESS_SIMPLE_SIZES_HTML;
 
   public layoutOne = ACCESS_LAYOUT_ONE;
-  public layoutTwo = ACCESS_LAYOUT_TWO;
   public layoutThree = ACCESS_LAYOUT_THREE;
   public layoutFour = ACCESS_LAYOUT_FOUR;
+  public layoutThreeTablet = ACCESS_LAYOUT_THREE_TABLET;
+  public layoutFourTablet = ACCESS_LAYOUT_FOUR_TABLET;
 }

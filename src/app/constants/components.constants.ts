@@ -50,7 +50,7 @@ export const COMPONENTS_NAVIGATION = [
     route: '/components/access',
     children: [
       {
-        title: 'Simple ❌',
+        title: 'Simple ✅',
         route: '/components/access/access-simple',
       },
       {

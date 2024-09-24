@@ -5,7 +5,6 @@ import { ONavbarModule } from 'ngx-obelisco-17/navbar';
 import {
   COMPONENTS_NAVIGATION,
   OTHERS_NAVIGATION,
-  ICONS_NAVIGATION,
 } from './constants/components.constants';
 import { HighlightJsModule } from 'ngx-highlight-js';
 
@@ -28,8 +27,7 @@ export class AppComponent implements OnInit {
     },
   ];
 
-  componentRoutes =
-    COMPONENTS_NAVIGATION.concat(OTHERS_NAVIGATION).concat(ICONS_NAVIGATION);
+  componentRoutes = COMPONENTS_NAVIGATION.concat(OTHERS_NAVIGATION);
 
   searchItemsList = this.componentRoutes
     .flatMap((item) => {

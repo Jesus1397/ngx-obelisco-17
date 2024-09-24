@@ -238,6 +238,11 @@ export const COMPONENTS_NAVIGATION = [
 
 export const OTHERS_NAVIGATION = [
   {
+    title: 'Iconos',
+    image: { src: 'assets/component-cards/' },
+    route: '/components/icon',
+  },
+  {
     title: 'Contenido personalizable',
     image: { src: 'assets/component-cards/' },
     route: '/components/custom-content',
@@ -246,14 +251,6 @@ export const OTHERS_NAVIGATION = [
     title: 'Imagen por defecto',
     image: { src: 'assets/component-cards/' },
     route: '/components/default-image',
-  },
-];
-
-export const ICONS_NAVIGATION = [
-  {
-    title: 'Iconos',
-    image: { src: 'assets/component-cards/' },
-    route: '/components/icon',
   },
 ];
 

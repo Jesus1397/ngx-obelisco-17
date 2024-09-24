@@ -4,7 +4,7 @@
 @import "node_modules/tippy.js/animations/scale.css";
 
 .tippy-box[data-theme~="custom-theme"] {
-  background-color: #505e70 !important;
+  background-color: #080f1c !important;
   border-radius: 0.5rem !important;
   color: #fff !important;
   width: max-content !important;
@@ -20,17 +20,28 @@
   }
 
   .tippy-arrow {
-    color: #505e70 !important;
-    z-index: 51689745964651 !important;
+    background-color: #080f1c !important;
+    z-index: 999999 !important;
 
     &::before {
       content: "";
       position: absolute;
       width: 20px;
       height: 20px;
-      background: #505e70;
+      background: #080f1c;
       transform: rotate(45deg);
       border-radius: 4px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px; /* Debe coincidir con el tamaño del before */
+      height: 20px;
+      background-color: #0055f4 !important;
+      transform: rotate(135deg);
+      border-radius: 4px;
+      z-index: 999999 !important; /* Asegúrate de que esté encima */
     }
   }
 

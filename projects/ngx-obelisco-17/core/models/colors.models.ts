@@ -1,6 +1,6 @@
 export type Types = 'primary' | 'success' | 'danger' | 'info';
 
-export type AlertTypes = 'primary' | 'success' | 'danger' | 'info';
+export type AlertTypes = 'success' | 'danger' | 'info' | 'warning';
 
 export type StatusMessageTypes = Types | 'institutional';
 
@@ -10,7 +10,12 @@ export type BadgeTypes = Types | 'secondary';
 
 export type ProgressBarTypes = 'info' | 'success';
 
-export type ButtonTypes = 'primary' | 'secondary' | 'success' | 'danger' | 'link';
+export type ButtonTypes =
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'danger'
+  | 'link';
 
 export type CromaticTypes =
   | 'sky'
@@ -32,14 +37,14 @@ export enum EnumTypes {
   Primary = 'primary',
   Success = 'success',
   Danger = 'danger',
-  Info = 'info'
+  Info = 'info',
 }
 
 export enum EnumAlertTypes {
   Primary = 'primary',
   Success = 'success',
   Danger = 'danger',
-  Info = 'info'
+  Info = 'info',
 }
 
 export enum EnumStatusMessageTypes {
@@ -47,7 +52,7 @@ export enum EnumStatusMessageTypes {
   Success = 'success',
   Danger = 'danger',
   Info = 'info',
-  Institutional = 'institutional'
+  Institutional = 'institutional',
 }
 
 export enum EnumSpinnerTypes {
@@ -57,12 +62,12 @@ export enum EnumSpinnerTypes {
   Info = 'info',
   Secondary = 'secondary',
   Dark = 'dark',
-  Light = 'light'
+  Light = 'light',
 }
 
 export enum EnumProgressBarTypes {
   Info = 'info',
-  Success = 'success'
+  Success = 'success',
 }
 
 export enum EnumBadgeTypes {
@@ -70,7 +75,7 @@ export enum EnumBadgeTypes {
   Success = 'success',
   Danger = 'danger',
   Info = 'info',
-  Secondary = 'secondary'
+  Secondary = 'secondary',
 }
 
 export enum EnumButtonTypes {
@@ -78,5 +83,5 @@ export enum EnumButtonTypes {
   Secondary = 'secondary',
   Success = 'success',
   Danger = 'danger',
-  Link = 'link'
+  Link = 'link',
 }

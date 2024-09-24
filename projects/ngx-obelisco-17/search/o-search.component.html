@@ -1,7 +1,7 @@
 <div class="navbar-search" *ngIf="searchbarItems">
   <form class="form-search">
-    <div class="form-group">
-      <label class="sr-only" for="search-input">Buscador</label>
+    <div class="search-container">
+      <label class="visually-hidden" for="search-input">Buscador</label>
       <input
         #inputElement
         type="search"
@@ -17,10 +17,27 @@
         (keydown.ArrowUp)="onUp()"
         (keydown.ArrowDown)="onDown()"
       />
-      <button class="reset" type="reset" aria-label="Borrar" (click)="resetSearch()"></button>
+      <button
+        class="reset"
+        type="reset"
+        aria-label="Borrar"
+        (click)="resetSearch()"
+      ></button>
+
+      <button
+        *ngIf="withSearchButton"
+        class="button-search"
+        type="button"
+        aria-label="Buscar"
+        (click)="searchButtonClick()"
+      ></button>
     </div>
   </form>
-  <div class="search-results" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <div
+    class="search-results"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+  >
     <ng-container *ngIf="filteredResults.length > 0">
       <div
         class="search-item"
@@ -32,6 +49,8 @@
         {{ result.title }}
       </div>
     </ng-container>
-    <div class="no-results" *ngIf="noResults">No se encontraron resultados😢.</div>
+    <div class="no-results" *ngIf="noResults">
+      No se encontraron resultados😢.
+    </div>
   </div>
 </div>

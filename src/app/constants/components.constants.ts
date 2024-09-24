@@ -215,7 +215,7 @@ export const COMPONENTS_NAVIGATION = [
   //   route: '/components/block'
   // },
   {
-    title: 'Buscador ❌',
+    title: 'Buscador ✅',
     image: { src: 'assets/component-cards/buscador.jpg' },
     route: '/components/search',
   },

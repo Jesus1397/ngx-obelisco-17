@@ -20,6 +20,7 @@ export class OSearchComponent implements AfterViewInit {
   @Input() public placeholder: string = 'Buscar...';
   @Input() public type: string = '';
   @Input() public onSelectItem?: (item: SearchbarItem) => void;
+  @Input() public withSearchButton: boolean = false;
 
   term = '';
   isHover = false;
@@ -100,6 +101,12 @@ export class OSearchComponent implements AfterViewInit {
     if (this.selectedIndex < this.filteredResults.length - 1) {
       this.selectedIndex++;
       this.isHover = false;
+    }
+  }
+
+  searchButtonClick() {
+    if (this.filteredResults.length > 0) {
+      this.goTo(this.filteredResults[0]);
     }
   }
 

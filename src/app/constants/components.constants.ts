@@ -179,7 +179,7 @@ export const COMPONENTS_NAVIGATION = [
     route: '/components/spinner',
   },
   {
-    title: 'Tooltip ❌',
+    title: 'Tooltip ✅',
     image: { src: 'assets/component-cards/Tooltip.svg' },
     route: '/components/tooltip',
   },

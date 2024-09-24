@@ -2,7 +2,12 @@ export type Types = 'primary' | 'success' | 'danger' | 'info';
 
 export type AlertTypes = 'success' | 'danger' | 'info' | 'warning';
 
-export type StatusMessageTypes = Types | 'institutional';
+export type StatusMessageTypes =
+  | 'success'
+  | 'danger'
+  | 'info'
+  | 'warning'
+  | 'institutional';
 
 export type SpinnerTypes = Types | 'secondary' | 'dark' | 'light';
 

@@ -109,7 +109,7 @@ export class ExampleComponent {
   },
   {
     name: 'Advertencia',
-    type: 'primary',
+    type: 'warning',
     title: 'Esto es un título de un mensaje de advertencia',
     content:
       'Esto es un párrafo que advierte y sirve para indicarle al usuario que preste atención a determinada información o acción que debe realizar.',

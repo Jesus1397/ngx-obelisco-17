@@ -45,7 +45,7 @@ export enum ComponentEnum {
 
 export const COMPONENTS_NAVIGATION = [
   {
-    title: 'Accesos',
+    title: 'Accesos ❌',
     image: { src: 'assets/component-cards/Accesos.svg' },
     route: '/components/access',
     children: [
@@ -65,7 +65,7 @@ export const COMPONENTS_NAVIGATION = [
     route: '/components/alert',
   },
   {
-    title: 'Miga de pan ❌',
+    title: 'Miga de pan ✅',
     image: { src: 'assets/component-cards/MigasDePan.svg' },
     route: '/components/breadcrumb',
   },
@@ -125,7 +125,7 @@ export const COMPONENTS_NAVIGATION = [
   //   route: '/components/gallery'
   // },
   {
-    title: 'Navegación',
+    title: 'Navegación ❌',
     route: '/components/navigation',
     image: { src: 'assets/component-cards/Navegacion.svg' },
     children: [
@@ -154,7 +154,7 @@ export const COMPONENTS_NAVIGATION = [
   //   route: '/components/steps-form'
   // },
   {
-    title: 'Desplegables',
+    title: 'Desplegables ❌',
     image: { src: 'assets/component-cards/Desplegable.svg' },
     route: '/components/dropdown',
     children: [

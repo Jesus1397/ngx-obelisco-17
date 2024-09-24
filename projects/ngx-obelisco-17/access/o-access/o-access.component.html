@@ -1,9 +1,8 @@
 <a #access [routerLink]="route" class="list-group-item" [class.item-sm]="size == 'sm'" [ngClass]="customClasses">
-  <i *ngIf="icon && icon.includes('bx')" [ngClass]="icon!"></i>
+  <i *ngIf="icon && icon.includes('bx')" [ngClass]="[icon!, 'o-icon']"></i>
   <span *ngIf="icon && !icon.includes('bx')" class="material-symbols-rounded o-icon" aria-hidden="true">{{ icon }}</span>
-  <span class="access-title" *ngIf="!description">{{ title }}</span>
-  <div class="access-content" *ngIf="description">
+  <div class="access-content">
     <span class="access-title">{{ title }}</span>
-    <p class="access-text">{{ description }}</p>
+    <p class="access-text" *ngIf="description">{{ description }}</p>
   </div>
 </a>

@@ -42,7 +42,7 @@ export const ALERT_DATA_SOURCE: DataSource[] = [
 ];
 
 export const ALERT_TYPES = `
-  type AlertTypes = 'primary' | 'success' | 'danger' | 'info';
+  type AlertTypes = 'success' | 'danger' | 'info' | 'warning';
 `;
 
 export const ALERT_LIST_INTERFACE = `
@@ -56,6 +56,7 @@ export interface AlertListItems {
   url?: string;
 }
 `;
+
 export const ALERT_LIST_INTERFACE_DATA_SOURCE: DataSource[] = [
   {
     name: {
@@ -80,18 +81,19 @@ export const ALERT_LIST_INTERFACE_DATA_SOURCE: DataSource[] = [
 ];
 
 export const ALERT_EXAMPLE_COLORS = `
-<o-alert>
-  Esta es la descripción de una alerta de información.
-</o-alert>
-<o-alert type="primary">
-  Esta es la descripción de una alerta de información.
-</o-alert>
-<o-alert type="success">
-  Esta es la descripción de una alerta de información.
-</o-alert>
-<o-alert type="danger">
-  Esta es la descripción de una alerta de información.
-</o-alert>
+<o-alert>Esta es la descripción de una alerta de información.</o-alert>
+
+<o-alert type="success"
+  >Esta es la descripción de una alerta de éxito.</o-alert
+>
+
+<o-alert type="warning"
+  >Esta es la descripción de una alerta de advertencia.</o-alert
+>
+
+<o-alert type="danger"
+  >Esta es la descripción de una alerta de error.</o-alert
+>
 `;
 
 export const ALERT_EXAMPLE_DISMISSIBLE = `

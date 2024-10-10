@@ -1,5 +1,5 @@
 <div
-  class="card card-block"
+  class="card-block"
   [ngStyle]="isPositionRelative ? null : { top: '48px' }"
   [class.bg-light]="isBgLight"
   [class.position-sticky]="!isPositionRelative"
@@ -16,5 +16,8 @@
 
     <ng-content select="o-block-footer"></ng-content>
   </div>
-  <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"></ng-container>
+  <ng-container
+    *ngIf="oCustomContent"
+    [ngTemplateOutlet]="oCustomContent.template"
+  ></ng-container>
 </div>

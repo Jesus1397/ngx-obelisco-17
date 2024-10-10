@@ -66,7 +66,7 @@ export const DATA_SOURCE_STATUS_MESSAGE: DataSource[] = [
 ];
 
 export const STATUS_MESSAGE_TYPE = `
-  type StatusMessageTypes = 'primary' | 'success' | 'danger' | 'info' | 'institutional';
+  type StatusMessageTypes = 'warning' | 'success' | 'danger' | 'info' | 'institutional';
 `;
 
 export const STATUS_MESSAGE_LIST: StatusMessage[] = [
@@ -109,7 +109,7 @@ export class ExampleComponent {
   },
   {
     name: 'Advertencia',
-    type: 'primary',
+    type: 'warning',
     title: 'Esto es un título de un mensaje de advertencia',
     content:
       'Esto es un párrafo que advierte y sirve para indicarle al usuario que preste atención a determinada información o acción que debe realizar.',
@@ -120,7 +120,7 @@ export class ExampleComponent {
     ],
     exampleHTML: `
 <o-status-message
-  type="primary"
+  type="warning"
   title="Esto es un título de un mensaje de advertencia"
   content="Esto es un párrafo que advierte y sirve para indicarle al usuario que preste atención a determinada información o acción que debe realizar."
   [listContent]="listContent"

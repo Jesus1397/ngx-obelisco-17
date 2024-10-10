@@ -1,16 +1,32 @@
-<div class="modal fade" tabindex="-1" role="dialog" [attr.id]="dataTarget" [ngClass]="customClasses">
+<div
+  class="modal fade"
+  tabindex="-1"
+  [attr.id]="dataTarget"
+  [ngClass]="customClasses"
+  aria-hidden="true"
+  [attr.aria-labelledby]="dataTarget"
+>
   <div
     class="modal-dialog"
     [ngClass]="[
-      size === 'sm' ? 'modal-sm' : size === 'lg' ? 'modal-lg' : size === 'xl' ? 'modal-xl' : '',
+      size === 'sm'
+        ? 'modal-sm'
+        : size === 'lg'
+        ? 'modal-lg'
+        : size === 'xl'
+        ? 'modal-xl'
+        : '',
       isScrollable ? 'modal-dialog-scrollable' : '',
       isOnTop ? '' : 'modal-dialog-centered'
     ]"
-    role="document"
   >
     <div class="modal-content">
       <ng-container *ngIf="!oCustomContent">
-        <div class="modal-header" [ngClass]="{ unbordered: isHeaderUnbordered }" *ngIf="title || subtitle">
+        <div
+          class="modal-header"
+          [ngClass]="{ unbordered: isHeaderUnbordered }"
+          *ngIf="title || subtitle"
+        >
           <small *ngIf="subtitle">{{ subtitle }}</small>
           <o-modal-title *ngIf="title">{{ title }}</o-modal-title>
         </div>
@@ -21,10 +37,16 @@
         </div>
         <ng-content select="o-modal-content"></ng-content>
 
-        <o-modal-footer *ngIf="children"><ng-content></ng-content></o-modal-footer>
+        <o-modal-footer *ngIf="children"
+          ><ng-content></ng-content
+        ></o-modal-footer>
         <ng-content select="o-modal-footer"></ng-content>
       </ng-container>
-      <ng-container *ngIf="oCustomContent" [ngTemplateOutlet]="oCustomContent.template"> </ng-container>
+      <ng-container
+        *ngIf="oCustomContent"
+        [ngTemplateOutlet]="oCustomContent.template"
+      >
+      </ng-container>
     </div>
   </div>
 </div>

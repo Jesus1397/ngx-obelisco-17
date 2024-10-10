@@ -2,11 +2,24 @@
   <app-viewer title="Simple">
     <div class="alert-container" component>
       <o-alert>Esta es la descripción de una alerta de información.</o-alert>
-      <o-alert type="primary">Esta es la descripción de una alerta de advertencia.</o-alert>
-      <o-alert type="success">Esta es la descripción de una alerta de éxito.</o-alert>
-      <o-alert type="danger">Esta es la descripción de una alerta de error.</o-alert>
+      <br />
+      <o-alert type="success"
+        >Esta es la descripción de una alerta de éxito.</o-alert
+      >
+      <br />
+      <o-alert type="warning"
+        >Esta es la descripción de una alerta de advertencia.</o-alert
+      >
+      <br />
+      <o-alert type="danger"
+        >Esta es la descripción de una alerta de error.</o-alert
+      >
     </div>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+    <div
+      appClipboard
+      class="d-flex flex-column align-items-end p-0"
+      component-html
+    >
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
       <code highlight-js>
         {{ exampleColors }}
@@ -16,10 +29,18 @@
 
   <app-viewer title="Con cierre">
     <div class="alert-container" component>
-      <o-alert [isDismissible]="true">Esta es la descripción de una alerta de información.</o-alert>
+      <o-alert [isDismissible]="true"
+        >Esta es la descripción de una alerta de información.</o-alert
+      >
     </div>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
-      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+    <div
+      appClipboard
+      class="d-flex flex-column align-items-end p-0"
+      component-html
+    >
+      <button
+        class="btn btn-sm btn-outline-link btn-clipboard btn-icon"
+      ></button>
       <code highlight-js>
         {{ exampleDismissible }}
       </code>
@@ -30,10 +51,15 @@
     <div class="alert-container" component>
       <o-alert>
         <strong>Este es un destacado de una alerta de información.</strong>
-        Esta es la descripción de una alerta de información que continua al texto destacado.
+        Esta es la descripción de una alerta de información que continua al
+        texto destacado.
       </o-alert>
     </div>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+    <div
+      appClipboard
+      class="d-flex flex-column align-items-end p-0"
+      component-html
+    >
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
       <code highlight-js>
         {{ exampleHighlight }}
@@ -45,11 +71,16 @@
     <div class="alert-container" component>
       <o-alert>
         <strong>Este es un destacado de una alerta de información.</strong>
-        Esta es la descripción de una alerta de información que continua al texto destacado, incluso con
+        Esta es la descripción de una alerta de información que continua al
+        texto destacado, incluso con
         <a [routerLink]="['/']">con enlace</a>.
       </o-alert>
     </div>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+    <div
+      appClipboard
+      class="d-flex flex-column align-items-end p-0"
+      component-html
+    >
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
       <code highlight-js>
         {{ exampleHighlightLink }}
@@ -60,23 +91,34 @@
   <app-viewer title="Listas" [isNavCode]="true">
     <div class="alert-container" component>
       <o-alert type="danger" [listContent]="listLinkItems">
-        <strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que
-        continua al texto destacado.
+        <strong>Este es un destacado de una alerta de error.</strong> Esta es la
+        descripción de una alerta de error que continua al texto destacado.
       </o-alert>
-
+      <br />
       <o-alert [listContent]="listItems">
-        <strong>Este es un destacado de una alerta de información.</strong> Esta es la descripción de una alerta de
-        información que continua al texto destacado.
+        <strong>Este es un destacado de una alerta de información.</strong> Esta
+        es la descripción de una alerta de información que continua al texto
+        destacado.
       </o-alert>
     </div>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-html>
+    <div
+      appClipboard
+      class="d-flex flex-column align-items-end p-0"
+      component-html
+    >
       <button class="btn btn-sm btn-outline-link btn-clipboard">Copiar</button>
       <code highlight-js>
         {{ exampleListsHtml }}
       </code>
     </div>
-    <div appClipboard class="d-flex flex-column align-items-end p-0" component-ts>
-      <button class="btn btn-sm btn-outline-link btn-clipboard btn-icon"></button>
+    <div
+      appClipboard
+      class="d-flex flex-column align-items-end p-0"
+      component-ts
+    >
+      <button
+        class="btn btn-sm btn-outline-link btn-clipboard btn-icon"
+      ></button>
       <code highlight-js [lang]="'ts'">
         {{ exampleListsTs }}
       </code>

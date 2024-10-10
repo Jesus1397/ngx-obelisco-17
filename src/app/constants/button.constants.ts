@@ -127,7 +127,7 @@ export const BUTTON_DATA_SOURCE: DataSource[] = [
 ];
 
 export const BUTTON_TYPES = `
-  type ButtonTypes = 'primary' | 'secondary' | 'success' | 'danger' | 'link' ;
+  type ButtonTypes = 'primary' | 'secondary' | 'success' | 'danger' | 'tertiary' ;
 `;
 export const BUTTON_SIZES_TYPE = `
   type ButtonSizes = "xs" | "sm" | "md" | "lg";

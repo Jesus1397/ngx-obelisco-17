@@ -1,234 +1,234 @@
 export enum ComponentEnum {
   access = 'Accesos',
   accessSimple = 'Accesos',
-  accessList = 'Lista de accesos',
+  // accessList = 'Lista de accesos',
   alert = 'Alerta',
   breadcrumb = 'Miga de pan',
   card = 'Tarjetas',
-  footer = 'Footer',
-  progressBar = 'Barra de progreso',
-  collapse = 'Colapsable',
+  // footer = 'Footer',
+  // progressBar = 'Barra de progreso',
+  collapse = 'Colapsables',
   map = 'Mapa',
   modal = 'Modal',
   pagination = 'Paginación',
   table = 'Tabla',
-  navigation = 'Navegación horizontal',
+  // navigation = 'Navegación horizontal',
   navigationHorizontal = 'Navegación horizontal',
   navigationVertical = 'Navegación vertical',
   tabs = 'Pestañas',
-  gallery = 'Galería',
-  panel = 'Panel',
-  panelSmall = 'Panel Chico',
-  stepsForm = 'Pasos de un formulario',
-  dropdown = 'Desplegables de navegación',
+  // gallery = 'Galería',
+  // panel = 'Panel',
+  // panelSmall = 'Panel Chico',
+  // stepsForm = 'Pasos de un formulario',
+  // dropdown = 'Desplegables de navegación',
   dropdownNavigation = 'Desplegables de navegación',
   dropdownSelection = 'Desplegables de selección',
   statusMessage = 'Mensaje de estado',
   spinner = 'Spinner',
   tooltip = 'Tooltip',
-  navbar = 'Header',
+  // navbar = 'Header',
   switch = 'Switch',
   list = 'Lista de pasos',
   listStep = 'Lista de pasos',
-  banner = 'Banner',
+  // banner = 'Banner',
   button = 'Botón',
   highlighted = 'Destacado',
   block = 'Bloque de trámite',
   search = 'Buscador',
-  customContent = 'Contenido personalizable',
-  defaultImage = 'Imagen por defecto',
-  icon = 'Iconos',
+  // customContent = 'Contenido personalizable',
+  // defaultImage = 'Imagen por defecto',
+  // icon = 'Iconos',
   badge = 'Etiqueta',
-  calendar = 'Calendario'
+  calendar = 'Calendario',
   // datePicker = 'Datepicker'
 }
 
 export const COMPONENTS_NAVIGATION = [
   {
-    title: 'Accesos',
+    title: 'Accesos ✅',
     image: { src: 'assets/component-cards/Accesos.svg' },
     route: '/components/access',
     children: [
       {
-        title: 'Simple',
-        route: '/components/access/access-simple'
+        title: 'Simple ✅',
+        route: '/components/access/access-simple',
       },
-      {
-        title: 'Lista de accesos',
-        route: '/components/access/access-list'
-      }
-    ]
+      // {
+      //   title: 'Lista de accesos ❌',
+      //   route: '/components/access/access-list',
+      // },
+    ],
   },
   {
-    title: 'Alerta',
+    title: 'Alerta ✅',
     image: { src: 'assets/component-cards/Alerta.svg' },
-    route: '/components/alert'
+    route: '/components/alert',
   },
   {
-    title: 'Miga de pan',
+    title: 'Miga de pan ✅',
     image: { src: 'assets/component-cards/MigasDePan.svg' },
-    route: '/components/breadcrumb'
+    route: '/components/breadcrumb',
   },
   {
-    title: 'Tarjetas',
+    title: 'Tarjetas ❌',
     image: { src: 'assets/component-cards/Tarjetas.svg' },
-    route: '/components/card'
+    route: '/components/card',
   },
   {
-    title: 'Footer',
+    title: 'Footer ✅',
     image: { src: 'assets/component-cards/Footer.svg' },
-    route: '/components/footer'
+    route: '/components/footer',
   },
   {
-    title: 'Banner',
+    title: 'Banner ✅',
     image: { src: 'assets/component-cards/banner.jpg' },
-    route: '/components/banner'
+    route: '/components/banner',
   },
+  // {
+  //   title: 'Barra de progreso',
+  //   image: { src: 'assets/component-cards/BarraDeProgreso.svg' },
+  //   route: '/components/progress-bar'
+  // },
   {
-    title: 'Barra de progreso',
-    image: { src: 'assets/component-cards/BarraDeProgreso.svg' },
-    route: '/components/progress-bar'
-  },
-  {
-    title: 'Botón',
+    title: 'Botón ✅',
     image: { src: 'assets/component-cards/boton.jpg' },
-    route: '/components/button'
+    route: '/components/button',
   },
   {
-    title: 'Colapsable',
+    title: 'Colapsable ❌',
     image: { src: 'assets/component-cards/Colapsables.svg' },
-    route: '/components/collapse'
+    route: '/components/collapse',
   },
   {
-    title: 'Mapa',
+    title: 'Mapa ✅',
     image: { src: 'assets/component-cards/mapa.jpg' },
-    route: '/components/map'
+    route: '/components/map',
   },
   {
-    title: 'Modal',
+    title: 'Modal ✅',
     image: { src: 'assets/component-cards/Modal.svg' },
-    route: '/components/modal'
+    route: '/components/modal',
   },
   {
-    title: 'Paginación',
+    title: 'Paginación ✅',
     image: { src: 'assets/component-cards/Paginado.svg' },
-    route: '/components/pagination'
+    route: '/components/pagination',
   },
   {
-    title: 'Tabla',
+    title: 'Tabla ✅',
     image: { src: 'assets/component-cards/Tabla.svg' },
-    route: '/components/table'
+    route: '/components/table',
   },
+  // {
+  //   title: 'Galería',
+  //   image: { src: 'assets/component-cards/Galeria.svg' },
+  //   route: '/components/gallery'
+  // },
   {
-    title: 'Galería',
-    image: { src: 'assets/component-cards/Galeria.svg' },
-    route: '/components/gallery'
-  },
-  {
-    title: 'Navegación',
+    title: 'Navegación ❌',
     route: '/components/navigation',
     image: { src: 'assets/component-cards/Navegacion.svg' },
     children: [
       {
-        title: 'Horizontal',
-        route: '/components/navigation/navigation-horizontal'
+        title: 'Horizontal ❌',
+        route: '/components/navigation/navigation-horizontal',
       },
       {
-        title: 'Vertical',
-        route: '/components/navigation/navigation-vertical'
+        title: 'Vertical ❌',
+        route: '/components/navigation/navigation-vertical',
       },
       {
-        title: 'Pestañas',
-        route: '/components/navigation/tabs'
-      }
-    ]
+        title: 'Pestañas ❌',
+        route: '/components/navigation/tabs',
+      },
+    ],
   },
+  // {
+  //   title: 'Panel',
+  //   image: { src: 'assets/component-cards/' },
+  //   route: '/components/panel'
+  // },
+  // {
+  //   title: 'Pasos de un formulario',
+  //   image: { src: 'assets/component-cards/PasosDeUnFormulario.svg' },
+  //   route: '/components/steps-form'
+  // },
   {
-    title: 'Panel',
-    image: { src: 'assets/component-cards/' },
-    route: '/components/panel'
-  },
-  {
-    title: 'Pasos de un formulario',
-    image: { src: 'assets/component-cards/PasosDeUnFormulario.svg' },
-    route: '/components/steps-form'
-  },
-  {
-    title: 'Desplegables',
+    title: 'Desplegables ❌',
     image: { src: 'assets/component-cards/Desplegable.svg' },
     route: '/components/dropdown',
     children: [
       {
-        title: 'De navegación',
-        route: '/components/dropdown/dropdown-navigation'
+        title: 'De navegación ❌',
+        route: '/components/dropdown/dropdown-navigation',
       },
       {
-        title: 'De selección',
-        route: '/components/dropdown/dropdown-selection'
-      }
-    ]
+        title: 'De selección ❌',
+        route: '/components/dropdown/dropdown-selection',
+      },
+    ],
   },
   {
-    title: 'Mensaje de estado',
+    title: 'Mensaje de estado ✅',
     image: { src: 'assets/component-cards/MensajeDeEstado.svg' },
-    route: '/components/status-message'
+    route: '/components/status-message',
   },
   {
-    title: 'Spinner',
+    title: 'Spinner ✅',
     image: { src: 'assets/component-cards/Spinner.svg' },
-    route: '/components/spinner'
+    route: '/components/spinner',
   },
   {
-    title: 'Tooltip',
+    title: 'Tooltip ✅',
     image: { src: 'assets/component-cards/Tooltip.svg' },
-    route: '/components/tooltip'
+    route: '/components/tooltip',
   },
   {
-    title: 'Header',
+    title: 'Header ❌',
     image: { src: 'assets/component-cards/header.jpg' },
-    route: '/components/navbar'
+    route: '/components/navbar',
   },
   {
-    title: 'Switch',
+    title: 'Switch ✅',
     image: { src: 'assets/component-cards/Switch.svg' },
-    route: '/components/switch'
+    route: '/components/switch',
   },
   {
-    title: 'Listas',
+    title: 'Listas ✅',
     image: { src: 'assets/component-cards/BarraDeEstado.svg' },
     route: '/components/list',
     children: [
       {
-        title: 'De pasos',
-        route: '/components/list/step-list'
-      }
-    ]
+        title: 'De pasos ✅',
+        route: '/components/list/step-list',
+      },
+    ],
   },
   {
-    title: 'Destacado',
+    title: 'Destacado ✅',
     image: { src: 'assets/component-cards/Panel.svg' },
-    route: '/components/highlighted'
+    route: '/components/highlighted',
   },
   {
-    title: 'Bloque de trámite',
+    title: 'Bloque de trámite ✅',
     image: { src: 'assets/component-cards/bloque.jpg' },
-    route: '/components/block'
+    route: '/components/block',
   },
   {
-    title: 'Buscador',
+    title: 'Buscador ✅',
     image: { src: 'assets/component-cards/buscador.jpg' },
-    route: '/components/search'
+    route: '/components/search',
   },
   {
-    title: 'Calendario',
+    title: 'Calendario ✅ - Falta Colap',
     image: { src: 'assets/component-cards/Calendar.svg' },
-    route: '/components/calendar'
+    route: '/components/calendar',
   },
   {
-    title: 'Etiqueta',
+    title: 'Etiqueta ✅',
     image: { src: 'assets/component-cards/' },
-    route: '/components/badge'
-  }
+    route: '/components/badge',
+  },
   // {
   //   title: 'Datepicker',
   //   image: { src: 'assets/component-cards/' },
@@ -238,36 +238,33 @@ export const COMPONENTS_NAVIGATION = [
 
 export const OTHERS_NAVIGATION = [
   {
+    title: 'Iconos',
+    image: { src: 'assets/component-cards/' },
+    route: '/components/icon',
+  },
+  {
     title: 'Contenido personalizable',
     image: { src: 'assets/component-cards/' },
-    route: '/components/custom-content'
+    route: '/components/custom-content',
   },
   {
     title: 'Imagen por defecto',
     image: { src: 'assets/component-cards/' },
-    route: '/components/default-image'
-  }
-];
-
-export const ICONS_NAVIGATION = [
-  {
-    title: 'Iconos',
-    image: { src: 'assets/component-cards/' },
-    route: '/components/icon'
-  }
+    route: '/components/default-image',
+  },
 ];
 
 export const COLUMNS = [
   {
     key: 'name',
     value: 'Nombre',
-    customClasses: 'tb-text'
+    customClasses: 'tb-text',
   },
   {
     key: 'description',
     value: 'Descripción',
-    customClasses: 'tb-text'
-  }
+    customClasses: 'tb-text',
+  },
 ];
 
 export const SIZES = `

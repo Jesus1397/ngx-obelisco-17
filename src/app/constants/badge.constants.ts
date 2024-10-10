@@ -15,7 +15,7 @@ export const BADGE_DATA_SOURCE: DataSource[] = [
   {
     name: { data: '@Input() <br/> type: BadgeTypes', customClasses: '' },
     description: {
-      data: 'Se utiliza para establecer el color de la etiqueta. Por defecto es secondary.',
+      data: 'Se utiliza para establecer el color de la etiqueta. Por defecto es default.',
       customClasses: '',
     },
   },
@@ -50,15 +50,15 @@ export const BADGE_DATA_SOURCE: DataSource[] = [
 ];
 
 export const BADGE_TYPES = `
-  type BadgeTypes = 'primary' | 'secondary' | 'success' | 'danger' | 'info';
+  type BadgeTypes = 'default' | 'danger' | 'info' | 'success' | 'warning';
 `;
 /* BADGE-EXMPLES */
 export const BADGE_TYPES_EXAMPLES = `
-<o-badge>Etiqueta</o-badge>
-<o-badge type="info">Etiqueta</o-badge>
-<o-badge type="primary">Etiqueta</o-badge>
-<o-badge type="success">Etiqueta</o-badge>
-<o-badge type="danger">Etiqueta</o-badge>
+<o-badge>Predeterminada</o-badge>
+<o-badge type="danger">Peligro  </o-badge>
+<o-badge type="info">Info</o-badge>
+<o-badge type="success">Éxito</o-badge>
+<o-badge type="warning">Advertencia</o-badge>
 `;
 export const BADGE_TYPES_LINKS = `
 <o-badge link="https://gcba.github.io/Obelisco">Etiqueta con link</o-badge>

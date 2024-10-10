@@ -113,11 +113,11 @@ export const BANNER_ICON_COOKIE = 'cookie';
 
 export const BANNER_BUTTON_HTML = `
 <o-banner [content]="content" [icon]="icon">
-  <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
+  <o-button #children size="sm" type="primary" link="#">Botón</o-button>
 </o-banner>
 
 <o-banner [content]="content" [icon]="icon" [isDark]="true">
-  <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
+  <o-button #children size="sm" type="primary" link="#">Botón</o-button>
 </o-banner>
 `;
 
@@ -135,12 +135,12 @@ export class ExampleComponent {
 
 export const BANNER_BUTTONS_HTML = `
 <o-banner [content]="content" [icon]="iconCookie">
+  <o-button #children size="sm" type="primary" link="#">Botón</o-button>
   <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
-  <o-button #children size="sm" link="#">Botón</o-button>
 </o-banner>
 
 <o-banner [content]="content" [icon]="iconCookie" [isDark]="true">
-  <o-button #children size="sm" type="secondary" link="#">Botón</o-button>
-  <o-button #children size="sm" link="#">Botón</o-button>
+  <o-button #children size="sm" type="primary" link="#">Botón</o-button>
+  <o-button #children size="sm" type="terciary" link="#">Botón</o-button>
 </o-banner>
 `;

@@ -4,14 +4,14 @@ export enum ComponentEnum {
   accessList = 'Lista de accesos',
   alert = 'Alerta',
   breadcrumb = 'Miga de pan',
-  // card = 'Tarjetas',
+  card = 'Tarjetas',
   // footer = 'Footer',
   // progressBar = 'Barra de progreso',
-  // collapse = 'Colapsable',
-  // map = 'Mapa',
+  collapse = 'Colapsables',
+  map = 'Mapa',
   modal = 'Modal',
-  // pagination = 'Paginación',
-  // table = 'Tabla',
+  pagination = 'Paginación',
+  table = 'Tabla',
   // navigation = 'Navegación horizontal',
   navigationHorizontal = 'Navegación horizontal',
   navigationVertical = 'Navegación vertical',
@@ -32,14 +32,14 @@ export enum ComponentEnum {
   // listStep = 'Lista de pasos',
   // banner = 'Banner',
   button = 'Botón',
-  // highlighted = 'Destacado',
-  // block = 'Bloque de trámite',
+  highlighted = 'Destacado',
+  block = 'Bloque de trámite',
   search = 'Buscador',
   // customContent = 'Contenido personalizable',
   // defaultImage = 'Imagen por defecto',
   // icon = 'Iconos',
-  // badge = 'Etiqueta',
-  // calendar = 'Calendario'
+  badge = 'Etiqueta',
+  calendar = 'Calendario',
   // datePicker = 'Datepicker'
 }
 
@@ -69,21 +69,21 @@ export const COMPONENTS_NAVIGATION = [
     image: { src: 'assets/component-cards/MigasDePan.svg' },
     route: '/components/breadcrumb',
   },
-  // {
-  //   title: 'Tarjetas',
-  //   image: { src: 'assets/component-cards/Tarjetas.svg' },
-  //   route: '/components/card'
-  // },
-  // {
-  //   title: 'Footer',
-  //   image: { src: 'assets/component-cards/Footer.svg' },
-  //   route: '/components/footer'
-  // },
-  // {
-  //   title: 'Banner',
-  //   image: { src: 'assets/component-cards/banner.jpg' },
-  //   route: '/components/banner'
-  // },
+  {
+    title: 'Tarjetas ❌',
+    image: { src: 'assets/component-cards/Tarjetas.svg' },
+    route: '/components/card',
+  },
+  {
+    title: 'Footer ✅',
+    image: { src: 'assets/component-cards/Footer.svg' },
+    route: '/components/footer',
+  },
+  {
+    title: 'Banner ✅',
+    image: { src: 'assets/component-cards/banner.jpg' },
+    route: '/components/banner',
+  },
   // {
   //   title: 'Barra de progreso',
   //   image: { src: 'assets/component-cards/BarraDeProgreso.svg' },
@@ -94,31 +94,31 @@ export const COMPONENTS_NAVIGATION = [
     image: { src: 'assets/component-cards/boton.jpg' },
     route: '/components/button',
   },
-  // {
-  //   title: 'Colapsable',
-  //   image: { src: 'assets/component-cards/Colapsables.svg' },
-  //   route: '/components/collapse'
-  // },
-  // {
-  //   title: 'Mapa',
-  //   image: { src: 'assets/component-cards/mapa.jpg' },
-  //   route: '/components/map'
-  // },
+  {
+    title: 'Colapsable ❌',
+    image: { src: 'assets/component-cards/Colapsables.svg' },
+    route: '/components/collapse',
+  },
+  {
+    title: 'Mapa ✅',
+    image: { src: 'assets/component-cards/mapa.jpg' },
+    route: '/components/map',
+  },
   {
     title: 'Modal ✅',
     image: { src: 'assets/component-cards/Modal.svg' },
     route: '/components/modal',
   },
-  // {
-  //   title: 'Paginación',
-  //   image: { src: 'assets/component-cards/Paginado.svg' },
-  //   route: '/components/pagination'
-  // },
-  // {
-  //   title: 'Tabla',
-  //   image: { src: 'assets/component-cards/Tabla.svg' },
-  //   route: '/components/table'
-  // },
+  {
+    title: 'Paginación ❌',
+    image: { src: 'assets/component-cards/Paginado.svg' },
+    route: '/components/pagination',
+  },
+  {
+    title: 'Tabla ❌',
+    image: { src: 'assets/component-cards/Tabla.svg' },
+    route: '/components/table',
+  },
   // {
   //   title: 'Galería',
   //   image: { src: 'assets/component-cards/Galeria.svg' },
@@ -183,52 +183,52 @@ export const COMPONENTS_NAVIGATION = [
     image: { src: 'assets/component-cards/Tooltip.svg' },
     route: '/components/tooltip',
   },
-  // {
-  //   title: 'Header',
-  //   image: { src: 'assets/component-cards/header.jpg' },
-  //   route: '/components/navbar'
-  // },
+  {
+    title: 'Header ❌',
+    image: { src: 'assets/component-cards/header.jpg' },
+    route: '/components/navbar',
+  },
   {
     title: 'Switch ✅',
     image: { src: 'assets/component-cards/Switch.svg' },
     route: '/components/switch',
   },
-  // {
-  //   title: 'Listas',
-  //   image: { src: 'assets/component-cards/BarraDeEstado.svg' },
-  //   route: '/components/list',
-  //   children: [
-  //     {
-  //       title: 'De pasos',
-  //       route: '/components/list/step-list'
-  //     }
-  //   ]
-  // },
-  // {
-  //   title: 'Destacado',
-  //   image: { src: 'assets/component-cards/Panel.svg' },
-  //   route: '/components/highlighted'
-  // },
-  // {
-  //   title: 'Bloque de trámite',
-  //   image: { src: 'assets/component-cards/bloque.jpg' },
-  //   route: '/components/block'
-  // },
+  {
+    title: 'Listas ❌',
+    image: { src: 'assets/component-cards/BarraDeEstado.svg' },
+    route: '/components/list',
+    children: [
+      {
+        title: 'De pasos',
+        route: '/components/list/step-list',
+      },
+    ],
+  },
+  {
+    title: 'Destacado ❌',
+    image: { src: 'assets/component-cards/Panel.svg' },
+    route: '/components/highlighted',
+  },
+  {
+    title: 'Bloque de trámite ✅',
+    image: { src: 'assets/component-cards/bloque.jpg' },
+    route: '/components/block',
+  },
   {
     title: 'Buscador ✅',
     image: { src: 'assets/component-cards/buscador.jpg' },
     route: '/components/search',
   },
-  // {
-  //   title: 'Calendario',
-  //   image: { src: 'assets/component-cards/Calendar.svg' },
-  //   route: '/components/calendar'
-  // },
-  // {
-  //   title: 'Etiqueta',
-  //   image: { src: 'assets/component-cards/' },
-  //   route: '/components/badge'
-  // }
+  {
+    title: 'Calendario ✅ - Falta Colap',
+    image: { src: 'assets/component-cards/Calendar.svg' },
+    route: '/components/calendar',
+  },
+  {
+    title: 'Etiqueta ✅',
+    image: { src: 'assets/component-cards/' },
+    route: '/components/badge',
+  },
   // {
   //   title: 'Datepicker',
   //   image: { src: 'assets/component-cards/' },

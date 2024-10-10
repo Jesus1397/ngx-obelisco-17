@@ -1,7 +1,11 @@
 <p class="steps">Descripción</p>
 <div class="progress">
-  <div class="progress-bar bg-info" role="progressbar" [style.width.%]="percentage | number"></div>
+  <div
+    class="progress-bar bg-info"
+    role="progressbar"
+    [style.width.%]="percentage | number"
+  ></div>
 </div>
 
-<o-button type="link" size="sm" (click)="clickPrev()">Anterior</o-button>
-<o-button type="link" size="sm" (click)="clickNext()">Siguiente</o-button>
+<o-button type="tertiary" size="sm" (click)="clickPrev()">Anterior</o-button>
+<o-button type="tertiary" size="sm" (click)="clickNext()">Siguiente</o-button>

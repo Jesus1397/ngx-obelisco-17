@@ -14,7 +14,7 @@ export class OBadgeComponent {
   @Input() public text?: string;
 
   getBadgesClassNames(): string {
-    const typeClass = this.type ? this.type : 'secondary';
+    const typeClass = this.type ? this.type : 'default';
     const customClass = this.customClasses ? ' ' + this.customClasses : '';
     return 'badge-' + typeClass + customClass;
   }

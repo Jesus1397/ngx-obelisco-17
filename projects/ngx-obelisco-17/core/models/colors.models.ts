@@ -11,7 +11,7 @@ export type StatusMessageTypes =
 
 export type SpinnerTypes = Types | 'secondary' | 'dark' | 'light';
 
-export type BadgeTypes = Types | 'secondary';
+export type BadgeTypes = 'default' | 'danger' | 'info' | 'success' | 'warning';
 
 export type ProgressBarTypes = 'info' | 'success';
 
@@ -20,7 +20,7 @@ export type ButtonTypes =
   | 'secondary'
   | 'success'
   | 'danger'
-  | 'link';
+  | 'tertiary';
 
 export type CromaticTypes =
   | 'sky'

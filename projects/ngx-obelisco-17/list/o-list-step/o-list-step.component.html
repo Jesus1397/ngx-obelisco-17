@@ -7,10 +7,18 @@
   [ngClass]="customClasses"
 >
   <li class="list-steps-item" *ngFor="let step of steps; let i = index">
-    <h3 *ngIf="step.title">{{ step.title }}</h3>
-    <p class="status-text" *ngIf="!isTextArray; else isAarray" [innerHTML]="step.description"></p>
+    <h3 class="list-steps-item-title" *ngIf="step.title">{{ step.title }}</h3>
+    <p
+      class="status-text"
+      *ngIf="!isTextArray; else isAarray"
+      [innerHTML]="step.description"
+    ></p>
     <ng-template #isAarray>
-      <p class="status-text" *ngFor="let item of textArray(i)" [innerHTML]="item"></p>
+      <p
+        class="status-text"
+        *ngFor="let item of textArray(i)"
+        [innerHTML]="item"
+      ></p>
     </ng-template>
   </li>
 </ul>

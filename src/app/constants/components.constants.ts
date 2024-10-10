@@ -28,8 +28,8 @@ export enum ComponentEnum {
   tooltip = 'Tooltip',
   // navbar = 'Header',
   switch = 'Switch',
-  // list = 'Lista de pasos',
-  // listStep = 'Lista de pasos',
+  list = 'Lista de pasos',
+  listStep = 'Lista de pasos',
   // banner = 'Banner',
   button = 'Botón',
   highlighted = 'Destacado',
@@ -194,12 +194,12 @@ export const COMPONENTS_NAVIGATION = [
     route: '/components/switch',
   },
   {
-    title: 'Listas ❌',
+    title: 'Listas ✅',
     image: { src: 'assets/component-cards/BarraDeEstado.svg' },
     route: '/components/list',
     children: [
       {
-        title: 'De pasos',
+        title: 'De pasos ✅',
         route: '/components/list/step-list',
       },
     ],

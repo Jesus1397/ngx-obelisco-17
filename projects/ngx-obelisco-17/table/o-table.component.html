@@ -1,4 +1,8 @@
-<div [ngClass]="{ 'responsive-scroll': isScrollable }" [class]="customClasses" tabindex="0">
+<div
+  [ngClass]="{ 'responsive-scroll': isScrollable }"
+  [class]="customClasses"
+  tabindex="0"
+>
   <table
     *ngIf="isValidateComponent"
     class="table"
@@ -6,10 +10,14 @@
   >
     <thead>
       <tr>
-        <th scope="col" *ngIf="checkbox?.isAllSelectable == true" [ngClass]="checkbox.customClassesTh">
-          <div class="custom-control custom-checkbox">
+        <th
+          scope="col"
+          *ngIf="checkbox?.isAllSelectable == true"
+          [ngClass]="checkbox.customClassesTh"
+        >
+          <!-- <div class="form-checkbox">
             <input
-              class="custom-control-input"
+              class="form-checkbox-input"
               type="checkbox"
               id="{{ id }}-selectAllCheckbox"
               name="{{ id }}-selectAllCheckbox"
@@ -21,25 +29,30 @@
               class="custom-control-label"
               for="{{ id }}-selectAllCheckbox"
               aria-label="Descripción para usuarios de lectores de pantalla"
-              >{{ checkbox.title }}</label
-            >
-          </div>
+            ></label>
+          </div> -->
         </th>
-        <th scope="col" *ngIf="checkbox?.isAllSelectable == false" [ngClass]="checkbox.customClassesTh">
+        <th
+          scope="col"
+          *ngIf="checkbox?.isAllSelectable == false"
+          [ngClass]="checkbox.customClassesTh"
+        >
           {{ checkbox.title }}
         </th>
         <ng-container *ngFor="let column of columns">
-          <th scope="col" [ngClass]="column.customClasses">{{ column.value }}</th>
+          <th scope="col" [ngClass]="column.customClasses">
+            {{ column.value }}
+          </th>
         </ng-container>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let data of dataSource; let i = index">
         <td *ngIf="checkbox">
-          <div class="custom-control custom-checkbox">
+          <div class="form-checkbox">
             <input
               #checkbox
-              class="custom-control-input"
+              class="form-checkbox-input"
               type="checkbox"
               id="{{ id }}-checkbox_{{ i }}"
               name="{{ id }}-checkbox_{{ i }}"
@@ -47,7 +60,7 @@
               (change)="onCheckboxChange(data, $event)"
             />
             <label
-              class="custom-control-label no-text"
+              class="form-checkbox-label"
               for="{{ id }}-checkbox_{{ i }}"
               aria-label="Descripción para usuarios de lectores de pantalla"
             ></label>
@@ -55,7 +68,10 @@
         </td>
         <ng-container *ngFor="let column of columns">
           <td [ngClass]="data[column.key].customClasses">
-            <div *ngIf="data[column.key].data" [innerHTML]="sanitizeHTML(data[column.key].data)"></div>
+            <div
+              *ngIf="data[column.key].data"
+              [innerHTML]="sanitizeHTML(data[column.key].data)"
+            ></div>
           </td>
         </ng-container>
       </tr>

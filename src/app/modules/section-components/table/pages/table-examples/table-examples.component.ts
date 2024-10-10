@@ -53,21 +53,21 @@ export class TableExamplesComponent {
           </button>`,
       },
       tag: {
-        data: `<span class="badge badge-secondary">Etiqueta 1</span>`,
+        data: `<span class="badge badge-default">Etiqueta 1</span>`,
       },
       icon: {
         data: `
           <div class="actions-table">
-            <button class="btn button-actions-table" aria-label="Editar">
+            <button class="btn btn btn-xs" aria-label="Editar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">edit</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Visualizar">
+            <button class="btn btn btn-xs" aria-label="Visualizar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">visibility</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Descargar">
+            <button class="btn btn btn-xs" aria-label="Descargar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Eliminar">
+            <button class="btn btn btn-xs" aria-label="Eliminar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">delete</span>
             </button>
           </div>`,
@@ -87,21 +87,21 @@ export class TableExamplesComponent {
           </button>`,
       },
       tag: {
-        data: `<span class="badge badge-secondary">Etiqueta 1</span>`,
+        data: `<span class="badge badge-default">Etiqueta 1</span>`,
       },
       icon: {
         data: `
           <div class="actions-table">
-            <button class="btn button-actions-table" aria-label="Editar">
+            <button class="btn btn btn-xs" aria-label="Editar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">edit</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Visualizar">
+            <button class="btn btn btn-xs" aria-label="Visualizar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">visibility</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Descargar">
+            <button class="btn btn btn-xs" aria-label="Descargar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Eliminar">
+            <button class="btn btn btn-xs" aria-label="Eliminar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">delete</span>
             </button>
           </div>`,
@@ -121,21 +121,21 @@ export class TableExamplesComponent {
           </button>`,
       },
       tag: {
-        data: `<span class="badge badge-secondary">Etiqueta 1</span>`,
+        data: `<span class="badge badge-default">Etiqueta 1</span>`,
       },
       icon: {
         data: `
           <div class="actions-table">
-            <button class="btn button-actions-table" aria-label="Editar">
+            <button class="btn btn btn-xs" aria-label="Editar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">edit</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Visualizar">
+            <button class="btn btn btn-xs" aria-label="Visualizar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">visibility</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Descargar">
+            <button class="btn btn btn-xs" aria-label="Descargar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Eliminar">
+            <button class="btn btn btn-xs" aria-label="Eliminar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">delete</span>
             </button>
           </div>`,
@@ -155,21 +155,21 @@ export class TableExamplesComponent {
           </button>`,
       },
       tag: {
-        data: `<span class="badge badge-secondary">Etiqueta 1</span>`,
+        data: `<span class="badge badge-default">Etiqueta 1</span>`,
       },
       icon: {
         data: `
           <div class="actions-table">
-            <button class="btn button-actions-table" aria-label="Editar">
+            <button class="btn btn btn-xs" aria-label="Editar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">edit</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Visualizar">
+            <button class="btn btn btn-xs" aria-label="Visualizar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">visibility</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Descargar">
+            <button class="btn btn btn-xs" aria-label="Descargar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">file_download</span>
             </button>
-            <button class="btn button-actions-table" aria-label="Eliminar">
+            <button class="btn btn btn-xs" aria-label="Eliminar">
               <span class="material-symbols-rounded o-icon" aria-hidden="true">delete</span>
             </button>
           </div>`,

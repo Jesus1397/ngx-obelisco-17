@@ -1,7 +1,7 @@
 export enum ComponentEnum {
   access = 'Accesos',
   accessSimple = 'Accesos',
-  accessList = 'Lista de accesos',
+  // accessList = 'Lista de accesos',
   alert = 'Alerta',
   breadcrumb = 'Miga de pan',
   card = 'Tarjetas',
@@ -45,7 +45,7 @@ export enum ComponentEnum {
 
 export const COMPONENTS_NAVIGATION = [
   {
-    title: 'Accesos ❌',
+    title: 'Accesos ✅',
     image: { src: 'assets/component-cards/Accesos.svg' },
     route: '/components/access',
     children: [
@@ -53,10 +53,10 @@ export const COMPONENTS_NAVIGATION = [
         title: 'Simple ✅',
         route: '/components/access/access-simple',
       },
-      {
-        title: 'Lista de accesos ❌',
-        route: '/components/access/access-list',
-      },
+      // {
+      //   title: 'Lista de accesos ❌',
+      //   route: '/components/access/access-list',
+      // },
     ],
   },
   {
@@ -110,12 +110,12 @@ export const COMPONENTS_NAVIGATION = [
     route: '/components/modal',
   },
   {
-    title: 'Paginación ❌',
+    title: 'Paginación ✅',
     image: { src: 'assets/component-cards/Paginado.svg' },
     route: '/components/pagination',
   },
   {
-    title: 'Tabla ❌',
+    title: 'Tabla ✅',
     image: { src: 'assets/component-cards/Tabla.svg' },
     route: '/components/table',
   },
@@ -205,7 +205,7 @@ export const COMPONENTS_NAVIGATION = [
     ],
   },
   {
-    title: 'Destacado ❌',
+    title: 'Destacado ✅',
     image: { src: 'assets/component-cards/Panel.svg' },
     route: '/components/highlighted',
   },
